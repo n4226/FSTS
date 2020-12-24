@@ -1,7 +1,7 @@
 
-workspace "FSTS"
-	archirexture "x64"
-	
+workspace "FlightSimTerrainSystem"
+	architecture "x64"
+		
 
 	configurations {
 		"Debug",
@@ -15,14 +15,15 @@ workspace "FSTS"
 		"MultiProcessorCompile"
 	}
 
-outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.archirexture}"
+outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 -- Include directories relative to root folder (solution directory)
 IncludeDir = {}
 
-
+	
 group "Dependencies"
 
 group ""
 
-Include "Sunrise"
+include "Sunrise"
+include "FlightSimTerrainSystem"
