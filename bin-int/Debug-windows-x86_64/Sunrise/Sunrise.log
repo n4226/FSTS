@@ -1,1 +1,20 @@
-﻿
+﻿  srpch.cpp
+  Application.cpp
+  Engine.cpp
+  Log.cpp
+C:\code\visual studio\FSTS\Sunrise\src\Sunrise\Sunrise\core\Log.h(27,42): warning C4251: 'Sunrise::Log::s_CoreLogger': class 'std::shared_ptr<spdlog::logger>' needs to have dll-interface to be used by clients of class 'Sunrise::Log' (compiling source file src\Sunrise\Sunrise\core\Application.cpp)
+C:\code\visual studio\FSTS\Sunrise\vendor\spdlog\include\spdlog\details\registry.h(34): message : see declaration of 'std::shared_ptr<spdlog::logger>' (compiling source file src\Sunrise\Sunrise\core\Application.cpp)
+C:\code\visual studio\FSTS\Sunrise\src\Sunrise\Sunrise\core\Log.h(28,44): warning C4251: 'Sunrise::Log::s_ClientLogger': class 'std::shared_ptr<spdlog::logger>' needs to have dll-interface to be used by clients of class 'Sunrise::Log' (compiling source file src\Sunrise\Sunrise\core\Application.cpp)
+C:\code\visual studio\FSTS\Sunrise\vendor\spdlog\include\spdlog\details\registry.h(34): message : see declaration of 'std::shared_ptr<spdlog::logger>' (compiling source file src\Sunrise\Sunrise\core\Application.cpp)
+C:\code\visual studio\FSTS\Sunrise\src\Sunrise\Sunrise\core\Log.h(27,42): warning C4251: 'Sunrise::Log::s_CoreLogger': class 'std::shared_ptr<spdlog::logger>' needs to have dll-interface to be used by clients of class 'Sunrise::Log' (compiling source file src\Sunrise\Sunrise\core\Log.cpp)
+C:\code\visual studio\FSTS\Sunrise\vendor\spdlog\include\spdlog\details\registry.h(34): message : see declaration of 'std::shared_ptr<spdlog::logger>' (compiling source file src\Sunrise\Sunrise\core\Log.cpp)
+C:\code\visual studio\FSTS\Sunrise\src\Sunrise\Sunrise\core\Log.h(28,44): warning C4251: 'Sunrise::Log::s_ClientLogger': class 'std::shared_ptr<spdlog::logger>' needs to have dll-interface to be used by clients of class 'Sunrise::Log' (compiling source file src\Sunrise\Sunrise\core\Log.cpp)
+C:\code\visual studio\FSTS\Sunrise\vendor\spdlog\include\spdlog\details\registry.h(34): message : see declaration of 'std::shared_ptr<spdlog::logger>' (compiling source file src\Sunrise\Sunrise\core\Log.cpp)
+C:\code\visual studio\FSTS\Sunrise\src\Sunrise\Sunrise\core\Log.h(27,42): warning C4251: 'Sunrise::Log::s_CoreLogger': class 'std::shared_ptr<spdlog::logger>' needs to have dll-interface to be used by clients of class 'Sunrise::Log' (compiling source file src\Sunrise\Sunrise\core\Engine.cpp)
+C:\code\visual studio\FSTS\Sunrise\vendor\spdlog\include\spdlog\details\registry.h(34): message : see declaration of 'std::shared_ptr<spdlog::logger>' (compiling source file src\Sunrise\Sunrise\core\Engine.cpp)
+C:\code\visual studio\FSTS\Sunrise\src\Sunrise\Sunrise\core\Log.h(28,44): warning C4251: 'Sunrise::Log::s_ClientLogger': class 'std::shared_ptr<spdlog::logger>' needs to have dll-interface to be used by clients of class 'Sunrise::Log' (compiling source file src\Sunrise\Sunrise\core\Engine.cpp)
+C:\code\visual studio\FSTS\Sunrise\vendor\spdlog\include\spdlog\details\registry.h(34): message : see declaration of 'std::shared_ptr<spdlog::logger>' (compiling source file src\Sunrise\Sunrise\core\Engine.cpp)
+C:\code\visual studio\FSTS\Sunrise\src\Sunrise\Sunrise\core\Engine.cpp(16,13): warning C4150: deletion of pointer to incomplete type 'Sunrise::Application'; no destructor called
+C:\code\visual studio\FSTS\Sunrise\src\Sunrise\Sunrise\core\Engine.h(11): message : see declaration of 'Sunrise::Application'
+     Creating library ..\bin\Debug-windows-x86_64\Sunrise\Sunrise.lib and object ..\bin\Debug-windows-x86_64\Sunrise\Sunrise.exp
+  Sunrise.vcxproj -> C:\code\visual studio\FSTS\bin\Debug-windows-x86_64\Sunrise\Sunrise.dll

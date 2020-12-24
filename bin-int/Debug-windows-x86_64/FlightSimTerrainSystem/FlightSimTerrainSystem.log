@@ -1,1 +1,6 @@
-﻿LINK : fatal error LNK1104: cannot open file 'C:\code\visual studio\FSTS\bin\Debug-windows-x86_64\Sunrise\Sunrise.lib'
+﻿  FlightSimTerrainSystemApp.cpp
+C:\code\visual studio\FSTS\Sunrise\src\Sunrise\Sunrise\core\Log.h(27,42): warning C4251: 'Sunrise::Log::s_CoreLogger': class 'std::shared_ptr<spdlog::logger>' needs to have dll-interface to be used by clients of class 'Sunrise::Log'
+C:\code\visual studio\FSTS\Sunrise\vendor\spdlog\include\spdlog\details\registry.h(34): message : see declaration of 'std::shared_ptr<spdlog::logger>'
+C:\code\visual studio\FSTS\Sunrise\src\Sunrise\Sunrise\core\Log.h(28,44): warning C4251: 'Sunrise::Log::s_ClientLogger': class 'std::shared_ptr<spdlog::logger>' needs to have dll-interface to be used by clients of class 'Sunrise::Log'
+C:\code\visual studio\FSTS\Sunrise\vendor\spdlog\include\spdlog\details\registry.h(34): message : see declaration of 'std::shared_ptr<spdlog::logger>'
+  FlightSimTerrainSystem.vcxproj -> C:\code\visual studio\FSTS\bin\Debug-windows-x86_64\FlightSimTerrainSystem\FlightSimTerrainSystem.exe
