@@ -16,10 +16,17 @@ project "FlightSimTerrainSystem"
 	}
 
 	includedirs {
+		"%{wks.location}/Sunrise/src",
+		"%{wks.location}/Sunrise/vendor",
+		"%{wks.location}/Sunrise/vendor/spdlog/include",
 	}	
 
 	links {
 		"Sunrise"
+	}
+
+	postbuildcommands {
+		("{COPY} ../bin/" .. outputdir .. "/Sunrise ../bin/" .. outputdir .. "/%{prj.name}")
 	}
 
 	filter "system:windows"
@@ -29,6 +36,7 @@ project "FlightSimTerrainSystem"
 		systemversion "latest"
 
 		defines {
+			"SR_PLATFORM_WINDOWS"
 		}
 
 
