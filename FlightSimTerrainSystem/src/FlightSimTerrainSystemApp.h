@@ -2,7 +2,7 @@
 
 #include "Sunrise.h"
 
-class FlightSimTerrainSystemApp: public Sunrise::Application
+class FlightSimTerrainSystemApp: public sunrise::Application
 {
 public:
 
@@ -10,6 +10,10 @@ public:
 	~FlightSimTerrainSystemApp();
 
 	const char* getName() override;
+
+	void startup() override;
+	void run() override;
+	void shutdown() override;
 
 };
 

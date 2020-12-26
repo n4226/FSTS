@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FlightSimTerrainSystem", "FlightSimTerrainSystem\FlightSimTerrainSystem.vcxproj", "{26A0799E-129A-A2F0-FB06-3901E79F085D}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "FlightSimTerrainSystemXplanePlugin", "FlightSimTerrainSystemXplanePlugin\FlightSimTerrainSystemXplanePlugin.vcxproj", "{3DE05CF3-291C-605D-922E-78547E890878}"
+EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Sunrise", "Sunrise\Sunrise.vcxproj", "{0EBAD311-7A99-52AD-83B1-DD83EF0FB90E}"
 EndProject
 Global
@@ -18,6 +20,12 @@ Global
 		{26A0799E-129A-A2F0-FB06-3901E79F085D}.Dist|x64.Build.0 = Dist|x64
 		{26A0799E-129A-A2F0-FB06-3901E79F085D}.Release|x64.ActiveCfg = Release|x64
 		{26A0799E-129A-A2F0-FB06-3901E79F085D}.Release|x64.Build.0 = Release|x64
+		{3DE05CF3-291C-605D-922E-78547E890878}.Debug|x64.ActiveCfg = Debug|x64
+		{3DE05CF3-291C-605D-922E-78547E890878}.Debug|x64.Build.0 = Debug|x64
+		{3DE05CF3-291C-605D-922E-78547E890878}.Dist|x64.ActiveCfg = Dist|x64
+		{3DE05CF3-291C-605D-922E-78547E890878}.Dist|x64.Build.0 = Dist|x64
+		{3DE05CF3-291C-605D-922E-78547E890878}.Release|x64.ActiveCfg = Release|x64
+		{3DE05CF3-291C-605D-922E-78547E890878}.Release|x64.Build.0 = Release|x64
 		{0EBAD311-7A99-52AD-83B1-DD83EF0FB90E}.Debug|x64.ActiveCfg = Debug|x64
 		{0EBAD311-7A99-52AD-83B1-DD83EF0FB90E}.Debug|x64.Build.0 = Debug|x64
 		{0EBAD311-7A99-52AD-83B1-DD83EF0FB90E}.Dist|x64.ActiveCfg = Dist|x64

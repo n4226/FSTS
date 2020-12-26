@@ -15,27 +15,27 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{26A0799E-129A-A2F0-FB06-3901E79F085D}</ProjectGuid>
+    <ProjectGuid>{3DE05CF3-291C-605D-922E-78547E890878}</ProjectGuid>
     <IgnoreWarnCompileDuplicatedFilename>true</IgnoreWarnCompileDuplicatedFilename>
     <Keyword>Win32Proj</Keyword>
-    <RootNamespace>FlightSimTerrainSystem</RootNamespace>
+    <RootNamespace>FlightSimTerrainSystemXplanePlugin</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
     <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
     <PlatformToolset>v142</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
     <PlatformToolset>v142</PlatformToolset>
@@ -55,31 +55,31 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>..\bin\Debug-windows-x86_64\FlightSimTerrainSystem\</OutDir>
-    <IntDir>..\bin-int\Debug-windows-x86_64\FlightSimTerrainSystem\</IntDir>
-    <TargetName>FlightSimTerrainSystem</TargetName>
-    <TargetExt>.exe</TargetExt>
+    <OutDir>..\bin\Debug-windows-x86_64\FlightSimTerrainSystemXplanePlugin\</OutDir>
+    <IntDir>..\bin-int\Debug-windows-x86_64\FlightSimTerrainSystemXplanePlugin\</IntDir>
+    <TargetName>win</TargetName>
+    <TargetExt>.dll</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>..\bin\Release-windows-x86_64\FlightSimTerrainSystem\</OutDir>
-    <IntDir>..\bin-int\Release-windows-x86_64\FlightSimTerrainSystem\</IntDir>
-    <TargetName>FlightSimTerrainSystem</TargetName>
-    <TargetExt>.exe</TargetExt>
+    <OutDir>..\bin\Release-windows-x86_64\FlightSimTerrainSystemXplanePlugin\</OutDir>
+    <IntDir>..\bin-int\Release-windows-x86_64\FlightSimTerrainSystemXplanePlugin\</IntDir>
+    <TargetName>win</TargetName>
+    <TargetExt>.dll</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>..\bin\Dist-windows-x86_64\FlightSimTerrainSystem\</OutDir>
-    <IntDir>..\bin-int\Dist-windows-x86_64\FlightSimTerrainSystem\</IntDir>
-    <TargetName>FlightSimTerrainSystem</TargetName>
-    <TargetExt>.exe</TargetExt>
+    <OutDir>..\bin\Dist-windows-x86_64\FlightSimTerrainSystemXplanePlugin\</OutDir>
+    <IntDir>..\bin-int\Dist-windows-x86_64\FlightSimTerrainSystemXplanePlugin\</IntDir>
+    <TargetName>win</TargetName>
+    <TargetExt>.dll</TargetExt>
   </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>SR_PLATFORM_WINDOWS;SR_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\Sunrise\src;..\Sunrise\vendor;..\Sunrise\vendor\spdlog\include;..\Sunrise\vendor\glm-master;..\Sunrise\vendor\marl-main\include;..\Sunrise\vendor\stb;..\Sunrise\vendor\mango-master\mango-master\include;..\Sunrise\vendor\libigl\include;..\Sunrise\vendor\HTTPRequest\include;..\Sunrise\vendor\httplib\include;..\Sunrise\vendor\rapidjson\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>XPLM200;XPLM300;XPLM301;SR_PLATFORM_WINDOWS;IBM;SR_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\Sunrise\src;..\Sunrise\vendor;..\Sunrise\vendor\spdlog\include;C:\dev\x-plane sdk\XPSDK303\SDK\CHeaders;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <MinimalRebuild>false</MinimalRebuild>
@@ -88,8 +88,11 @@
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>XPLM_64.lib;XPWidgets_64.lib;OpenGL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\dev\x-plane sdk\XPSDK303\SDK\Libraries\Win;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ImportLibrary>..\bin\Debug-windows-x86_64\FlightSimTerrainSystemXplanePlugin\win.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
       <Command>IF EXIST ..\bin\Debug-windows-x86_64\Sunrise\Sunrise.dLL\ (xcopy /Q /E /Y /I ..\bin\Debug-windows-x86_64\Sunrise\Sunrise.dLL ..\bin\Debug-windows-x86_64\$(ProjectName)\ &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows-x86_64\Sunrise\Sunrise.dLL ..\bin\Debug-windows-x86_64\$(ProjectName)\ &gt; nul)</Command>
@@ -99,8 +102,8 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>SR_PLATFORM_WINDOWS;SR_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\Sunrise\src;..\Sunrise\vendor;..\Sunrise\vendor\spdlog\include;..\Sunrise\vendor\glm-master;..\Sunrise\vendor\marl-main\include;..\Sunrise\vendor\stb;..\Sunrise\vendor\mango-master\mango-master\include;..\Sunrise\vendor\libigl\include;..\Sunrise\vendor\HTTPRequest\include;..\Sunrise\vendor\httplib\include;..\Sunrise\vendor\rapidjson\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>XPLM200;XPLM300;XPLM301;SR_PLATFORM_WINDOWS;IBM;SR_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\Sunrise\src;..\Sunrise\vendor;..\Sunrise\vendor\spdlog\include;C:\dev\x-plane sdk\XPSDK303\SDK\CHeaders;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -111,9 +114,12 @@
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>XPLM_64.lib;XPWidgets_64.lib;OpenGL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\dev\x-plane sdk\XPSDK303\SDK\Libraries\Win;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ImportLibrary>..\bin\Release-windows-x86_64\FlightSimTerrainSystemXplanePlugin\win.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
       <Command>IF EXIST ..\bin\Release-windows-x86_64\Sunrise\Sunrise.dLL\ (xcopy /Q /E /Y /I ..\bin\Release-windows-x86_64\Sunrise\Sunrise.dLL ..\bin\Release-windows-x86_64\$(ProjectName)\ &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows-x86_64\Sunrise\Sunrise.dLL ..\bin\Release-windows-x86_64\$(ProjectName)\ &gt; nul)</Command>
@@ -123,8 +129,8 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>SR_PLATFORM_WINDOWS;SR_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\Sunrise\src;..\Sunrise\vendor;..\Sunrise\vendor\spdlog\include;..\Sunrise\vendor\glm-master;..\Sunrise\vendor\marl-main\include;..\Sunrise\vendor\stb;..\Sunrise\vendor\mango-master\mango-master\include;..\Sunrise\vendor\libigl\include;..\Sunrise\vendor\HTTPRequest\include;..\Sunrise\vendor\httplib\include;..\Sunrise\vendor\rapidjson\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>XPLM200;XPLM300;XPLM301;SR_PLATFORM_WINDOWS;IBM;SR_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>..\Sunrise\src;..\Sunrise\vendor;..\Sunrise\vendor\spdlog\include;C:\dev\x-plane sdk\XPSDK303\SDK\CHeaders;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -135,19 +141,19 @@
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
-      <SubSystem>Console</SubSystem>
+      <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>XPLM_64.lib;XPWidgets_64.lib;OpenGL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\dev\x-plane sdk\XPSDK303\SDK\Libraries\Win;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <ImportLibrary>..\bin\Dist-windows-x86_64\FlightSimTerrainSystemXplanePlugin\win.lib</ImportLibrary>
     </Link>
     <PostBuildEvent>
       <Command>IF EXIST ..\bin\Dist-windows-x86_64\Sunrise\Sunrise.dLL\ (xcopy /Q /E /Y /I ..\bin\Dist-windows-x86_64\Sunrise\Sunrise.dLL ..\bin\Dist-windows-x86_64\$(ProjectName)\ &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Dist-windows-x86_64\Sunrise\Sunrise.dLL ..\bin\Dist-windows-x86_64\$(ProjectName)\ &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="src\FlightSimTerrainSystemApp.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="src\FlightSimTerrainSystemApp.cpp" />
+    <ClCompile Include="src\FlightSimTerrainSystemXplanePlugin.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Sunrise\Sunrise.vcxproj">

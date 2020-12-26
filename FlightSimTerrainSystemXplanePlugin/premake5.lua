@@ -1,14 +1,19 @@
 
+project "FlightSimTerrainSystemXplanePlugin"
 
-project "FlightSimTerrainSystem"
-
-	kind "ConsoleApp"
+	kind "SharedLib"
 	language "C++"
+
+	targetname ("win")
 
 	targetdir ("%{wks.location}/bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("%{wks.location}/bin-int/" .. outputdir .. "/%{prj.name}")
 
-
+	defines {
+		"XPLM200",
+		"XPLM300",
+		"XPLM301"
+	}
 
 	files {
 		"src/**.h",
@@ -19,24 +24,26 @@ project "FlightSimTerrainSystem"
 		"%{wks.location}/Sunrise/src",
 		"%{wks.location}/Sunrise/vendor",
 		"%{wks.location}/Sunrise/vendor/spdlog/include",
-
-		"%{wks.location}/Sunrise/vendor/glm-master",
-		"%{wks.location}/Sunrise/vendor/marl-main/include",
-		"%{wks.location}/Sunrise/vendor/stb",
-		"%{wks.location}/Sunrise/vendor/mango-master/mango-master/include",
-		"%{wks.location}/Sunrise/vendor/libigl/include",
-		"%{wks.location}/Sunrise/vendor/HTTPRequest/include",
-		"%{wks.location}/Sunrise/vendor/httplib/include",
-		"%{wks.location}/Sunrise/vendor/rapidjson/include",
+		"C:/dev/x-plane sdk/XPSDK303/SDK/CHeaders",
 	}	
 
-	links {
-		"Sunrise"
+	libdirs {
+		"C:/dev/x-plane sdk/XPSDK303/SDK/Libraries/Win"
 	}
 
-	postbuildcommands {
-		("{COPY} ../bin/" .. outputdir .. "/Sunrise/Sunrise.dLL ../bin/" .. outputdir .. "/%{prj.name}/")
+	links {
+		"Sunrise",
+		"XPLM_64",
+		"XPWidgets_64",
+		"OpenGL32",
 	}
+
+	
+	postbuildcommands {
+		("{COPY} ../bin/" .. outputdir .. "/Sunrise/Sunrise.dLL ../bin/" .. outputdir .. "/%{prj.name}/"),
+
+	}
+
 
 	filter "system:windows"
 		
@@ -45,7 +52,8 @@ project "FlightSimTerrainSystem"
 		systemversion "latest"
 
 		defines {
-			"SR_PLATFORM_WINDOWS"
+			"SR_PLATFORM_WINDOWS",
+			"IBM"
 		}
 
 

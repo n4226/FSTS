@@ -27,3 +27,4 @@ group ""
 
 include "Sunrise"
 include "FlightSimTerrainSystem"
+include "FlightSimTerrainSystemXplanePlugin"
