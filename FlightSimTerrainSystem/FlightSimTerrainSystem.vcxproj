@@ -79,7 +79,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>SR_PLATFORM_WINDOWS;SR_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\VulkanSDK\1.2.154.1\Include;..\Sunrise\src;..\Sunrise\vendor;..\Sunrise\vendor\spdlog\include;..\Sunrise\vendor\glm-master;..\Sunrise\vendor\marl-main\marl-main\include;..\Sunrise\vendor\stb;..\Sunrise\vendor\mango-master\mango-master\include;..\Sunrise\vendor\libigl\include;..\Sunrise\vendor\HTTPRequest\include;..\Sunrise\vendor\httplib\include;..\Sunrise\vendor\rapidjson\include;..\Sunrise\vendor\libguarded\src;..\Sunrise\vendor\bin\glfw\windows\glfw-3.3.2.bin.WIN64\glfw-3.3.2.bin.WIN64\lib-vc2019;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.2.154.1\Include;..\Sunrise\src;..\Sunrise\src\Sunrise;..\Sunrise\vendor;..\Sunrise\vendor\spdlog\include;..\Sunrise\vendor\glm-master;..\Sunrise\vendor\marl-main\marl-main\include;..\Sunrise\vendor\stb;..\Sunrise\vendor\mango-master\mango-master\include;..\Sunrise\vendor\libigl\include;..\Sunrise\vendor\HTTPRequest\include;..\Sunrise\vendor\httplib\include;..\Sunrise\vendor\rapidjson\include;..\Sunrise\vendor\libguarded\src;..\Sunrise\vendor\bin\glfw\windows\glfw-3.3.2.bin.WIN64\glfw-3.3.2.bin.WIN64\lib-vc2019;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <MinimalRebuild>false</MinimalRebuild>
@@ -100,7 +100,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>SR_PLATFORM_WINDOWS;SR_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\VulkanSDK\1.2.154.1\Include;..\Sunrise\src;..\Sunrise\vendor;..\Sunrise\vendor\spdlog\include;..\Sunrise\vendor\glm-master;..\Sunrise\vendor\marl-main\marl-main\include;..\Sunrise\vendor\stb;..\Sunrise\vendor\mango-master\mango-master\include;..\Sunrise\vendor\libigl\include;..\Sunrise\vendor\HTTPRequest\include;..\Sunrise\vendor\httplib\include;..\Sunrise\vendor\rapidjson\include;..\Sunrise\vendor\libguarded\src;..\Sunrise\vendor\bin\glfw\windows\glfw-3.3.2.bin.WIN64\glfw-3.3.2.bin.WIN64\lib-vc2019;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.2.154.1\Include;..\Sunrise\src;..\Sunrise\src\Sunrise;..\Sunrise\vendor;..\Sunrise\vendor\spdlog\include;..\Sunrise\vendor\glm-master;..\Sunrise\vendor\marl-main\marl-main\include;..\Sunrise\vendor\stb;..\Sunrise\vendor\mango-master\mango-master\include;..\Sunrise\vendor\libigl\include;..\Sunrise\vendor\HTTPRequest\include;..\Sunrise\vendor\httplib\include;..\Sunrise\vendor\rapidjson\include;..\Sunrise\vendor\libguarded\src;..\Sunrise\vendor\bin\glfw\windows\glfw-3.3.2.bin.WIN64\glfw-3.3.2.bin.WIN64\lib-vc2019;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -124,7 +124,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>SR_PLATFORM_WINDOWS;SR_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\VulkanSDK\1.2.154.1\Include;..\Sunrise\src;..\Sunrise\vendor;..\Sunrise\vendor\spdlog\include;..\Sunrise\vendor\glm-master;..\Sunrise\vendor\marl-main\marl-main\include;..\Sunrise\vendor\stb;..\Sunrise\vendor\mango-master\mango-master\include;..\Sunrise\vendor\libigl\include;..\Sunrise\vendor\HTTPRequest\include;..\Sunrise\vendor\httplib\include;..\Sunrise\vendor\rapidjson\include;..\Sunrise\vendor\libguarded\src;..\Sunrise\vendor\bin\glfw\windows\glfw-3.3.2.bin.WIN64\glfw-3.3.2.bin.WIN64\lib-vc2019;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.2.154.1\Include;..\Sunrise\src;..\Sunrise\src\Sunrise;..\Sunrise\vendor;..\Sunrise\vendor\spdlog\include;..\Sunrise\vendor\glm-master;..\Sunrise\vendor\marl-main\marl-main\include;..\Sunrise\vendor\stb;..\Sunrise\vendor\mango-master\mango-master\include;..\Sunrise\vendor\libigl\include;..\Sunrise\vendor\HTTPRequest\include;..\Sunrise\vendor\httplib\include;..\Sunrise\vendor\rapidjson\include;..\Sunrise\vendor\libguarded\src;..\Sunrise\vendor\bin\glfw\windows\glfw-3.3.2.bin.WIN64\glfw-3.3.2.bin.WIN64\lib-vc2019;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
