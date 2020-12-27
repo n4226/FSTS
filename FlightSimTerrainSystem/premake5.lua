@@ -16,18 +16,24 @@ project "FlightSimTerrainSystem"
 	}
 
 	includedirs {
+		"C:/VulkanSDK/1.2.154.1/Include",
+
 		"%{wks.location}/Sunrise/src",
 		"%{wks.location}/Sunrise/vendor",
 		"%{wks.location}/Sunrise/vendor/spdlog/include",
 
 		"%{wks.location}/Sunrise/vendor/glm-master",
-		"%{wks.location}/Sunrise/vendor/marl-main/include",
+		"%{wks.location}/Sunrise/vendor/marl-main/marl-main/include",
 		"%{wks.location}/Sunrise/vendor/stb",
 		"%{wks.location}/Sunrise/vendor/mango-master/mango-master/include",
 		"%{wks.location}/Sunrise/vendor/libigl/include",
 		"%{wks.location}/Sunrise/vendor/HTTPRequest/include",
 		"%{wks.location}/Sunrise/vendor/httplib/include",
 		"%{wks.location}/Sunrise/vendor/rapidjson/include",
+		"%{wks.location}/Sunrise/vendor/libguarded/src",
+
+		"%{wks.location}/Sunrise/vendor/bin/glfw/windows/glfw-3.3.2.bin.WIN64/glfw-3.3.2.bin.WIN64/lib-vc2019"
+
 	}	
 
 	links {

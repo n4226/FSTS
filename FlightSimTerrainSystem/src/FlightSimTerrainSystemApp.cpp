@@ -21,11 +21,6 @@ const char* FlightSimTerrainSystemApp::getName()
 void FlightSimTerrainSystemApp::startup()
 {
 	SR_INFO("Startup");
-	SR_INFO("earth's rad is {} meters",math::dEarthRad); 
-}
-
-void FlightSimTerrainSystemApp::run()
-{
 }
 
 void FlightSimTerrainSystemApp::shutdown()

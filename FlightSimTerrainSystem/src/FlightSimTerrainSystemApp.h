@@ -12,7 +12,7 @@ public:
 	const char* getName() override;
 
 	void startup() override;
-	void run() override;
+	//void run() override;
 	void shutdown() override;
 
 };
