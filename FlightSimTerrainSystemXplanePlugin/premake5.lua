@@ -11,8 +11,13 @@ project "FlightSimTerrainSystemXplanePlugin"
 
 	defines {
 		"XPLM200",
+		"XPLM210",
 		"XPLM300",
-		"XPLM301"
+		"XPLM301",
+		"_DEBUG			",
+		"_WINDOWS		",
+		"_USRDLL		",
+		"SIMDATA_EXPORTS",
 	}
 
 	files {
@@ -32,7 +37,7 @@ project "FlightSimTerrainSystemXplanePlugin"
 	}
 
 	links {
-		"Sunrise",
+		--"Sunrise",
 		"XPLM_64",
 		"XPWidgets_64",
 		"OpenGL32",
@@ -40,7 +45,7 @@ project "FlightSimTerrainSystemXplanePlugin"
 
 	
 	postbuildcommands {
-		("{COPY} ../bin/" .. outputdir .. "/Sunrise/Sunrise.dLL ../bin/" .. outputdir .. "/%{prj.name}/"),
+		--("{COPY} ../bin/" .. outputdir .. "/Sunrise/Sunrise.dLL ../bin/" .. outputdir .. "/%{prj.name}/"),
 
 	}
 

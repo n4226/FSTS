@@ -31,6 +31,7 @@ project "FlightSimTerrainSystem"
 		"%{wks.location}/Sunrise/vendor/httplib/include",
 		"%{wks.location}/Sunrise/vendor/rapidjson/include",
 		"%{wks.location}/Sunrise/vendor/libguarded/src",
+		"%{wks.location}/Sunrise/vendor/nlohmann/include",
 
 		"%{wks.location}/Sunrise/vendor/bin/glfw/windows/glfw-3.3.2.bin.WIN64/glfw-3.3.2.bin.WIN64/lib-vc2019"
 
@@ -41,7 +42,10 @@ project "FlightSimTerrainSystem"
 	}
 
 	postbuildcommands {
-		("{COPY} ../bin/" .. outputdir .. "/Sunrise/Sunrise.dLL ../bin/" .. outputdir .. "/%{prj.name}/")
+		("{COPY} ../bin/" .. outputdir .. "/Sunrise/Sunrise.dLL ../bin/" .. outputdir .. "/%{prj.name}/"),
+		("{COPY} ../bin/" .. outputdir .. "/Sunrise/Sunrise.pdb ../bin/" .. outputdir .. "/%{prj.name}/"),
+		--("call ../Sunrise/src/Sunrise/Sunrise/graphcis/shaders/compileShaders.bat"),
+		--("XCOPY /S /Y ../Sunrise/src/Sunrise/Sunrise/graphcis/shaders/ ../bin/" .. outputdir .. "/%{prj.name}/shaders"),
 	}
 
 	filter "system:windows"
@@ -53,6 +57,7 @@ project "FlightSimTerrainSystem"
 		defines {
 			"SR_PLATFORM_WINDOWS"
 		}
+		debugdir ("../bin/" .. outputdir .. "/%{prj.name}/")
 
 
 	filter "configurations:Debug"

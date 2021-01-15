@@ -79,7 +79,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>SR_PLATFORM_WINDOWS;SR_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\VulkanSDK\1.2.154.1\Include;..\Sunrise\src;..\Sunrise\src\Sunrise;..\Sunrise\vendor;..\Sunrise\vendor\spdlog\include;..\Sunrise\vendor\glm-master;..\Sunrise\vendor\marl-main\marl-main\include;..\Sunrise\vendor\stb;..\Sunrise\vendor\mango-master\mango-master\include;..\Sunrise\vendor\libigl\include;..\Sunrise\vendor\HTTPRequest\include;..\Sunrise\vendor\httplib\include;..\Sunrise\vendor\rapidjson\include;..\Sunrise\vendor\libguarded\src;..\Sunrise\vendor\bin\glfw\windows\glfw-3.3.2.bin.WIN64\glfw-3.3.2.bin.WIN64\lib-vc2019;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.2.154.1\Include;..\Sunrise\src;..\Sunrise\vendor;..\Sunrise\vendor\spdlog\include;..\Sunrise\vendor\glm-master;..\Sunrise\vendor\marl-main\marl-main\include;..\Sunrise\vendor\stb;..\Sunrise\vendor\mango-master\mango-master\include;..\Sunrise\vendor\libigl\include;..\Sunrise\vendor\HTTPRequest\include;..\Sunrise\vendor\httplib\include;..\Sunrise\vendor\rapidjson\include;..\Sunrise\vendor\libguarded\src;..\Sunrise\vendor\nlohmann\include;..\Sunrise\vendor\bin\glfw\windows\glfw-3.3.2.bin.WIN64\glfw-3.3.2.bin.WIN64\lib-vc2019;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <MinimalRebuild>false</MinimalRebuild>
@@ -92,7 +92,8 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Debug-windows-x86_64\Sunrise\Sunrise.dLL\ (xcopy /Q /E /Y /I ..\bin\Debug-windows-x86_64\Sunrise\Sunrise.dLL ..\bin\Debug-windows-x86_64\$(ProjectName)\ &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows-x86_64\Sunrise\Sunrise.dLL ..\bin\Debug-windows-x86_64\$(ProjectName)\ &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\Debug-windows-x86_64\Sunrise\Sunrise.dLL\ (xcopy /Q /E /Y /I ..\bin\Debug-windows-x86_64\Sunrise\Sunrise.dLL ..\bin\Debug-windows-x86_64\$(ProjectName)\ &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows-x86_64\Sunrise\Sunrise.dLL ..\bin\Debug-windows-x86_64\$(ProjectName)\ &gt; nul)
+IF EXIST ..\bin\Debug-windows-x86_64\Sunrise\Sunrise.pdb\ (xcopy /Q /E /Y /I ..\bin\Debug-windows-x86_64\Sunrise\Sunrise.pdb ..\bin\Debug-windows-x86_64\$(ProjectName)\ &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows-x86_64\Sunrise\Sunrise.pdb ..\bin\Debug-windows-x86_64\$(ProjectName)\ &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -100,7 +101,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>SR_PLATFORM_WINDOWS;SR_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\VulkanSDK\1.2.154.1\Include;..\Sunrise\src;..\Sunrise\src\Sunrise;..\Sunrise\vendor;..\Sunrise\vendor\spdlog\include;..\Sunrise\vendor\glm-master;..\Sunrise\vendor\marl-main\marl-main\include;..\Sunrise\vendor\stb;..\Sunrise\vendor\mango-master\mango-master\include;..\Sunrise\vendor\libigl\include;..\Sunrise\vendor\HTTPRequest\include;..\Sunrise\vendor\httplib\include;..\Sunrise\vendor\rapidjson\include;..\Sunrise\vendor\libguarded\src;..\Sunrise\vendor\bin\glfw\windows\glfw-3.3.2.bin.WIN64\glfw-3.3.2.bin.WIN64\lib-vc2019;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.2.154.1\Include;..\Sunrise\src;..\Sunrise\vendor;..\Sunrise\vendor\spdlog\include;..\Sunrise\vendor\glm-master;..\Sunrise\vendor\marl-main\marl-main\include;..\Sunrise\vendor\stb;..\Sunrise\vendor\mango-master\mango-master\include;..\Sunrise\vendor\libigl\include;..\Sunrise\vendor\HTTPRequest\include;..\Sunrise\vendor\httplib\include;..\Sunrise\vendor\rapidjson\include;..\Sunrise\vendor\libguarded\src;..\Sunrise\vendor\nlohmann\include;..\Sunrise\vendor\bin\glfw\windows\glfw-3.3.2.bin.WIN64\glfw-3.3.2.bin.WIN64\lib-vc2019;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -116,7 +117,8 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Release-windows-x86_64\Sunrise\Sunrise.dLL\ (xcopy /Q /E /Y /I ..\bin\Release-windows-x86_64\Sunrise\Sunrise.dLL ..\bin\Release-windows-x86_64\$(ProjectName)\ &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows-x86_64\Sunrise\Sunrise.dLL ..\bin\Release-windows-x86_64\$(ProjectName)\ &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\Release-windows-x86_64\Sunrise\Sunrise.dLL\ (xcopy /Q /E /Y /I ..\bin\Release-windows-x86_64\Sunrise\Sunrise.dLL ..\bin\Release-windows-x86_64\$(ProjectName)\ &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows-x86_64\Sunrise\Sunrise.dLL ..\bin\Release-windows-x86_64\$(ProjectName)\ &gt; nul)
+IF EXIST ..\bin\Release-windows-x86_64\Sunrise\Sunrise.pdb\ (xcopy /Q /E /Y /I ..\bin\Release-windows-x86_64\Sunrise\Sunrise.pdb ..\bin\Release-windows-x86_64\$(ProjectName)\ &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows-x86_64\Sunrise\Sunrise.pdb ..\bin\Release-windows-x86_64\$(ProjectName)\ &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
@@ -124,7 +126,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>SR_PLATFORM_WINDOWS;SR_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\VulkanSDK\1.2.154.1\Include;..\Sunrise\src;..\Sunrise\src\Sunrise;..\Sunrise\vendor;..\Sunrise\vendor\spdlog\include;..\Sunrise\vendor\glm-master;..\Sunrise\vendor\marl-main\marl-main\include;..\Sunrise\vendor\stb;..\Sunrise\vendor\mango-master\mango-master\include;..\Sunrise\vendor\libigl\include;..\Sunrise\vendor\HTTPRequest\include;..\Sunrise\vendor\httplib\include;..\Sunrise\vendor\rapidjson\include;..\Sunrise\vendor\libguarded\src;..\Sunrise\vendor\bin\glfw\windows\glfw-3.3.2.bin.WIN64\glfw-3.3.2.bin.WIN64\lib-vc2019;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.2.154.1\Include;..\Sunrise\src;..\Sunrise\vendor;..\Sunrise\vendor\spdlog\include;..\Sunrise\vendor\glm-master;..\Sunrise\vendor\marl-main\marl-main\include;..\Sunrise\vendor\stb;..\Sunrise\vendor\mango-master\mango-master\include;..\Sunrise\vendor\libigl\include;..\Sunrise\vendor\HTTPRequest\include;..\Sunrise\vendor\httplib\include;..\Sunrise\vendor\rapidjson\include;..\Sunrise\vendor\libguarded\src;..\Sunrise\vendor\nlohmann\include;..\Sunrise\vendor\bin\glfw\windows\glfw-3.3.2.bin.WIN64\glfw-3.3.2.bin.WIN64\lib-vc2019;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -140,14 +142,17 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
     <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Dist-windows-x86_64\Sunrise\Sunrise.dLL\ (xcopy /Q /E /Y /I ..\bin\Dist-windows-x86_64\Sunrise\Sunrise.dLL ..\bin\Dist-windows-x86_64\$(ProjectName)\ &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Dist-windows-x86_64\Sunrise\Sunrise.dLL ..\bin\Dist-windows-x86_64\$(ProjectName)\ &gt; nul)</Command>
+      <Command>IF EXIST ..\bin\Dist-windows-x86_64\Sunrise\Sunrise.dLL\ (xcopy /Q /E /Y /I ..\bin\Dist-windows-x86_64\Sunrise\Sunrise.dLL ..\bin\Dist-windows-x86_64\$(ProjectName)\ &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Dist-windows-x86_64\Sunrise\Sunrise.dLL ..\bin\Dist-windows-x86_64\$(ProjectName)\ &gt; nul)
+IF EXIST ..\bin\Dist-windows-x86_64\Sunrise\Sunrise.pdb\ (xcopy /Q /E /Y /I ..\bin\Dist-windows-x86_64\Sunrise\Sunrise.pdb ..\bin\Dist-windows-x86_64\$(ProjectName)\ &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Dist-windows-x86_64\Sunrise\Sunrise.pdb ..\bin\Dist-windows-x86_64\$(ProjectName)\ &gt; nul)</Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\FlightSimTerrainSystemApp.h" />
+    <ClInclude Include="src\scenes\TestScene.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\FlightSimTerrainSystemApp.cpp" />
+    <ClCompile Include="src\scenes\TestScene.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Sunrise\Sunrise.vcxproj">

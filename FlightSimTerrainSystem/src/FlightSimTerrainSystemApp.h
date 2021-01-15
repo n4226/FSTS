@@ -1,11 +1,11 @@
 #pragma once
 
 #include "Sunrise.h"
+#include "Sunrise/Sunrise/core/EntryPoint.h"
 
 class FlightSimTerrainSystemApp: public sunrise::Application
 {
 public:
-
 	FlightSimTerrainSystemApp();
 	~FlightSimTerrainSystemApp();
 
@@ -15,5 +15,5 @@ public:
 	//void run() override;
 	void shutdown() override;
 
-};
+}; 
 

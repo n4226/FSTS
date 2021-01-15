@@ -1,9 +1,11 @@
 #include "FlightSimTerrainSystemApp.h"
-
+#include "scenes/TestScene.h"
 
 using namespace sunrise;
 
 FlightSimTerrainSystemApp::FlightSimTerrainSystemApp()
+	: Application(new WorldScene(this))
+	//: Application(new TestScene(this))
 {
 
 }
@@ -20,12 +22,14 @@ const char* FlightSimTerrainSystemApp::getName()
 
 void FlightSimTerrainSystemApp::startup()
 {
+	Application::startup();
 	SR_INFO("Startup");
 }
 
 void FlightSimTerrainSystemApp::shutdown()
 {
 	SR_TRACE("Shutdown Initiated");
+	
 }
 
 
