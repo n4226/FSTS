@@ -6,7 +6,8 @@ class TestScene
 	: public sunrise::Scene
 {
 public:
-	using Scene::Scene;
+	//using Scene::Scene;
+	TestScene(sunrise::Application* app);
 	~TestScene();
 
 	void load() override;

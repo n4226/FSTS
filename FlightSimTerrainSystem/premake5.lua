@@ -37,8 +37,13 @@ project "FlightSimTerrainSystem"
 
 	}	
 
+	libdirs {
+		"C:/VulkanSDK/1.2.154.1/Lib",
+	}
+
 	links {
-		"Sunrise"
+		"Sunrise",
+		"vulkan-1",
 	}
 
 	postbuildcommands {

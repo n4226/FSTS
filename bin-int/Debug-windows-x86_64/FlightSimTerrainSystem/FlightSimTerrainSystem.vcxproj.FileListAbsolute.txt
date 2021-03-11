@@ -1,1 +1,2 @@
 C:\code\visual studio\FSTS\bin-int\Debug-windows-x86_64\FlightSimTerrainSystem\FlightSimTerrainSystem.vcxproj.CopyComplete
+C:\code\visual_studio\FSTS\bin-int\Debug-windows-x86_64\FlightSimTerrainSystem\FlightSimTerrainSystem.vcxproj.CopyComplete

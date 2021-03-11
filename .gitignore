@@ -397,6 +397,8 @@ healthchecksdb
 bin/*
 bin_int/*
 
+FlightSimTerrainSystem/My Advisor Results - FlightSimTerrainSystem/*
+
 
 <<<<<<< HEAD
 *.idb

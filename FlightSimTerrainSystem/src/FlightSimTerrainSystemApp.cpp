@@ -4,8 +4,8 @@
 using namespace sunrise;
 
 FlightSimTerrainSystemApp::FlightSimTerrainSystemApp()
-	//: Application(new WorldScene(this))
-	: Application(new TestScene(this))
+	: Application(new WorldScene(this))
+	//: Application(new TestScene(this))
 {
 
 }
@@ -28,6 +28,8 @@ void FlightSimTerrainSystemApp::startup()
 
 void FlightSimTerrainSystemApp::shutdown()
 {
+	Application::shutdown();
+
 	SR_TRACE("Shutdown Initiated");
 	
 }
