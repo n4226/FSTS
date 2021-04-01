@@ -1,0 +1,14 @@
+^C:\CODE\VISUAL_STUDIO\FSTS\SUNRISE\SRC\SUNRISE\SUNRISE\GRAPHICS\SHADERS\GBUFFER.FRAG
+C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V ..\Sunrise\src\Sunrise\Sunrise\graphics\shaders\GBuffer.frag -o ../bin/Debug-windows-x86_64/FlightSimTerrainSystem/shaders/GBuffer.frag.spv
+^C:\CODE\VISUAL_STUDIO\FSTS\SUNRISE\SRC\SUNRISE\SUNRISE\GRAPHICS\SHADERS\GBUFFER.VERT
+C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V ..\Sunrise\src\Sunrise\Sunrise\graphics\shaders\GBuffer.vert -o ../bin/Debug-windows-x86_64/FlightSimTerrainSystem/shaders/GBuffer.vert.spv
+^C:\CODE\VISUAL_STUDIO\FSTS\SUNRISE\SRC\SUNRISE\SUNRISE\GRAPHICS\SHADERS\GPUGENCOMMANDS.COMP
+C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V ..\Sunrise\src\Sunrise\Sunrise\graphics\shaders\gpuGenCommands.comp -o ../bin/Debug-windows-x86_64/FlightSimTerrainSystem/shaders/gpuGenCommands.comp.spv
+^C:\CODE\VISUAL_STUDIO\FSTS\SUNRISE\SRC\SUNRISE\SUNRISE\GRAPHICS\SHADERS\TERRAIN.FRAG
+C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V ..\Sunrise\src\Sunrise\Sunrise\graphics\shaders\terrain.frag -o ../bin/Debug-windows-x86_64/FlightSimTerrainSystem/shaders/terrain.frag.spv
+^C:\CODE\VISUAL_STUDIO\FSTS\SUNRISE\SRC\SUNRISE\SUNRISE\GRAPHICS\SHADERS\TERRAIN.VERT
+C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V ..\Sunrise\src\Sunrise\Sunrise\graphics\shaders\terrain.vert -o ../bin/Debug-windows-x86_64/FlightSimTerrainSystem/shaders/terrain.vert.spv
+^C:\CODE\VISUAL_STUDIO\FSTS\SUNRISE\SRC\SUNRISE\SUNRISE\GRAPHICS\SHADERS\TRIANGLE.FRAG
+C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V ..\Sunrise\src\Sunrise\Sunrise\graphics\shaders\triangle.frag -o ../bin/Debug-windows-x86_64/FlightSimTerrainSystem/shaders/triangle.frag.spv
+^C:\CODE\VISUAL_STUDIO\FSTS\SUNRISE\SRC\SUNRISE\SUNRISE\GRAPHICS\SHADERS\TRIANGLE.VERT
+C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V ..\Sunrise\src\Sunrise\Sunrise\graphics\shaders\triangle.vert -o ../bin/Debug-windows-x86_64/FlightSimTerrainSystem/shaders/triangle.vert.spv

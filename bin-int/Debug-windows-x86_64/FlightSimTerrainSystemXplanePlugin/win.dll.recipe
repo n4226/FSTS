@@ -2,7 +2,7 @@
 <Project>
   <ProjectOutputs>
     <ProjectOutput>
-      <FullPath>C:\code\visual studio\FSTS\bin\Debug-windows-x86_64\FlightSimTerrainSystemXplanePlugin\win.dll</FullPath>
+      <FullPath>C:\code\visual_studio\FSTS\bin\Debug-windows-x86_64\FlightSimTerrainSystemXplanePlugin\win.dll</FullPath>
     </ProjectOutput>
   </ProjectOutputs>
   <ContentFiles />

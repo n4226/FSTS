@@ -1,26 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="scenes">
-      <UniqueIdentifier>{A602591B-92A4-83F1-7B5F-974567A00A42}</UniqueIdentifier>
+    <Filter Include="Sunrise">
+      <UniqueIdentifier>{0EBAD311-7A99-52AD-83B1-DD83EF0FB90E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sunrise\src">
+      <UniqueIdentifier>{25CF39EA-9184-B2DF-1A79-ACB6862DA9E3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sunrise\src\Sunrise">
+      <UniqueIdentifier>{1D56BFF6-89B7-9C04-1225-E3B67E85D3C3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sunrise\src\Sunrise\Sunrise">
+      <UniqueIdentifier>{1555F8B3-8162-269A-0A49-22857655F250}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sunrise\src\Sunrise\Sunrise\graphics">
+      <UniqueIdentifier>{15413425-0128-F61C-AA78-5C3A963E6F83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sunrise\src\Sunrise\Sunrise\graphics\shaders">
+      <UniqueIdentifier>{0E43462E-FA55-4687-A33F-23748F31E3D4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{2DAB880B-99B4-887C-2230-9F7C8E38947C}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\scenes">
+      <UniqueIdentifier>{DDDBB778-C993-F9C5-329B-D2211E7294B6}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="src\FlightSimTerrainSystemApp.h" />
+    <ClInclude Include="src\FlightSimTerrainSystemApp.h">
+      <Filter>src</Filter>
+    </ClInclude>
     <ClInclude Include="src\scenes\TestScene.h">
-      <Filter>scenes</Filter>
+      <Filter>src\scenes</Filter>
     </ClInclude>
     <ClInclude Include="src\scenes\TestSceneCoordinator.h">
-      <Filter>scenes</Filter>
+      <Filter>src\scenes</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="src\FlightSimTerrainSystemApp.cpp" />
+    <ClCompile Include="src\FlightSimTerrainSystemApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
     <ClCompile Include="src\scenes\TestScene.cpp">
-      <Filter>scenes</Filter>
+      <Filter>src\scenes</Filter>
     </ClCompile>
     <ClCompile Include="src\scenes\TestSceneCoordinator.cpp">
-      <Filter>scenes</Filter>
+      <Filter>src\scenes</Filter>
     </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\Sunrise\src\Sunrise\Sunrise\graphics\shaders\GBuffer.frag">
+      <Filter>Sunrise\src\Sunrise\Sunrise\graphics\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\Sunrise\src\Sunrise\Sunrise\graphics\shaders\GBuffer.vert">
+      <Filter>Sunrise\src\Sunrise\Sunrise\graphics\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\Sunrise\src\Sunrise\Sunrise\graphics\shaders\gpuGenCommands.comp">
+      <Filter>Sunrise\src\Sunrise\Sunrise\graphics\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\Sunrise\src\Sunrise\Sunrise\graphics\shaders\terrain.frag">
+      <Filter>Sunrise\src\Sunrise\Sunrise\graphics\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\Sunrise\src\Sunrise\Sunrise\graphics\shaders\terrain.vert">
+      <Filter>Sunrise\src\Sunrise\Sunrise\graphics\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\Sunrise\src\Sunrise\Sunrise\graphics\shaders\triangle.frag">
+      <Filter>Sunrise\src\Sunrise\Sunrise\graphics\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="..\Sunrise\src\Sunrise\Sunrise\graphics\shaders\triangle.vert">
+      <Filter>Sunrise\src\Sunrise\Sunrise\graphics\shaders</Filter>
+    </CustomBuild>
   </ItemGroup>
 </Project>

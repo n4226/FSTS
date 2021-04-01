@@ -13,6 +13,10 @@ project "FlightSimTerrainSystem"
 	files {
 		"src/**.h",
 		"src/**.cpp",
+		
+		"%{wks.location}/Sunrise/src/**.vert",
+		"%{wks.location}/Sunrise/src/**.frag",
+		"%{wks.location}/Sunrise/src/**.comp"
 	}
 
 	includedirs {
@@ -79,3 +83,21 @@ project "FlightSimTerrainSystem"
 		defines "SR_DIST"
 		runtime "Release"
 		optimize "on"
+
+	-- GLSL Shader Compile Pipeline
+
+	filter 'files:**.vert or files:**.frag or files:**.comp'
+	   -- A message to display while this build step is running (optional)
+	   buildmessage 'Compiling %{file.relpath} TO SPIR-V'
+
+	   -- One or more commands to run (required)
+	   buildcommands {
+		  ("C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V %{file.relpath} -o ../bin/" .. outputdir .. "/%{prj.name}/shaders/%{file.name}.spv")
+	   }
+
+	   -- One or more outputs resulting from the build (required)
+	   buildoutputs {("../bin/" .. outputdir .. "/%{prj.name}/shaders/%{file.name}.spv")}
+
+	   -- One or more additional dependencies for this build command (optional)
+	   --buildinputs { 'path/to/file1.ext', 'path/to/file2.ext' }
+
