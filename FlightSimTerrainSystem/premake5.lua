@@ -37,8 +37,10 @@ project "FlightSimTerrainSystem"
 		"%{wks.location}/Sunrise/vendor/libguarded/src",
 		"%{wks.location}/Sunrise/vendor/nlohmann/include",
 
-		"%{wks.location}/Sunrise/vendor/bin/glfw/windows/glfw-3.3.2.bin.WIN64/glfw-3.3.2.bin.WIN64/lib-vc2019"
-
+		"%{wks.location}/Sunrise/vendor/bin/glfw/windows/glfw-3.3.2.bin.WIN64/glfw-3.3.2.bin.WIN64/lib-vc2019",
+		
+		"%{wks.location}/Sunrise/vendor/date/include",
+		"%{wks.location}/Sunrise/vendor/entt/single_include",
 	}	
 
 	libdirs {
@@ -60,7 +62,7 @@ project "FlightSimTerrainSystem"
 	filter "system:windows"
 		
 		cppdialect "C++17"
-		staticruntime "on"
+		staticruntime "off"
 		systemversion "latest"
 
 		defines {

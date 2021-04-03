@@ -23,7 +23,8 @@ const char* FlightSimTerrainSystemApp::getName()
 void FlightSimTerrainSystemApp::startup()
 {
 	Application::startup();
-	SR_INFO("Startup");
+	// was cosing problems for some unknown reason
+	//SR_INFO("Startup");
 }
 
 void FlightSimTerrainSystemApp::shutdown()

@@ -21,8 +21,8 @@ public:
 void TestSceneCoordinator::createPasses()
 {
 
-	auto mainStage = TestRenderStage(app, "TestStage");
+	auto mainStage = new TestRenderStage(app, "TestStage");
 
-	registerStage(&mainStage, {}, {}, {});
+	registerStage(mainStage, {}, {}, {});
 
 }
