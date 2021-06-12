@@ -13,6 +13,10 @@ project "FlightSimTerrainSystem"
 	files {
 		"src/**.h",
 		"src/**.cpp",
+
+		"src/**.vert",
+		"src/**.frag",
+		"src/**.comp",
 		
 		"%{wks.location}/Sunrise/src/**.vert",
 		"%{wks.location}/Sunrise/src/**.frag",

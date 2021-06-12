@@ -12,3 +12,7 @@ C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V ..\Sunrise\src\Sunrise\Sunris
 C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V ..\Sunrise\src\Sunrise\Sunrise\graphics\shaders\triangle.frag -o ../bin/Debug-windows-x86_64/FlightSimTerrainSystem/shaders/triangle.frag.spv
 ^C:\CODE\VISUAL_STUDIO\FSTS\SUNRISE\SRC\SUNRISE\SUNRISE\GRAPHICS\SHADERS\TRIANGLE.VERT
 C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V ..\Sunrise\src\Sunrise\Sunrise\graphics\shaders\triangle.vert -o ../bin/Debug-windows-x86_64/FlightSimTerrainSystem/shaders/triangle.vert.spv
+^C:\CODE\VISUAL_STUDIO\FSTS\FLIGHTSIMTERRAINSYSTEM\SRC\SHADERS\GREENPIPE.FRAG
+C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V src\shaders\greenPipe.frag -o ../bin/Debug-windows-x86_64/FlightSimTerrainSystem/shaders/greenPipe.frag.spv
+^C:\CODE\VISUAL_STUDIO\FSTS\FLIGHTSIMTERRAINSYSTEM\SRC\SHADERS\GREENPIPE.VERT
+C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V src\shaders\greenPipe.vert -o ../bin/Debug-windows-x86_64/FlightSimTerrainSystem/shaders/greenPipe.vert.spv

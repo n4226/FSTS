@@ -25,6 +25,9 @@
     <Filter Include="src\scenes">
       <UniqueIdentifier>{DDDBB778-C993-F9C5-329B-D2211E7294B6}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\shaders">
+      <UniqueIdentifier>{26450F9B-92FA-8790-1BEF-816787A37E94}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\FlightSimTerrainSystemApp.h">
@@ -69,6 +72,12 @@
     </CustomBuild>
     <CustomBuild Include="..\Sunrise\src\Sunrise\Sunrise\graphics\shaders\triangle.vert">
       <Filter>Sunrise\src\Sunrise\Sunrise\graphics\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\shaders\greenPipe.frag">
+      <Filter>src\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\shaders\greenPipe.vert">
+      <Filter>src\shaders</Filter>
     </CustomBuild>
   </ItemGroup>
 </Project>
