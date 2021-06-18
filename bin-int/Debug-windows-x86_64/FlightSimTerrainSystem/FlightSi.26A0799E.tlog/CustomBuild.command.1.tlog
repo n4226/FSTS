@@ -16,3 +16,7 @@ C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V ..\Sunrise\src\Sunrise\Sunris
 C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V src\shaders\greenPipe.frag -o ../bin/Debug-windows-x86_64/FlightSimTerrainSystem/shaders/greenPipe.frag.spv
 ^C:\CODE\VISUAL_STUDIO\FSTS\FLIGHTSIMTERRAINSYSTEM\SRC\SHADERS\GREENPIPE.VERT
 C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V src\shaders\greenPipe.vert -o ../bin/Debug-windows-x86_64/FlightSimTerrainSystem/shaders/greenPipe.vert.spv
+^C:\CODE\VISUAL_STUDIO\FSTS\FLIGHTSIMTERRAINSYSTEM\SRC\SHADERS\GREENPIPEDEFERRED.FRAG
+C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V src\shaders\greenPipeDeferred.frag -o ../bin/Debug-windows-x86_64/FlightSimTerrainSystem/shaders/greenPipeDeferred.frag.spv
+^C:\CODE\VISUAL_STUDIO\FSTS\FLIGHTSIMTERRAINSYSTEM\SRC\SHADERS\GREENPIPEDEFERRED.VERT
+C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V src\shaders\greenPipeDeferred.vert -o ../bin/Debug-windows-x86_64/FlightSimTerrainSystem/shaders/greenPipeDeferred.vert.spv

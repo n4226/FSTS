@@ -253,6 +253,26 @@ IF EXIST ..\bin\Dist-windows-x86_64\Sunrise\Sunrise.pdb\ (xcopy /Q /E /Y /I ..\b
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">../bin/Dist-windows-x86_64/FlightSimTerrainSystem/shaders/greenPipe.vert.spv</Outputs>
       <Message>Compiling %(Identity) TO SPIR-V</Message>
     </CustomBuild>
+    <CustomBuild Include="src\shaders\greenPipeDeferred.frag">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V %(Identity) -o ../bin/Debug-windows-x86_64/$(ProjectName)/shaders/%(Filename)%(Extension).spv</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V %(Identity) -o ../bin/Release-windows-x86_64/$(ProjectName)/shaders/%(Filename)%(Extension).spv</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V %(Identity) -o ../bin/Dist-windows-x86_64/$(ProjectName)/shaders/%(Filename)%(Extension).spv</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">../bin/Debug-windows-x86_64/FlightSimTerrainSystem/shaders/greenPipeDeferred.frag.spv</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../bin/Release-windows-x86_64/FlightSimTerrainSystem/shaders/greenPipeDeferred.frag.spv</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">../bin/Dist-windows-x86_64/FlightSimTerrainSystem/shaders/greenPipeDeferred.frag.spv</Outputs>
+      <Message>Compiling %(Identity) TO SPIR-V</Message>
+    </CustomBuild>
+    <CustomBuild Include="src\shaders\greenPipeDeferred.vert">
+      <FileType>Document</FileType>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V %(Identity) -o ../bin/Debug-windows-x86_64/$(ProjectName)/shaders/%(Filename)%(Extension).spv</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V %(Identity) -o ../bin/Release-windows-x86_64/$(ProjectName)/shaders/%(Filename)%(Extension).spv</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V %(Identity) -o ../bin/Dist-windows-x86_64/$(ProjectName)/shaders/%(Filename)%(Extension).spv</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">../bin/Debug-windows-x86_64/FlightSimTerrainSystem/shaders/greenPipeDeferred.vert.spv</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../bin/Release-windows-x86_64/FlightSimTerrainSystem/shaders/greenPipeDeferred.vert.spv</Outputs>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">../bin/Dist-windows-x86_64/FlightSimTerrainSystem/shaders/greenPipeDeferred.vert.spv</Outputs>
+      <Message>Compiling %(Identity) TO SPIR-V</Message>
+    </CustomBuild>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Sunrise\Sunrise.vcxproj">

@@ -79,5 +79,11 @@
     <CustomBuild Include="src\shaders\greenPipe.vert">
       <Filter>src\shaders</Filter>
     </CustomBuild>
+    <CustomBuild Include="src\shaders\greenPipeDeferred.frag">
+      <Filter>src\shaders</Filter>
+    </CustomBuild>
+    <CustomBuild Include="src\shaders\greenPipeDeferred.vert">
+      <Filter>src\shaders</Filter>
+    </CustomBuild>
   </ItemGroup>
 </Project>
