@@ -39,6 +39,7 @@
     <ClInclude Include="src\scenes\TestSceneCoordinator.h">
       <Filter>src\scenes</Filter>
     </ClInclude>
+    <ClInclude Include="src\tests\TestStageSys.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\FlightSimTerrainSystemApp.cpp">
@@ -50,6 +51,7 @@
     <ClCompile Include="src\scenes\TestSceneCoordinator.cpp">
       <Filter>src\scenes</Filter>
     </ClCompile>
+    <ClCompile Include="src\tests\TestStageSys.cpp" />
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\Sunrise\src\Sunrise\Sunrise\graphics\shaders\GBuffer.frag">

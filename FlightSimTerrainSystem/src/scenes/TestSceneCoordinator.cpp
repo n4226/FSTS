@@ -168,7 +168,7 @@ public:
 			https://www.reddit.com/r/vulkan/comments/dm16af/some_questions_regarding_the_rewrite_of_my/
 		*/
 
-		vk::DescriptorImageInfo imageInfo = { sampler.vkItem , window.app.loadedScenes[0]->coordinator->sceneRenderpass->getImage(1,&window)->view,vk::ImageLayout::eShaderReadOnlyOptimal };
+		vk::DescriptorImageInfo imageInfo = { sampler.vkItem , window.app.loadedScenes[0]->coordinator->sceneRenderpassHolders[0]->getImage(1,&window)->view,vk::ImageLayout::eShaderReadOnlyOptimal };
 
 		DescriptorPool::UpdateOperation updateOp = { DescriptorPool::UpdateOperation::Type::write,des[0]->makeBinding(0),0,1, DescriptorPool::UpdateOperation::ReferenceType(imageInfo)};
 
@@ -197,9 +197,9 @@ void TestSceneCoordinator::createPasses()
 
 
 	registerStage(mainStage, {}, {}, {});
-	registerStage(deferredStage, { mainStage }, {}, {});
+	//registerStage(deferredStage, { mainStage }, { {0, vk::ImageLayout::eColorAttachmentOptimal}, {1, vk::ImageLayout::eShaderReadOnlyOptimal} }, {});
 
-	setLastPass(deferredStage);
+	setLastPass(mainStage);
 	
 }
 
@@ -211,7 +211,8 @@ sunrise::gfx::ComposableRenderPass::CreateOptions TestSceneCoordinator::renderpa
 	attach.format = swapChainFormat;
 	attach.loadOp = vk::AttachmentLoadOp::eClear;
 	attach.initialLayout = vk::ImageLayout::eUndefined;
-	attach.transitionalToAtStartLayout = vk::ImageLayout::eColorAttachmentOptimal;
+	//attach.transitionalToAtStartLayout = vk::ImageLayout::eUndefined;//vk::ImageLayout::eColorAttachmentOptimal;
+	attach.transitionalToAtStartLayout = vk::ImageLayout::eColorAttachmentOptimal;//vk::ImageLayout::eColorAttachmentOptimal;
 	attach.finalLayout = vk::ImageLayout::ePresentSrcKHR;
 	attach.clearColor = { 0.8f, 0.2f, 0.0f, 1.0f };
 	attach.name = "MainRenderAttach";
@@ -223,10 +224,10 @@ sunrise::gfx::ComposableRenderPass::CreateOptions TestSceneCoordinator::renderpa
 	attach2.loadOp = vk::AttachmentLoadOp::eClear;
 	attach2.initialLayout = vk::ImageLayout::eUndefined;
 	attach2.transitionalToAtStartLayout = vk::ImageLayout::eColorAttachmentOptimal;
-	attach2.finalLayout = vk::ImageLayout::ePresentSrcKHR;
+	attach2.finalLayout = vk::ImageLayout::eColorAttachmentOptimal;
 	attach2.clearColor = { 0.0f, 0.8f, 0.0f, 1.0f };
 	attach2.usage |= vk::ImageUsageFlagBits::eSampled;
-	attach2.usage |= vk::ImageUsageFlagBits::eStorage;
+	//attach2.usage |= vk::ImageUsageFlagBits::eStorage;
 	attach2.name = "TempRenderTarget";
 
 	gfx::ComposableRenderPass::CreateOptions options = { {attach, attach2 }, 0};
