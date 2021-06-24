@@ -9,6 +9,9 @@ layout(binding = 0) uniform sampler2D mainPassResults;
 layout(location = 0) out vec4 outColor;
 
 void main() {
-	outColor = texture(mainPassResults,vec2(0));
+	//TODO can calculate this in vertex to be more efficient
+	vec2 uvs = gl_FragCoord.xy / vec2(textureSize(mainPassResults,0));
+	outColor = texture(mainPassResults,uvs);
+
 	// vec4(0.2,0.4,0.9,1);
 }
