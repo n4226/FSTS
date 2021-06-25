@@ -7,6 +7,13 @@ project "FlightSimTerrainSystemXplanePlugin"
 	mainProjDir = "FlightSimTerrainSystemXplanePlugin"
 	sunriseLocation = "%{wks.location}/Sunrise"
 
+	-- REMEMBER: TODO: X-plane makes plugins rename their .dll file to a .xpl 
+	-- which I don't think can't be done automatically through premake so i have to do it manually 
+	-- with the following windows terminal commands:
+	--  del E:\dev\devXplaneInstall\X-Plane_11\Resources\plugins\FlightSimTerrainSystemXplanePlugin\64\win.xpl - if 
+	-- it already exists
+	-- and Ren E:\dev\devXplaneInstall\X-Plane_11\Resources\plugins\FlightSimTerrainSystemXplanePlugin\64/win.dll E:\dev\devXplaneInstall\X-Plane_11\Resources\plugins\FlightSimTerrainSystemXplanePlugin\64\win.xpl
+	-- to actually copy the dll to a new file with the correct file extension
 	targetname ("win")
 
 	targetdir ("%{wks.location}/bin/" .. outputdir .. "/%{prj.name}/64")
