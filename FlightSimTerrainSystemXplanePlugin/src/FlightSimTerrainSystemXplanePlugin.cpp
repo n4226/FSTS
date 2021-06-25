@@ -1,5 +1,5 @@
 
-//#include "Sunrise.h"
+
 
 //#include "XPLM/XPLMUtilities.h"
 #include "XPLM/XPLMDisplay.h"
@@ -25,14 +25,17 @@
 
 
 #ifndef XPLM200
-#error This is made to be compiled against the XPLM300 SDK
+#error This is made to be compiled against the XPLM200 SDK
 #endif
 
+#include "Sunrise.h"
+#define SR_NO_AUTO_ENTRY
+#include "Sunrise/Sunrise/core/EntryPoint.h"
 
-//sunrise::Application* sunrise::CreateApplication() {
-//	//throw std::runtime_error("");
-//	return new sunrise::NO_APPLICATION();
-//}	
+sunrise::Application* sunrise::CreateApplication() {
+	//throw std::runtime_error("");
+	return new sunrise::NO_APPLICATION();
+}
 
 
 // An opaque handle to the window we will create
@@ -60,9 +63,9 @@ PLUGIN_API int XPluginStart(
 	char* outSig,
 	char* outDesc)
 {
-	strcpy(outName, "Fs Terrain System X-plane Plugin");
-	strcpy(outSig, "com.mbdev.fsterrainsytem.v1.0.plugin");
-	strcpy(outDesc, "The plugin for sending X-Plane tellemetry to the Fs Terrain System");
+	strcpy(outName, "Fs Terrain System Simlink X-plane Plugin");
+	strcpy(outSig, "SkyStarDevelopment.surnise.simlink.v1.0a1.plugin");
+	strcpy(outDesc, "The plugin for sending X-Plane tellemetry to the Fs Terrain System / sunrise engine");
 
 	//main(0,nullptr);
 
@@ -106,13 +109,13 @@ PLUGIN_API int XPluginStart(
 
 		/* First we must fill in the passed in buffers to describe our
 	 * plugin to the plugin-system. */
-		XPLMMenuID	id;
+	/*	XPLMMenuID	id;
 		int			item;
 
 		item = XPLMAppendMenuItem(XPLMFindPluginsMenu(), "ReloadPlugins", NULL, 1);
 
 		id = XPLMCreateMenu("ReloadPlugins", XPLMFindPluginsMenu(), item, ReloadPluginsMenuHandler, NULL);
-		XPLMAppendMenuItem(id, "Reload", (void*)"Reload plugins", 1);
+		XPLMAppendMenuItem(id, "Reload", (void*)"Reload plugins", 1);*/
 
 
 
@@ -133,6 +136,8 @@ PLUGIN_API int XPluginStart(
 		XPLMScheduleFlightLoop(flightLoopId, -1, true);
 
 	}
+
+	sunrise::runEngine();
 
 	return 1;
 }
@@ -208,21 +213,21 @@ float	MyFlightLoopCallback(
 }
 
 
-#if IBM
-#include <windows.h>
-BOOL APIENTRY DllMain(HANDLE hModule,
-	DWORD ul_reason_for_call,
-	LPVOID lpReserved
-)
-{
-	switch (ul_reason_for_call)
-	{
-	case DLL_PROCESS_ATTACH:
-	case DLL_THREAD_ATTACH:
-	case DLL_THREAD_DETACH:
-	case DLL_PROCESS_DETACH:
-		break;
-	}
-	return TRUE;
-}
-#endif
+//#if IBM
+//#include <windows.h>
+//BOOL APIENTRY DllMain(HANDLE hModule,
+//	DWORD ul_reason_for_call,
+//	LPVOID lpReserved
+//)
+//{
+//	switch (ul_reason_for_call)
+//	{
+//	case DLL_PROCESS_ATTACH:
+//	case DLL_THREAD_ATTACH:
+//	case DLL_THREAD_DETACH:
+//	case DLL_PROCESS_DETACH:
+//		break;
+//	}
+//	return TRUE;
+//}
+//#endif

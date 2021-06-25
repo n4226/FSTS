@@ -8,7 +8,8 @@ project "FlightSimTerrainSystem"
 	targetdir ("%{wks.location}/bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("%{wks.location}/bin-int/" .. outputdir .. "/%{prj.name}")
 
-
+	mainProjDir = "FlightSimTerrainSystem"
+	sunriseLocation = "%{wks.location}/Sunrise"
 
 	files {
 		"src/**.h",

@@ -10,14 +10,14 @@
 class DataRefManager
 {
 public:
-	DataRefManager();
-	~DataRefManager();
 
 	static DataRefManager* shared();
 
 	void runFrame();
 
 private:
+	DataRefManager();
+	~DataRefManager();
 
 	void readAll();
 

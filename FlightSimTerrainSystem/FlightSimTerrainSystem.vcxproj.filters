@@ -28,6 +28,9 @@
     <Filter Include="src\shaders">
       <UniqueIdentifier>{26450F9B-92FA-8790-1BEF-816787A37E94}</UniqueIdentifier>
     </Filter>
+    <Filter Include="src\tests">
+      <UniqueIdentifier>{CF8328B6-3BEE-DC2C-842C-8ED2F0D5BA81}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\FlightSimTerrainSystemApp.h">
@@ -39,7 +42,9 @@
     <ClInclude Include="src\scenes\TestSceneCoordinator.h">
       <Filter>src\scenes</Filter>
     </ClInclude>
-    <ClInclude Include="src\tests\TestStageSys.h" />
+    <ClInclude Include="src\tests\TestStageSys.h">
+      <Filter>src\tests</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\FlightSimTerrainSystemApp.cpp">
@@ -51,7 +56,9 @@
     <ClCompile Include="src\scenes\TestSceneCoordinator.cpp">
       <Filter>src\scenes</Filter>
     </ClCompile>
-    <ClCompile Include="src\tests\TestStageSys.cpp" />
+    <ClCompile Include="src\tests\TestStageSys.cpp">
+      <Filter>src\tests</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="..\Sunrise\src\Sunrise\Sunrise\graphics\shaders\GBuffer.frag">

@@ -4,9 +4,12 @@ project "FlightSimTerrainSystemXplanePlugin"
 	kind "SharedLib"
 	language "C++"
 
+	mainProjDir = "FlightSimTerrainSystemXplanePlugin"
+	sunriseLocation = "%{wks.location}/Sunrise"
+
 	targetname ("win")
 
-	targetdir ("%{wks.location}/bin/" .. outputdir .. "/%{prj.name}")
+	targetdir ("%{wks.location}/bin/" .. outputdir .. "/%{prj.name}/64")
 	objdir ("%{wks.location}/bin-int/" .. outputdir .. "/%{prj.name}")
 
 	defines {
@@ -26,9 +29,28 @@ project "FlightSimTerrainSystemXplanePlugin"
 	}
 
 	includedirs {
-		"%{wks.location}/Sunrise/src",
-		"%{wks.location}/Sunrise/vendor",
-		"%{wks.location}/Sunrise/vendor/spdlog/include",
+		"C:/VulkanSDK/1.2.154.1/Include",
+
+		"%{sunriseLocation}/src",
+		"%{sunriseLocation}/vendor",
+		"%{sunriseLocation}/vendor/spdlog/include",
+
+		"%{wks.location}/Sunrise/vendor/glm-master",
+		"%{wks.location}/Sunrise/vendor/marl-main/marl-main/include",
+		"%{wks.location}/Sunrise/vendor/stb",
+		"%{wks.location}/Sunrise/vendor/mango-master/mango-master/include",
+		"%{wks.location}/Sunrise/vendor/libigl/include",
+		"%{wks.location}/Sunrise/vendor/HTTPRequest/include",
+		"%{wks.location}/Sunrise/vendor/httplib/include",
+		"%{wks.location}/Sunrise/vendor/rapidjson/include",
+		"%{wks.location}/Sunrise/vendor/libguarded/src",
+		"%{wks.location}/Sunrise/vendor/nlohmann/include",
+
+		"%{wks.location}/Sunrise/vendor/bin/glfw/windows/glfw-3.3.2.bin.WIN64/glfw-3.3.2.bin.WIN64/lib-vc2019",
+		
+		"%{wks.location}/Sunrise/vendor/date/include",
+		"%{wks.location}/Sunrise/vendor/entt/single_include",
+
 		"C:/dev/x-plane sdk/XPSDK303/SDK/CHeaders",
 	}	
 
@@ -37,16 +59,27 @@ project "FlightSimTerrainSystemXplanePlugin"
 	}
 
 	links {
-		--"Sunrise",
+		"Sunrise",
 		"XPLM_64",
 		"XPWidgets_64",
 		"OpenGL32",
 	}
 
-	
+	-- xcopy E:/dev/devXplaneInstall/X-Plane_11/Resources/plugins/FlightSimTerrainSystemXplanePlugin/64/win.dll E:/dev/devXplaneInstall/X-Plane_11/Resources/plugins/FlightSimTerrainSystemXplanePlugin/64/win.xpl
 	postbuildcommands {
-		--("{COPY} ../bin/" .. outputdir .. "/Sunrise/Sunrise.dLL ../bin/" .. outputdir .. "/%{prj.name}/"),
+		-- NEEDS aftermath for sunrise even though it does not need it for this plugin
+		("{COPY} %{sunriseLocation}/vendor/bin//NVIDIA_Nsight_Aftermath_SDK_2021.1.0.21090/lib/x64/GFSDK_Aftermath_Lib.x64.dll %{wks.location}/bin/" .. outputdir .. "/%{prj.name}/64"),
+		
+		-- copy sunrise dll into build dur
+		("{COPY} ../bin/" .. outputdir .. "/Sunrise/Sunrise.dLL ../bin/" .. outputdir .. "/%{prj.name}/64"),
 
+		-- copy built plugin into xplane folder on e drive - E:/dev/devXplaneInstall/X-Plane_11/Resources/plugins/
+		("{COPY} ../bin/" .. outputdir .. "/%{prj.name}/ E:/dev/devXplaneInstall/X-Plane_11/Resources/plugins/%{prj.name}/"),
+		
+
+
+		-- not working dont know why
+		--("Ren E:/dev/devXplaneInstall/X-Plane_11/Resources/plugins/%{prj.name}/64/win.dll E:/dev/devXplaneInstall/X-Plane_11/Resources/plugins/%{prj.name}/64/win.xpl"),
 	}
 
 

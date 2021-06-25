@@ -55,21 +55,21 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <OutDir>..\bin\Debug-windows-x86_64\FlightSimTerrainSystemXplanePlugin\</OutDir>
+    <OutDir>..\bin\Debug-windows-x86_64\FlightSimTerrainSystemXplanePlugin\64\</OutDir>
     <IntDir>..\bin-int\Debug-windows-x86_64\FlightSimTerrainSystemXplanePlugin\</IntDir>
     <TargetName>win</TargetName>
     <TargetExt>.dll</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>..\bin\Release-windows-x86_64\FlightSimTerrainSystemXplanePlugin\</OutDir>
+    <OutDir>..\bin\Release-windows-x86_64\FlightSimTerrainSystemXplanePlugin\64\</OutDir>
     <IntDir>..\bin-int\Release-windows-x86_64\FlightSimTerrainSystemXplanePlugin\</IntDir>
     <TargetName>win</TargetName>
     <TargetExt>.dll</TargetExt>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <OutDir>..\bin\Dist-windows-x86_64\FlightSimTerrainSystemXplanePlugin\</OutDir>
+    <OutDir>..\bin\Dist-windows-x86_64\FlightSimTerrainSystemXplanePlugin\64\</OutDir>
     <IntDir>..\bin-int\Dist-windows-x86_64\FlightSimTerrainSystemXplanePlugin\</IntDir>
     <TargetName>win</TargetName>
     <TargetExt>.dll</TargetExt>
@@ -79,7 +79,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>XPLM200;XPLM210;XPLM300;XPLM301;_DEBUG			;_WINDOWS		;_USRDLL		;SIMDATA_EXPORTS;SR_PLATFORM_WINDOWS;IBM;SR_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\Sunrise\src;..\Sunrise\vendor;..\Sunrise\vendor\spdlog\include;C:\dev\x-plane sdk\XPSDK303\SDK\CHeaders;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.2.154.1\Include;..\Sunrise\src;..\Sunrise\vendor;..\Sunrise\vendor\spdlog\include;..\Sunrise\vendor\glm-master;..\Sunrise\vendor\marl-main\marl-main\include;..\Sunrise\vendor\stb;..\Sunrise\vendor\mango-master\mango-master\include;..\Sunrise\vendor\libigl\include;..\Sunrise\vendor\HTTPRequest\include;..\Sunrise\vendor\httplib\include;..\Sunrise\vendor\rapidjson\include;..\Sunrise\vendor\libguarded\src;..\Sunrise\vendor\nlohmann\include;..\Sunrise\vendor\bin\glfw\windows\glfw-3.3.2.bin.WIN64\glfw-3.3.2.bin.WIN64\lib-vc2019;..\Sunrise\vendor\date\include;..\Sunrise\vendor\entt\single_include;C:\dev\x-plane sdk\XPSDK303\SDK\CHeaders;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <MinimalRebuild>false</MinimalRebuild>
@@ -92,15 +92,20 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalDependencies>XPLM_64.lib;XPWidgets_64.lib;OpenGL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:\dev\x-plane sdk\XPSDK303\SDK\Libraries\Win;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <ImportLibrary>..\bin\Debug-windows-x86_64\FlightSimTerrainSystemXplanePlugin\win.lib</ImportLibrary>
+      <ImportLibrary>..\bin\Debug-windows-x86_64\FlightSimTerrainSystemXplanePlugin\64\win.lib</ImportLibrary>
     </Link>
+    <PostBuildEvent>
+      <Command>IF EXIST $(SolutionDir)\Sunrise\vendor\bin\NVIDIA_Nsight_Aftermath_SDK_2021.1.0.21090\lib\x64\GFSDK_Aftermath_Lib.x64.dll\ (xcopy /Q /E /Y /I $(SolutionDir)\Sunrise\vendor\bin\NVIDIA_Nsight_Aftermath_SDK_2021.1.0.21090\lib\x64\GFSDK_Aftermath_Lib.x64.dll $(SolutionDir)\bin\Debug-windows-x86_64\$(ProjectName)\64 &gt; nul) ELSE (xcopy /Q /Y /I $(SolutionDir)\Sunrise\vendor\bin\NVIDIA_Nsight_Aftermath_SDK_2021.1.0.21090\lib\x64\GFSDK_Aftermath_Lib.x64.dll $(SolutionDir)\bin\Debug-windows-x86_64\$(ProjectName)\64 &gt; nul)
+IF EXIST ..\bin\Debug-windows-x86_64\Sunrise\Sunrise.dLL\ (xcopy /Q /E /Y /I ..\bin\Debug-windows-x86_64\Sunrise\Sunrise.dLL ..\bin\Debug-windows-x86_64\$(ProjectName)\64 &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows-x86_64\Sunrise\Sunrise.dLL ..\bin\Debug-windows-x86_64\$(ProjectName)\64 &gt; nul)
+IF EXIST ..\bin\Debug-windows-x86_64\$(ProjectName)\\ (xcopy /Q /E /Y /I ..\bin\Debug-windows-x86_64\$(ProjectName)\ E:\dev\devXplaneInstall\X-Plane_11\Resources\plugins\$(ProjectName)\ &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows-x86_64\$(ProjectName)\ E:\dev\devXplaneInstall\X-Plane_11\Resources\plugins\$(ProjectName)\ &gt; nul)</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>XPLM200;XPLM210;XPLM300;XPLM301;_DEBUG			;_WINDOWS		;_USRDLL		;SIMDATA_EXPORTS;SR_PLATFORM_WINDOWS;IBM;SR_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\Sunrise\src;..\Sunrise\vendor;..\Sunrise\vendor\spdlog\include;C:\dev\x-plane sdk\XPSDK303\SDK\CHeaders;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.2.154.1\Include;..\Sunrise\src;..\Sunrise\vendor;..\Sunrise\vendor\spdlog\include;..\Sunrise\vendor\glm-master;..\Sunrise\vendor\marl-main\marl-main\include;..\Sunrise\vendor\stb;..\Sunrise\vendor\mango-master\mango-master\include;..\Sunrise\vendor\libigl\include;..\Sunrise\vendor\HTTPRequest\include;..\Sunrise\vendor\httplib\include;..\Sunrise\vendor\rapidjson\include;..\Sunrise\vendor\libguarded\src;..\Sunrise\vendor\nlohmann\include;..\Sunrise\vendor\bin\glfw\windows\glfw-3.3.2.bin.WIN64\glfw-3.3.2.bin.WIN64\lib-vc2019;..\Sunrise\vendor\date\include;..\Sunrise\vendor\entt\single_include;C:\dev\x-plane sdk\XPSDK303\SDK\CHeaders;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -116,15 +121,20 @@
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalDependencies>XPLM_64.lib;XPWidgets_64.lib;OpenGL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:\dev\x-plane sdk\XPSDK303\SDK\Libraries\Win;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <ImportLibrary>..\bin\Release-windows-x86_64\FlightSimTerrainSystemXplanePlugin\win.lib</ImportLibrary>
+      <ImportLibrary>..\bin\Release-windows-x86_64\FlightSimTerrainSystemXplanePlugin\64\win.lib</ImportLibrary>
     </Link>
+    <PostBuildEvent>
+      <Command>IF EXIST $(SolutionDir)\Sunrise\vendor\bin\NVIDIA_Nsight_Aftermath_SDK_2021.1.0.21090\lib\x64\GFSDK_Aftermath_Lib.x64.dll\ (xcopy /Q /E /Y /I $(SolutionDir)\Sunrise\vendor\bin\NVIDIA_Nsight_Aftermath_SDK_2021.1.0.21090\lib\x64\GFSDK_Aftermath_Lib.x64.dll $(SolutionDir)\bin\Release-windows-x86_64\$(ProjectName)\64 &gt; nul) ELSE (xcopy /Q /Y /I $(SolutionDir)\Sunrise\vendor\bin\NVIDIA_Nsight_Aftermath_SDK_2021.1.0.21090\lib\x64\GFSDK_Aftermath_Lib.x64.dll $(SolutionDir)\bin\Release-windows-x86_64\$(ProjectName)\64 &gt; nul)
+IF EXIST ..\bin\Release-windows-x86_64\Sunrise\Sunrise.dLL\ (xcopy /Q /E /Y /I ..\bin\Release-windows-x86_64\Sunrise\Sunrise.dLL ..\bin\Release-windows-x86_64\$(ProjectName)\64 &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows-x86_64\Sunrise\Sunrise.dLL ..\bin\Release-windows-x86_64\$(ProjectName)\64 &gt; nul)
+IF EXIST ..\bin\Release-windows-x86_64\$(ProjectName)\\ (xcopy /Q /E /Y /I ..\bin\Release-windows-x86_64\$(ProjectName)\ E:\dev\devXplaneInstall\X-Plane_11\Resources\plugins\$(ProjectName)\ &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows-x86_64\$(ProjectName)\ E:\dev\devXplaneInstall\X-Plane_11\Resources\plugins\$(ProjectName)\ &gt; nul)</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>XPLM200;XPLM210;XPLM300;XPLM301;_DEBUG			;_WINDOWS		;_USRDLL		;SIMDATA_EXPORTS;SR_PLATFORM_WINDOWS;IBM;SR_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>..\Sunrise\src;..\Sunrise\vendor;..\Sunrise\vendor\spdlog\include;C:\dev\x-plane sdk\XPSDK303\SDK\CHeaders;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.2.154.1\Include;..\Sunrise\src;..\Sunrise\vendor;..\Sunrise\vendor\spdlog\include;..\Sunrise\vendor\glm-master;..\Sunrise\vendor\marl-main\marl-main\include;..\Sunrise\vendor\stb;..\Sunrise\vendor\mango-master\mango-master\include;..\Sunrise\vendor\libigl\include;..\Sunrise\vendor\HTTPRequest\include;..\Sunrise\vendor\httplib\include;..\Sunrise\vendor\rapidjson\include;..\Sunrise\vendor\libguarded\src;..\Sunrise\vendor\nlohmann\include;..\Sunrise\vendor\bin\glfw\windows\glfw-3.3.2.bin.WIN64\glfw-3.3.2.bin.WIN64\lib-vc2019;..\Sunrise\vendor\date\include;..\Sunrise\vendor\entt\single_include;C:\dev\x-plane sdk\XPSDK303\SDK\CHeaders;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -140,8 +150,13 @@
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalDependencies>XPLM_64.lib;XPWidgets_64.lib;OpenGL32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:\dev\x-plane sdk\XPSDK303\SDK\Libraries\Win;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <ImportLibrary>..\bin\Dist-windows-x86_64\FlightSimTerrainSystemXplanePlugin\win.lib</ImportLibrary>
+      <ImportLibrary>..\bin\Dist-windows-x86_64\FlightSimTerrainSystemXplanePlugin\64\win.lib</ImportLibrary>
     </Link>
+    <PostBuildEvent>
+      <Command>IF EXIST $(SolutionDir)\Sunrise\vendor\bin\NVIDIA_Nsight_Aftermath_SDK_2021.1.0.21090\lib\x64\GFSDK_Aftermath_Lib.x64.dll\ (xcopy /Q /E /Y /I $(SolutionDir)\Sunrise\vendor\bin\NVIDIA_Nsight_Aftermath_SDK_2021.1.0.21090\lib\x64\GFSDK_Aftermath_Lib.x64.dll $(SolutionDir)\bin\Dist-windows-x86_64\$(ProjectName)\64 &gt; nul) ELSE (xcopy /Q /Y /I $(SolutionDir)\Sunrise\vendor\bin\NVIDIA_Nsight_Aftermath_SDK_2021.1.0.21090\lib\x64\GFSDK_Aftermath_Lib.x64.dll $(SolutionDir)\bin\Dist-windows-x86_64\$(ProjectName)\64 &gt; nul)
+IF EXIST ..\bin\Dist-windows-x86_64\Sunrise\Sunrise.dLL\ (xcopy /Q /E /Y /I ..\bin\Dist-windows-x86_64\Sunrise\Sunrise.dLL ..\bin\Dist-windows-x86_64\$(ProjectName)\64 &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Dist-windows-x86_64\Sunrise\Sunrise.dLL ..\bin\Dist-windows-x86_64\$(ProjectName)\64 &gt; nul)
+IF EXIST ..\bin\Dist-windows-x86_64\$(ProjectName)\\ (xcopy /Q /E /Y /I ..\bin\Dist-windows-x86_64\$(ProjectName)\ E:\dev\devXplaneInstall\X-Plane_11\Resources\plugins\$(ProjectName)\ &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Dist-windows-x86_64\$(ProjectName)\ E:\dev\devXplaneInstall\X-Plane_11\Resources\plugins\$(ProjectName)\ &gt; nul)</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\DataRefManager.h" />
@@ -149,6 +164,11 @@
   <ItemGroup>
     <ClCompile Include="src\DataRefManager.cpp" />
     <ClCompile Include="src\FlightSimTerrainSystemXplanePlugin.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Sunrise\Sunrise.vcxproj">
+      <Project>{0EBAD311-7A99-52AD-83B1-DD83EF0FB90E}</Project>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
