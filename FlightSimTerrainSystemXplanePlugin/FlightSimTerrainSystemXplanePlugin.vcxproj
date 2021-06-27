@@ -78,8 +78,8 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>XPLM200;XPLM210;XPLM300;XPLM301;_DEBUG			;_WINDOWS		;_USRDLL		;SIMDATA_EXPORTS;SR_PLATFORM_WINDOWS;IBM;SR_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\VulkanSDK\1.2.154.1\Include;..\Sunrise\src;..\Sunrise\vendor;..\Sunrise\vendor\spdlog\include;..\Sunrise\vendor\glm-master;..\Sunrise\vendor\marl-main\marl-main\include;..\Sunrise\vendor\stb;..\Sunrise\vendor\mango-master\mango-master\include;..\Sunrise\vendor\libigl\include;..\Sunrise\vendor\HTTPRequest\include;..\Sunrise\vendor\httplib\include;..\Sunrise\vendor\rapidjson\include;..\Sunrise\vendor\libguarded\src;..\Sunrise\vendor\nlohmann\include;..\Sunrise\vendor\bin\glfw\windows\glfw-3.3.2.bin.WIN64\glfw-3.3.2.bin.WIN64\lib-vc2019;..\Sunrise\vendor\date\include;..\Sunrise\vendor\entt\single_include;C:\dev\x-plane sdk\XPSDK303\SDK\CHeaders;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>XPLM200;XPLM210;XPLM300;XPLM301;_DEBUG			;_WINDOWS		;_USRDLL		;SIMDATA_EXPORTS;SR_NO_NETWORKING;SR_PLATFORM_WINDOWS;IBM;SR_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.2.154.1\Include;..\Sunrise\src;..\Sunrise\vendor;..\Sunrise\vendor\spdlog\include;..\Sunrise\vendor\glm-master;..\Sunrise\vendor\marl-main\marl-main\include;..\Sunrise\vendor\stb;..\Sunrise\vendor\mango-master\mango-master\include;..\Sunrise\vendor\libigl\include;..\Sunrise\vendor\HTTPRequest\include;..\Sunrise\vendor\httplib\include;..\Sunrise\vendor\rapidjson\include;..\Sunrise\vendor\libguarded\src;..\Sunrise\vendor\nlohmann\include;..\Sunrise\vendor\bin\glfw\windows\glfw-3.3.2.bin.WIN64\glfw-3.3.2.bin.WIN64\lib-vc2019;..\Sunrise\vendor\date\include;..\Sunrise\vendor\entt\single_include;..\Sunrise\vendor\asio-1.18.1\include;C:\dev\x-plane sdk\XPSDK303\SDK\CHeaders;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <MinimalRebuild>false</MinimalRebuild>
@@ -104,8 +104,8 @@ IF EXIST ..\bin\Debug-windows-x86_64\$(ProjectName)\\ (xcopy /Q /E /Y /I ..\bin\
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>XPLM200;XPLM210;XPLM300;XPLM301;_DEBUG			;_WINDOWS		;_USRDLL		;SIMDATA_EXPORTS;SR_PLATFORM_WINDOWS;IBM;SR_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\VulkanSDK\1.2.154.1\Include;..\Sunrise\src;..\Sunrise\vendor;..\Sunrise\vendor\spdlog\include;..\Sunrise\vendor\glm-master;..\Sunrise\vendor\marl-main\marl-main\include;..\Sunrise\vendor\stb;..\Sunrise\vendor\mango-master\mango-master\include;..\Sunrise\vendor\libigl\include;..\Sunrise\vendor\HTTPRequest\include;..\Sunrise\vendor\httplib\include;..\Sunrise\vendor\rapidjson\include;..\Sunrise\vendor\libguarded\src;..\Sunrise\vendor\nlohmann\include;..\Sunrise\vendor\bin\glfw\windows\glfw-3.3.2.bin.WIN64\glfw-3.3.2.bin.WIN64\lib-vc2019;..\Sunrise\vendor\date\include;..\Sunrise\vendor\entt\single_include;C:\dev\x-plane sdk\XPSDK303\SDK\CHeaders;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>XPLM200;XPLM210;XPLM300;XPLM301;_DEBUG			;_WINDOWS		;_USRDLL		;SIMDATA_EXPORTS;SR_NO_NETWORKING;SR_PLATFORM_WINDOWS;IBM;SR_RELEASE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.2.154.1\Include;..\Sunrise\src;..\Sunrise\vendor;..\Sunrise\vendor\spdlog\include;..\Sunrise\vendor\glm-master;..\Sunrise\vendor\marl-main\marl-main\include;..\Sunrise\vendor\stb;..\Sunrise\vendor\mango-master\mango-master\include;..\Sunrise\vendor\libigl\include;..\Sunrise\vendor\HTTPRequest\include;..\Sunrise\vendor\httplib\include;..\Sunrise\vendor\rapidjson\include;..\Sunrise\vendor\libguarded\src;..\Sunrise\vendor\nlohmann\include;..\Sunrise\vendor\bin\glfw\windows\glfw-3.3.2.bin.WIN64\glfw-3.3.2.bin.WIN64\lib-vc2019;..\Sunrise\vendor\date\include;..\Sunrise\vendor\entt\single_include;..\Sunrise\vendor\asio-1.18.1\include;C:\dev\x-plane sdk\XPSDK303\SDK\CHeaders;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -133,8 +133,8 @@ IF EXIST ..\bin\Release-windows-x86_64\$(ProjectName)\\ (xcopy /Q /E /Y /I ..\bi
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>XPLM200;XPLM210;XPLM300;XPLM301;_DEBUG			;_WINDOWS		;_USRDLL		;SIMDATA_EXPORTS;SR_PLATFORM_WINDOWS;IBM;SR_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>C:\VulkanSDK\1.2.154.1\Include;..\Sunrise\src;..\Sunrise\vendor;..\Sunrise\vendor\spdlog\include;..\Sunrise\vendor\glm-master;..\Sunrise\vendor\marl-main\marl-main\include;..\Sunrise\vendor\stb;..\Sunrise\vendor\mango-master\mango-master\include;..\Sunrise\vendor\libigl\include;..\Sunrise\vendor\HTTPRequest\include;..\Sunrise\vendor\httplib\include;..\Sunrise\vendor\rapidjson\include;..\Sunrise\vendor\libguarded\src;..\Sunrise\vendor\nlohmann\include;..\Sunrise\vendor\bin\glfw\windows\glfw-3.3.2.bin.WIN64\glfw-3.3.2.bin.WIN64\lib-vc2019;..\Sunrise\vendor\date\include;..\Sunrise\vendor\entt\single_include;C:\dev\x-plane sdk\XPSDK303\SDK\CHeaders;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>XPLM200;XPLM210;XPLM300;XPLM301;_DEBUG			;_WINDOWS		;_USRDLL		;SIMDATA_EXPORTS;SR_NO_NETWORKING;SR_PLATFORM_WINDOWS;IBM;SR_DIST;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>C:\VulkanSDK\1.2.154.1\Include;..\Sunrise\src;..\Sunrise\vendor;..\Sunrise\vendor\spdlog\include;..\Sunrise\vendor\glm-master;..\Sunrise\vendor\marl-main\marl-main\include;..\Sunrise\vendor\stb;..\Sunrise\vendor\mango-master\mango-master\include;..\Sunrise\vendor\libigl\include;..\Sunrise\vendor\HTTPRequest\include;..\Sunrise\vendor\httplib\include;..\Sunrise\vendor\rapidjson\include;..\Sunrise\vendor\libguarded\src;..\Sunrise\vendor\nlohmann\include;..\Sunrise\vendor\bin\glfw\windows\glfw-3.3.2.bin.WIN64\glfw-3.3.2.bin.WIN64\lib-vc2019;..\Sunrise\vendor\date\include;..\Sunrise\vendor\entt\single_include;..\Sunrise\vendor\asio-1.18.1\include;C:\dev\x-plane sdk\XPSDK303\SDK\CHeaders;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <Optimization>Full</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
@@ -160,10 +160,14 @@ IF EXIST ..\bin\Dist-windows-x86_64\$(ProjectName)\\ (xcopy /Q /E /Y /I ..\bin\D
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\DataRefManager.h" />
+    <ClInclude Include="src\SimlinkApp.h" />
+    <ClInclude Include="src\SimlinkNetworkManager.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\DataRefManager.cpp" />
     <ClCompile Include="src\FlightSimTerrainSystemXplanePlugin.cpp" />
+    <ClCompile Include="src\SimlinkApp.cpp" />
+    <ClCompile Include="src\SimlinkNetworkManager.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Sunrise\Sunrise.vcxproj">

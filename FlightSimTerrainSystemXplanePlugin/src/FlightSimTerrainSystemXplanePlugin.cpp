@@ -1,4 +1,5 @@
-
+// sunrise has to be inported first because asio uses winsock.h and so do other imports but asio has to befirst to work
+#include "Sunrise.h" 
 
 
 //#include "XPLM/XPLMUtilities.h"
@@ -28,13 +29,23 @@
 #error This is made to be compiled against the XPLM200 SDK
 #endif
 
-#include "Sunrise.h"
+
+// this is defined in project for every file anyway
+#define SR_NO_NETWORKING
+
+
 #define SR_NO_AUTO_ENTRY
 #include "Sunrise/Sunrise/core/EntryPoint.h"
 
+#include "SimlinkApp.h"
+#include "SimlinkNetworkManager.h"
+
+sunrise::Application* app;
+
 sunrise::Application* sunrise::CreateApplication() {
 	//throw std::runtime_error("");
-	return new sunrise::NO_APPLICATION();
+	app = new SimlinkApp();
+	return app;
 }
 
 
@@ -121,9 +132,13 @@ PLUGIN_API int XPluginStart(
 
 	}
 
+	sunrise::runEngine();
 	DataRefManager::shared();
+	SimlinkNetworkManager::makeShared(*app);
 
+	
 	{
+		// call a calback every frame after the flight model
 		XPLMCreateFlightLoop_t params;
 
 		params.structSize = sizeof(params);
@@ -137,7 +152,6 @@ PLUGIN_API int XPluginStart(
 
 	}
 
-	sunrise::runEngine();
 
 	return 1;
 }
@@ -185,7 +199,7 @@ void	draw_hello_world(XPLMWindowID in_window_id, void* in_refcon)
 
 	float col_white[] = { 1.0, 1.0, 1.0 }; // red, green, blue
 
-	XPLMDrawString(col_white, l + 10, t - 20, "Hello world!", NULL, xplmFont_Proportional);
+	XPLMDrawString(col_white, l + 10, t - 20, "Simlink Active", NULL, xplmFont_Proportional);
 }
 
 

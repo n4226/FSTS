@@ -102,11 +102,11 @@ public:
 	}
 
 	// Inherited via GPURenderStage
-	virtual vk::CommandBuffer* encode(SceneRenderCoordinator* coordinator, uint32_t pass, sunrise::Window& window) override
+	virtual vk::CommandBuffer* encode(RunOptions options) override
 	{
-		auto buff = selectAndSetupCommandBuff(coordinator, pass, window);
+		auto buff = selectAndSetupCommandBuff(options);
 
-		setPipeline(window, *buff, testPipe);
+		setPipeline(options.window, *buff, testPipe);
 
 		
 		meshBuff->bindVerticiesIntoCommandBuffer(*buff,0);
@@ -186,20 +186,20 @@ public:
 	}
 
 	// Inherited via GPURenderStage
-	virtual vk::CommandBuffer* encode(SceneRenderCoordinator* coordinator, uint32_t pass, sunrise::Window& window) override
+	virtual vk::CommandBuffer* encode(RunOptions options) override
 	{
-		auto buff = selectAndSetupCommandBuff(coordinator, pass, window);
+		auto buff = selectAndSetupCommandBuff(options);
 
-		setPipeline(window, *buff, testDeferredPipe);
+		setPipeline(options.window, *buff, testDeferredPipe);
 
 		meshBuff->bindVerticiesIntoCommandBuffer(*buff, 0);
 		meshBuff->bindIndiciesIntoCommandBuffer(*buff);
 
-		auto pipeline = getConcretePipeline(window, testDeferredPipe);
+		auto pipeline = getConcretePipeline(options.window, testDeferredPipe);
 
 		
 
-		buff->bindDescriptorSets(vk::PipelineBindPoint::eGraphics, pipeline->pipelineLayout, 0, { sets[&window][window.currentSurfaceIndex]->vkItem }, {});
+		buff->bindDescriptorSets(vk::PipelineBindPoint::eGraphics, pipeline->pipelineLayout, 0, { sets[&options.window][options.window.currentSurfaceIndex]->vkItem }, {});
 
 		buff->drawIndexed(square->indicies.size(), 1, 0, 0, 0);
 
@@ -224,7 +224,7 @@ void TestSceneCoordinator::createPasses()
 	registerStage(mainStage, {}, {}, {});
 	registerStage(deferredStage, { mainStage }, { {0, vk::ImageLayout::eColorAttachmentOptimal, vk::AttachmentLoadOp::eClear}, {1, vk::ImageLayout::eShaderReadOnlyOptimal} }, {});
 
-	setLastPass(deferredStage);
+	setLastStage(deferredStage);
 	
 }
 

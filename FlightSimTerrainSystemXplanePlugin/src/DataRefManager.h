@@ -1,5 +1,7 @@
 #pragma once
 
+#include "Sunrise.h"
+
 #include "XPLM/XPLMDisplay.h"
 #include "XPLM/XPLMGraphics.h"
 #include "XPLM/XPLMPlugin.h"
@@ -27,6 +29,9 @@ private:
 	XPLMDataRef lond;
 	XPLMDataRef altd;
 
+	XPLMDataRef thetaf;
+	XPLMDataRef phif;
+	XPLMDataRef psif;
 
 };
 

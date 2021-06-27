@@ -4,8 +4,8 @@
 using namespace sunrise;
 
 FlightSimTerrainSystemApp::FlightSimTerrainSystemApp()
-	//: Application(new WorldScene(this))
-	: Application(new TestScene(this))
+	: Application(new WorldScene(this))
+	//: Application(new TestScene(this))
 {
 
 }

@@ -16,5 +16,8 @@ public:
 
 	void unload() override;
 
+private:
+	sunrise::NetworkManager* networkManager;
+
 };
 

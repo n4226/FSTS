@@ -42,6 +42,8 @@ project "FlightSimTerrainSystem"
 		"%{wks.location}/Sunrise/vendor/libguarded/src",
 		"%{wks.location}/Sunrise/vendor/nlohmann/include",
 
+		"%{sunriseLocation}/vendor/asio-1.18.1/include",
+
 		"%{wks.location}/Sunrise/vendor/bin/glfw/windows/glfw-3.3.2.bin.WIN64/glfw-3.3.2.bin.WIN64/lib-vc2019",
 		
 		"%{wks.location}/Sunrise/vendor/date/include",

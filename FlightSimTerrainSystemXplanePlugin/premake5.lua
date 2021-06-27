@@ -28,6 +28,7 @@ project "FlightSimTerrainSystemXplanePlugin"
 		"_WINDOWS		",
 		"_USRDLL		",
 		"SIMDATA_EXPORTS",
+		"SR_NO_NETWORKING",
 	}
 
 	files {
@@ -41,7 +42,7 @@ project "FlightSimTerrainSystemXplanePlugin"
 		"%{sunriseLocation}/src",
 		"%{sunriseLocation}/vendor",
 		"%{sunriseLocation}/vendor/spdlog/include",
-
+		
 		"%{wks.location}/Sunrise/vendor/glm-master",
 		"%{wks.location}/Sunrise/vendor/marl-main/marl-main/include",
 		"%{wks.location}/Sunrise/vendor/stb",
@@ -52,13 +53,16 @@ project "FlightSimTerrainSystemXplanePlugin"
 		"%{wks.location}/Sunrise/vendor/rapidjson/include",
 		"%{wks.location}/Sunrise/vendor/libguarded/src",
 		"%{wks.location}/Sunrise/vendor/nlohmann/include",
-
+		
 		"%{wks.location}/Sunrise/vendor/bin/glfw/windows/glfw-3.3.2.bin.WIN64/glfw-3.3.2.bin.WIN64/lib-vc2019",
 		
 		"%{wks.location}/Sunrise/vendor/date/include",
 		"%{wks.location}/Sunrise/vendor/entt/single_include",
-
+		
+		"%{sunriseLocation}/vendor/asio-1.18.1/include",
+		
 		"C:/dev/x-plane sdk/XPSDK303/SDK/CHeaders",
+
 	}	
 
 	libdirs {
