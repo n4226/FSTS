@@ -101,7 +101,7 @@ project "FlightSimTerrainSystem"
 
 	   -- One or more commands to run (required)
 	   buildcommands {
-		  ("C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V %{file.relpath} -o ../bin/" .. outputdir .. "/%{prj.name}/shaders/%{file.name}.spv")
+		  ("C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V %{file.relpath} -o ../bin/" .. outputdir .. "/%{prj.name}/shaders/%{file.name}.spv -g")
 	   }
 
 	   -- One or more outputs resulting from the build (required)

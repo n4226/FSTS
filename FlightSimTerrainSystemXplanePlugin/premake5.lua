@@ -4,7 +4,8 @@ project "FlightSimTerrainSystemXplanePlugin"
 	kind "SharedLib"
 	language "C++"
 
-	mainProjDir = "FlightSimTerrainSystemXplanePlugin"
+	-- comment back in to have files coppied rto plugin
+	--mainProjDir = "FlightSimTerrainSystemXplanePlugin"
 	sunriseLocation = "%{wks.location}/Sunrise"
 
 	-- REMEMBER: TODO: X-plane makes plugins rename their .dll file to a .xpl 

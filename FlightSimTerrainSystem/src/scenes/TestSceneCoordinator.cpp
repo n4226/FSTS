@@ -150,7 +150,7 @@ public:
 		sampler = new Sampler(app.renderers[0]->device, {});
 
 	}
-	void lateSteup() override {
+	void lateSetup() override {
 		//TODO: skip onowned windows
 		for (auto window : app.windows)
 		{
@@ -213,8 +213,8 @@ public:
 void TestSceneCoordinator::createPasses()
 {
 
-	auto mainStage = new TestRenderStage(app, "TestStage");
-	auto deferredStage = new TestDeferredStage(app, "TestDeferredStage");
+	auto mainStage = new TestRenderStage(this, "TestStage");
+	auto deferredStage = new TestDeferredStage(this, "TestDeferredStage");
 
 
 	registerPipeline(testPipe,mainStage);
