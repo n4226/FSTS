@@ -11,9 +11,9 @@ DataRefManager::DataRefManager()
 	lond = XPLMFindDataRef("sim/flightmodel/position/longitude");
 	altd = XPLMFindDataRef("sim/flightmodel/position/elevation");
 
-	thetaf = XPLMFindDataRef("sim/flightmodel/position/theta");
-	phif = XPLMFindDataRef("sim/flightmodel/position/phi");
-	psif = XPLMFindDataRef("sim/flightmodel/position/psi");
+	thetaf = XPLMFindDataRef("sim/flightmodel/position/true_theta");
+	phif = XPLMFindDataRef("sim/flightmodel/position/true_phi");
+	psif = XPLMFindDataRef("sim/flightmodel/position/true_psi");
 }
 
 DataRefManager::~DataRefManager()
@@ -39,9 +39,9 @@ void DataRefManager::readAll()
 	auto lon = XPLMGetDatad(lond);
 	auto alt = XPLMGetDatad(altd);
 
-	auto theta = XPLMGetDataf(thetaf);
-	auto phi = XPLMGetDataf(phif);
-	auto psi = XPLMGetDataf(psif);
+	auto theta = glm::radians(XPLMGetDataf(thetaf));
+	auto phi =   glm::radians(XPLMGetDataf(phif));
+	auto psi =   glm::radians(XPLMGetDataf(psif));
 
 	sunrise::SimlinkMessages::simpleUpdate update{};
 
@@ -49,6 +49,8 @@ void DataRefManager::readAll()
 	update.lla = glm::dvec3(lat, lon, alt);
 	update.rot = glm::quat(glm::vec3(theta,phi,psi));
 
+
+	latestUpdate = update;
 
 	SimlinkNetworkManager::shared()->sendSimpleUpdate(update);
 

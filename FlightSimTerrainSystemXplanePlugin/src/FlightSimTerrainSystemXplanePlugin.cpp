@@ -1,3 +1,4 @@
+
 // sunrise has to be inported first because asio uses winsock.h and so do other imports but asio has to befirst to work
 #include "Sunrise.h" 
 
@@ -48,7 +49,7 @@ sunrise::Application* sunrise::CreateApplication() {
 	return app;
 }
 
-
+int frameId = 0;
 // An opaque handle to the window we will create
 static XPLMWindowID	helloWindow;
 
@@ -199,7 +200,21 @@ void	draw_hello_world(XPLMWindowID in_window_id, void* in_refcon)
 
 	float col_white[] = { 1.0, 1.0, 1.0 }; // red, green, blue
 
-	XPLMDrawString(col_white, l + 10, t - 20, "Simlink Active", NULL, xplmFont_Proportional);
+	auto& update = DataRefManager::shared()->latestUpdate;
+	auto rotAngles = glm::eulerAngles(update.rot);
+	char* text1 = new char[1000];
+	char* text2 = new char[1000];
+	
+	if (frameId > 0) {
+		sprintf_s(text1, 100, "Position: %.5f, %.5f, %.5f", update.lla.x, update.lla.y, update.lla.z);
+		sprintf_s(text2, 100, "Rotation Degrees (Thata, Phi, Psi):  %.5f, %.5f, %.5f", glm::degrees(rotAngles.x), glm::degrees(rotAngles.y), glm::degrees(rotAngles.z));
+	}
+	else {
+		text1 = "Awaiting Startup";
+		text2 = "Awaiting Startup";
+	}
+	XPLMDrawString(col_white, l + 10, t - 20, text1, NULL, xplmFont_Proportional);
+	XPLMDrawString(col_white, l + 10, t - 50, text2, NULL, xplmFont_Proportional);
 }
 
 
@@ -221,6 +236,7 @@ float	MyFlightLoopCallback(
 	int                  inCounter,
 	void* inRefcon)
 {
+	frameId += 1;
 	DataRefManager::shared()->runFrame();
 
 	return -1;

@@ -17,6 +17,8 @@ public:
 
 	void runFrame();
 
+	sunrise::SimlinkMessages::simpleUpdate latestUpdate;
+
 private:
 	DataRefManager();
 	~DataRefManager();

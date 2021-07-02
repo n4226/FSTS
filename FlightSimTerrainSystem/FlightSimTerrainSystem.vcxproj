@@ -174,6 +174,7 @@ IF EXIST ..\bin\Dist-windows-x86_64\Sunrise\Sunrise.pdb\ (xcopy /Q /E /Y /I ..\b
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../bin/Release-windows-x86_64/FlightSimTerrainSystem/shaders/GBuffer.frag.spv</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">../bin/Dist-windows-x86_64/FlightSimTerrainSystem/shaders/GBuffer.frag.spv</Outputs>
       <Message>Compiling %(Identity) TO SPIR-V</Message>
+      <AdditionalInputs>../Sunrisesrc/Sunrise/graphics/shaders/headers/**.h</AdditionalInputs>
     </CustomBuild>
     <CustomBuild Include="..\Sunrise\src\Sunrise\Sunrise\graphics\shaders\GBuffer.vert">
       <FileType>Document</FileType>
@@ -184,6 +185,7 @@ IF EXIST ..\bin\Dist-windows-x86_64\Sunrise\Sunrise.pdb\ (xcopy /Q /E /Y /I ..\b
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../bin/Release-windows-x86_64/FlightSimTerrainSystem/shaders/GBuffer.vert.spv</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">../bin/Dist-windows-x86_64/FlightSimTerrainSystem/shaders/GBuffer.vert.spv</Outputs>
       <Message>Compiling %(Identity) TO SPIR-V</Message>
+      <AdditionalInputs>../Sunrisesrc/Sunrise/graphics/shaders/headers/**.h</AdditionalInputs>
     </CustomBuild>
     <CustomBuild Include="..\Sunrise\src\Sunrise\Sunrise\graphics\shaders\gpuGenCommands.comp">
       <FileType>Document</FileType>
@@ -194,6 +196,7 @@ IF EXIST ..\bin\Dist-windows-x86_64\Sunrise\Sunrise.pdb\ (xcopy /Q /E /Y /I ..\b
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../bin/Release-windows-x86_64/FlightSimTerrainSystem/shaders/gpuGenCommands.comp.spv</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">../bin/Dist-windows-x86_64/FlightSimTerrainSystem/shaders/gpuGenCommands.comp.spv</Outputs>
       <Message>Compiling %(Identity) TO SPIR-V</Message>
+      <AdditionalInputs>../Sunrisesrc/Sunrise/graphics/shaders/headers/**.h</AdditionalInputs>
     </CustomBuild>
     <CustomBuild Include="..\Sunrise\src\Sunrise\Sunrise\graphics\shaders\terrain.frag">
       <FileType>Document</FileType>
@@ -204,6 +207,7 @@ IF EXIST ..\bin\Dist-windows-x86_64\Sunrise\Sunrise.pdb\ (xcopy /Q /E /Y /I ..\b
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../bin/Release-windows-x86_64/FlightSimTerrainSystem/shaders/terrain.frag.spv</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">../bin/Dist-windows-x86_64/FlightSimTerrainSystem/shaders/terrain.frag.spv</Outputs>
       <Message>Compiling %(Identity) TO SPIR-V</Message>
+      <AdditionalInputs>../Sunrisesrc/Sunrise/graphics/shaders/headers/**.h</AdditionalInputs>
     </CustomBuild>
     <CustomBuild Include="..\Sunrise\src\Sunrise\Sunrise\graphics\shaders\terrain.vert">
       <FileType>Document</FileType>
@@ -214,6 +218,7 @@ IF EXIST ..\bin\Dist-windows-x86_64\Sunrise\Sunrise.pdb\ (xcopy /Q /E /Y /I ..\b
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../bin/Release-windows-x86_64/FlightSimTerrainSystem/shaders/terrain.vert.spv</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">../bin/Dist-windows-x86_64/FlightSimTerrainSystem/shaders/terrain.vert.spv</Outputs>
       <Message>Compiling %(Identity) TO SPIR-V</Message>
+      <AdditionalInputs>../Sunrisesrc/Sunrise/graphics/shaders/headers/**.h</AdditionalInputs>
     </CustomBuild>
     <CustomBuild Include="..\Sunrise\src\Sunrise\Sunrise\graphics\shaders\triangle.frag">
       <FileType>Document</FileType>
@@ -224,6 +229,7 @@ IF EXIST ..\bin\Dist-windows-x86_64\Sunrise\Sunrise.pdb\ (xcopy /Q /E /Y /I ..\b
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../bin/Release-windows-x86_64/FlightSimTerrainSystem/shaders/triangle.frag.spv</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">../bin/Dist-windows-x86_64/FlightSimTerrainSystem/shaders/triangle.frag.spv</Outputs>
       <Message>Compiling %(Identity) TO SPIR-V</Message>
+      <AdditionalInputs>../Sunrisesrc/Sunrise/graphics/shaders/headers/**.h</AdditionalInputs>
     </CustomBuild>
     <CustomBuild Include="..\Sunrise\src\Sunrise\Sunrise\graphics\shaders\triangle.vert">
       <FileType>Document</FileType>
@@ -234,6 +240,7 @@ IF EXIST ..\bin\Dist-windows-x86_64\Sunrise\Sunrise.pdb\ (xcopy /Q /E /Y /I ..\b
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../bin/Release-windows-x86_64/FlightSimTerrainSystem/shaders/triangle.vert.spv</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">../bin/Dist-windows-x86_64/FlightSimTerrainSystem/shaders/triangle.vert.spv</Outputs>
       <Message>Compiling %(Identity) TO SPIR-V</Message>
+      <AdditionalInputs>../Sunrisesrc/Sunrise/graphics/shaders/headers/**.h</AdditionalInputs>
     </CustomBuild>
     <CustomBuild Include="src\shaders\greenPipe.frag">
       <FileType>Document</FileType>
@@ -244,6 +251,7 @@ IF EXIST ..\bin\Dist-windows-x86_64\Sunrise\Sunrise.pdb\ (xcopy /Q /E /Y /I ..\b
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../bin/Release-windows-x86_64/FlightSimTerrainSystem/shaders/greenPipe.frag.spv</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">../bin/Dist-windows-x86_64/FlightSimTerrainSystem/shaders/greenPipe.frag.spv</Outputs>
       <Message>Compiling %(Identity) TO SPIR-V</Message>
+      <AdditionalInputs>../Sunrisesrc/Sunrise/graphics/shaders/headers/**.h</AdditionalInputs>
     </CustomBuild>
     <CustomBuild Include="src\shaders\greenPipe.vert">
       <FileType>Document</FileType>
@@ -254,6 +262,7 @@ IF EXIST ..\bin\Dist-windows-x86_64\Sunrise\Sunrise.pdb\ (xcopy /Q /E /Y /I ..\b
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../bin/Release-windows-x86_64/FlightSimTerrainSystem/shaders/greenPipe.vert.spv</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">../bin/Dist-windows-x86_64/FlightSimTerrainSystem/shaders/greenPipe.vert.spv</Outputs>
       <Message>Compiling %(Identity) TO SPIR-V</Message>
+      <AdditionalInputs>../Sunrisesrc/Sunrise/graphics/shaders/headers/**.h</AdditionalInputs>
     </CustomBuild>
     <CustomBuild Include="src\shaders\greenPipeDeferred.frag">
       <FileType>Document</FileType>
@@ -264,6 +273,7 @@ IF EXIST ..\bin\Dist-windows-x86_64\Sunrise\Sunrise.pdb\ (xcopy /Q /E /Y /I ..\b
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../bin/Release-windows-x86_64/FlightSimTerrainSystem/shaders/greenPipeDeferred.frag.spv</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">../bin/Dist-windows-x86_64/FlightSimTerrainSystem/shaders/greenPipeDeferred.frag.spv</Outputs>
       <Message>Compiling %(Identity) TO SPIR-V</Message>
+      <AdditionalInputs>../Sunrisesrc/Sunrise/graphics/shaders/headers/**.h</AdditionalInputs>
     </CustomBuild>
     <CustomBuild Include="src\shaders\greenPipeDeferred.vert">
       <FileType>Document</FileType>
@@ -274,6 +284,7 @@ IF EXIST ..\bin\Dist-windows-x86_64\Sunrise\Sunrise.pdb\ (xcopy /Q /E /Y /I ..\b
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">../bin/Release-windows-x86_64/FlightSimTerrainSystem/shaders/greenPipeDeferred.vert.spv</Outputs>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">../bin/Dist-windows-x86_64/FlightSimTerrainSystem/shaders/greenPipeDeferred.vert.spv</Outputs>
       <Message>Compiling %(Identity) TO SPIR-V</Message>
+      <AdditionalInputs>../Sunrisesrc/Sunrise/graphics/shaders/headers/**.h</AdditionalInputs>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>

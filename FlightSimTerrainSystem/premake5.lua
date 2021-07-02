@@ -98,6 +98,8 @@ project "FlightSimTerrainSystem"
 	filter 'files:**.vert or files:**.frag or files:**.comp'
 	   -- A message to display while this build step is running (optional)
 	   buildmessage 'Compiling %{file.relpath} TO SPIR-V'
+		
+	   buildinputs {("%{sunriseLocation}src/Sunrise/graphics/shaders/headers/**.h")}
 
 	   -- One or more commands to run (required)
 	   buildcommands {
