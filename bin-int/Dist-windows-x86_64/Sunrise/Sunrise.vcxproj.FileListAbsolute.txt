@@ -1,0 +1,1 @@
+C:\code\visual_studio\FSTS\bin-int\Dist-windows-x86_64\Sunrise\Sunrise.vcxproj.CopyComplete
