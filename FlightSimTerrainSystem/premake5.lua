@@ -27,7 +27,7 @@ project "FlightSimTerrainSystem"
 	includedirs {
 		"C:/VulkanSDK/1.2.154.1/Include",
 
-		"%{wks.location}/Sunrise/src",
+		"%{wks.location}/Sunrise/src", "%{wks.location}/Sunrise/src/Sunrise",
 		"%{wks.location}/Sunrise/vendor",
 		"%{wks.location}/Sunrise/vendor/spdlog/include",
 

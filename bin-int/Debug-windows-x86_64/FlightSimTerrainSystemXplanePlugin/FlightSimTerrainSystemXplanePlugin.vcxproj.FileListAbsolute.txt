@@ -1,1 +1,0 @@
-C:\code\visual_studio\FSTS\bin-int\Debug-windows-x86_64\FlightSimTerrainSystemXplanePlugin\FlightSimTerrainSystemXplanePlugin.vcxproj.CopyComplete
