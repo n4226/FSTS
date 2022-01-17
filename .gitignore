@@ -395,7 +395,7 @@ ASALocalRun/
 healthchecksdb
 
 bin/*
-bin-int/**
+bin-int/*
 
 FlightSimTerrainSystem/My Advisor Results - FlightSimTerrainSystem/*
 

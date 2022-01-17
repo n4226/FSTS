@@ -83,7 +83,7 @@
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <MinimalRebuild>false</MinimalRebuild>
-      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
@@ -93,10 +93,6 @@
       <AdditionalDependencies>vulkan-1.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:\VulkanSDK\1.2.154.1\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
-    <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Debug-windows-x86_64\Sunrise\Sunrise.dLL\ (xcopy /Q /E /Y /I ..\bin\Debug-windows-x86_64\Sunrise\Sunrise.dLL ..\bin\Debug-windows-x86_64\$(ProjectName)\ &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows-x86_64\Sunrise\Sunrise.dLL ..\bin\Debug-windows-x86_64\$(ProjectName)\ &gt; nul)
-IF EXIST ..\bin\Debug-windows-x86_64\Sunrise\Sunrise.pdb\ (xcopy /Q /E /Y /I ..\bin\Debug-windows-x86_64\Sunrise\Sunrise.pdb ..\bin\Debug-windows-x86_64\$(ProjectName)\ &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Debug-windows-x86_64\Sunrise\Sunrise.pdb ..\bin\Debug-windows-x86_64\$(ProjectName)\ &gt; nul)</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
@@ -109,7 +105,7 @@ IF EXIST ..\bin\Debug-windows-x86_64\Sunrise\Sunrise.pdb\ (xcopy /Q /E /Y /I ..\
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
@@ -120,10 +116,6 @@ IF EXIST ..\bin\Debug-windows-x86_64\Sunrise\Sunrise.pdb\ (xcopy /Q /E /Y /I ..\
       <AdditionalDependencies>vulkan-1.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:\VulkanSDK\1.2.154.1\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
-    <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Release-windows-x86_64\Sunrise\Sunrise.dLL\ (xcopy /Q /E /Y /I ..\bin\Release-windows-x86_64\Sunrise\Sunrise.dLL ..\bin\Release-windows-x86_64\$(ProjectName)\ &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows-x86_64\Sunrise\Sunrise.dLL ..\bin\Release-windows-x86_64\$(ProjectName)\ &gt; nul)
-IF EXIST ..\bin\Release-windows-x86_64\Sunrise\Sunrise.pdb\ (xcopy /Q /E /Y /I ..\bin\Release-windows-x86_64\Sunrise\Sunrise.pdb ..\bin\Release-windows-x86_64\$(ProjectName)\ &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Release-windows-x86_64\Sunrise\Sunrise.pdb ..\bin\Release-windows-x86_64\$(ProjectName)\ &gt; nul)</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Dist|x64'">
     <ClCompile>
@@ -136,7 +128,7 @@ IF EXIST ..\bin\Release-windows-x86_64\Sunrise\Sunrise.pdb\ (xcopy /Q /E /Y /I .
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <MinimalRebuild>false</MinimalRebuild>
       <StringPooling>true</StringPooling>
-      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
@@ -147,10 +139,6 @@ IF EXIST ..\bin\Release-windows-x86_64\Sunrise\Sunrise.pdb\ (xcopy /Q /E /Y /I .
       <AdditionalDependencies>vulkan-1.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>C:\VulkanSDK\1.2.154.1\Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
-    <PostBuildEvent>
-      <Command>IF EXIST ..\bin\Dist-windows-x86_64\Sunrise\Sunrise.dLL\ (xcopy /Q /E /Y /I ..\bin\Dist-windows-x86_64\Sunrise\Sunrise.dLL ..\bin\Dist-windows-x86_64\$(ProjectName)\ &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Dist-windows-x86_64\Sunrise\Sunrise.dLL ..\bin\Dist-windows-x86_64\$(ProjectName)\ &gt; nul)
-IF EXIST ..\bin\Dist-windows-x86_64\Sunrise\Sunrise.pdb\ (xcopy /Q /E /Y /I ..\bin\Dist-windows-x86_64\Sunrise\Sunrise.pdb ..\bin\Dist-windows-x86_64\$(ProjectName)\ &gt; nul) ELSE (xcopy /Q /Y /I ..\bin\Dist-windows-x86_64\Sunrise\Sunrise.pdb ..\bin\Dist-windows-x86_64\$(ProjectName)\ &gt; nul)</Command>
-    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="src\FlightSimTerrainSystemApp.h" />

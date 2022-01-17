@@ -4,12 +4,14 @@ project "FlightSimTerrainSystem"
 
 	kind "ConsoleApp"
 	language "C++"
+	cppdialect "C++17"
+	staticruntime "on"
 
 	targetdir ("%{wks.location}/bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("%{wks.location}/bin-int/" .. outputdir .. "/%{prj.name}")
 
-	mainProjDir = "FlightSimTerrainSystem"
-	sunriseLocation = "%{wks.location}/Sunrise"
+	-- mainProjDir = "FlightSimTerrainSystem"
+	-- sunriseLocation = "%{wks.location}/Sunrise"
 
 	files {
 		"src/**.h",
@@ -60,16 +62,11 @@ project "FlightSimTerrainSystem"
 	}
 
 	postbuildcommands {
-		("{COPY} ../bin/" .. outputdir .. "/Sunrise/Sunrise.dLL ../bin/" .. outputdir .. "/%{prj.name}/"),
-		("{COPY} ../bin/" .. outputdir .. "/Sunrise/Sunrise.pdb ../bin/" .. outputdir .. "/%{prj.name}/"),
-		--("call ../Sunrise/src/Sunrise/Sunrise/graphcis/shaders/compileShaders.bat"),
-		--("XCOPY /S /Y ../Sunrise/src/Sunrise/Sunrise/graphcis/shaders/ ../bin/" .. outputdir .. "/%{prj.name}/shaders"),
+		--("{COPY} ../bin/" .. outputdir .. "/Sunrise/Sunrise.dLL ../bin/" .. outputdir .. "/%{prj.name}/"),
+		--("{COPY} ../bin/" .. outputdir .. "/Sunrise/Sunrise.pdb ../bin/" .. outputdir .. "/%{prj.name}/"),
 	}
 
 	filter "system:windows"
-		
-		cppdialect "C++17"
-		staticruntime "off"
 		systemversion "latest"
 
 		defines {
@@ -93,6 +90,7 @@ project "FlightSimTerrainSystem"
 		runtime "Release"
 		optimize "on"
 
+		
 	-- GLSL Shader Compile Pipeline
 
 	filter 'files:**.vert or files:**.frag or files:**.comp'

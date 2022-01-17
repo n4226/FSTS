@@ -1,2 +1,1 @@
 C:\code\visual studio\FSTS\bin-int\Debug-windows-x86_64\Sunrise\Sunrise.vcxproj.CopyComplete
-C:\code\visual_studio\FSTS\bin-int\Debug-windows-x86_64\Sunrise\Sunrise.vcxproj.CopyComplete
