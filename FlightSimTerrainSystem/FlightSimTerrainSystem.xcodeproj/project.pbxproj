@@ -1,0 +1,797 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1C11A3F4AE9F6DE617781234 /* libglfw.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = BCE7FCDC8053BE8EBEF7631C /* libglfw.3.dylib */; };
+		564D4072ADB2B3645FC0CEB2 /* libvulkan.1.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 20EAFC7A52E4472CCCC382BA /* libvulkan.1.dylib */; };
+		7FD6FADD16000CCFD766691D /* libSunrise.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF0FA9256205B2D7B3280F65 /* libSunrise.a */; };
+		83562FE51BA3159749EA1625 /* TestScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3F019A2D83503F9FC577786D /* TestScene.cpp */; };
+		98BF041D2EE8160FF04E725D /* FlightSimTerrainSystemApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4E0DC0E50103CA9752262725 /* FlightSimTerrainSystemApp.cpp */; };
+		9C9159C110EB9EB38ECF2801 /* TestStageSys.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B97B8469CBA5611BFF964AA9 /* TestStageSys.cpp */; };
+		BF67FE2DA4FF055F6844146D /* TestSceneCoordinator.cpp in Sources */ = {isa = PBXBuildFile; fileRef = A80D56F5020E6DE7C9556535 /* TestSceneCoordinator.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0D21F52B63AF5F9D3C28736B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 178D07F5DE1AFF674C1D2635 /* ../Sunrise/Sunrise.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 95951D7896481A6A0A29EBB8;
+			remoteInfo = libSunrise.a;
+		};
+		5F5C67C4B5E9D2368E62E604 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 178D07F5DE1AFF674C1D2635 /* ../Sunrise/Sunrise.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3CF3265EDFE14D106F072C9E;
+			remoteInfo = libSunrise.a;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		060596B615EAC2E8025E4CF6 /* greenPipeDeferred.vert */ = {isa = PBXFileReference; lastKnownFileType = text; name = greenPipeDeferred.vert; path = src/shaders/greenPipeDeferred.vert; sourceTree = "<group>"; };
+		083B22F418204F260493D934 /* greenPipeDeferred.frag */ = {isa = PBXFileReference; lastKnownFileType = text; name = greenPipeDeferred.frag; path = src/shaders/greenPipeDeferred.frag; sourceTree = "<group>"; };
+		09C5E95EA23DD6D0CE24C79E /* GBuffer.frag */ = {isa = PBXFileReference; lastKnownFileType = text; name = GBuffer.frag; path = ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/GBuffer.frag; sourceTree = "<group>"; };
+		0C544C00A4CC3972D0B32A40 /* GBuffer.vert */ = {isa = PBXFileReference; lastKnownFileType = text; name = GBuffer.vert; path = ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/GBuffer.vert; sourceTree = "<group>"; };
+		178D07F5DE1AFF674C1D2635 /* libSunrise.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Sunrise.xcodeproj"; path = ../Sunrise/Sunrise.xcodeproj; sourceTree = SOURCE_ROOT; };
+		20EAFC7A52E4472CCCC382BA /* libvulkan.1.dylib */ = {isa = PBXFileReference; lastKnownFileType = compiled.mach-o.dylib; name = libvulkan.1.dylib; path = libvulkan.1.dylib; sourceTree = SOURCE_ROOT; };
+		3F019A2D83503F9FC577786D /* TestScene.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = TestScene.cpp; path = src/scenes/TestScene.cpp; sourceTree = "<group>"; };
+		4CBA7EB4310186E6B4EEB4F4 /* greenPipe.vert */ = {isa = PBXFileReference; lastKnownFileType = text; name = greenPipe.vert; path = src/shaders/greenPipe.vert; sourceTree = "<group>"; };
+		4E0DC0E50103CA9752262725 /* FlightSimTerrainSystemApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FlightSimTerrainSystemApp.cpp; path = src/FlightSimTerrainSystemApp.cpp; sourceTree = "<group>"; };
+		627D375F5374A551BF78259F /* TestSceneCoordinator.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TestSceneCoordinator.h; path = src/scenes/TestSceneCoordinator.h; sourceTree = "<group>"; };
+		64DFFF46FD57ECB8293EDD86 /* terrain.frag */ = {isa = PBXFileReference; lastKnownFileType = text; name = terrain.frag; path = ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/terrain.frag; sourceTree = "<group>"; };
+		676E61E8FFE64F5A2BCD4028 /* terrain.vert */ = {isa = PBXFileReference; lastKnownFileType = text; name = terrain.vert; path = ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/terrain.vert; sourceTree = "<group>"; };
+		9EDF6BCA1200F8BC72C63A0A /* gpuGenCommands.comp */ = {isa = PBXFileReference; lastKnownFileType = text; name = gpuGenCommands.comp; path = ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/gpuGenCommands.comp; sourceTree = "<group>"; };
+		9F11BBF28358C4240745F232 /* greenPipe.frag */ = {isa = PBXFileReference; lastKnownFileType = text; name = greenPipe.frag; path = src/shaders/greenPipe.frag; sourceTree = "<group>"; };
+		A80D56F5020E6DE7C9556535 /* TestSceneCoordinator.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = TestSceneCoordinator.cpp; path = src/scenes/TestSceneCoordinator.cpp; sourceTree = "<group>"; };
+		ACB1862A07F2D99CDB4D246A /* FlightSimTerrainSystem */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; name = FlightSimTerrainSystem; path = FlightSimTerrainSystem; sourceTree = BUILT_PRODUCTS_DIR; };
+		AF5FBBEA4588CDDC06EF2A2A /* triangle.vert */ = {isa = PBXFileReference; lastKnownFileType = text; name = triangle.vert; path = ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/triangle.vert; sourceTree = "<group>"; };
+		B97B8469CBA5611BFF964AA9 /* TestStageSys.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = TestStageSys.cpp; path = src/tests/TestStageSys.cpp; sourceTree = "<group>"; };
+		BCE7FCDC8053BE8EBEF7631C /* libglfw.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = compiled.mach-o.dylib; name = libglfw.3.dylib; path = libglfw.3.dylib; sourceTree = SOURCE_ROOT; };
+		D4D199F3A2F4EDA52A034033 /* TestStageSys.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TestStageSys.h; path = src/tests/TestStageSys.h; sourceTree = "<group>"; };
+		DA6A35287093471A31F9A368 /* triangle.frag */ = {isa = PBXFileReference; lastKnownFileType = text; name = triangle.frag; path = ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/triangle.frag; sourceTree = "<group>"; };
+		E4BCBEB7DE7E7B29187D7CF7 /* TestScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = TestScene.h; path = src/scenes/TestScene.h; sourceTree = "<group>"; };
+		EB006C0F88E16CC1605FB24F /* FlightSimTerrainSystemApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = FlightSimTerrainSystemApp.h; path = src/FlightSimTerrainSystemApp.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FB52F69A51E0610C2A5974DA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				564D4072ADB2B3645FC0CEB2 /* libvulkan.1.dylib in Frameworks */,
+				1C11A3F4AE9F6DE617781234 /* libglfw.3.dylib in Frameworks */,
+				7FD6FADD16000CCFD766691D /* libSunrise.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F1B6558621482478FC5563C6 /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXGroup section */
+		4313C710E76664C2F99EAD50 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				CEBBE0C9F6F6997BDE922709 /* Sunrise */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		4E58F43BC2B3392D4096C27B /* shaders */ = {
+			isa = PBXGroup;
+			children = (
+				09C5E95EA23DD6D0CE24C79E /* GBuffer.frag */,
+				0C544C00A4CC3972D0B32A40 /* GBuffer.vert */,
+				9EDF6BCA1200F8BC72C63A0A /* gpuGenCommands.comp */,
+				64DFFF46FD57ECB8293EDD86 /* terrain.frag */,
+				676E61E8FFE64F5A2BCD4028 /* terrain.vert */,
+				DA6A35287093471A31F9A368 /* triangle.frag */,
+				AF5FBBEA4588CDDC06EF2A2A /* triangle.vert */,
+			);
+			name = shaders;
+			sourceTree = "<group>";
+		};
+		5775D4184366DFCA959E7A58 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				4E0DC0E50103CA9752262725 /* FlightSimTerrainSystemApp.cpp */,
+				EB006C0F88E16CC1605FB24F /* FlightSimTerrainSystemApp.h */,
+				8AB42A418E24FC730F91A081 /* scenes */,
+				FF9341B3A281686531A747F3 /* shaders */,
+				E493D66588E674179B1EBCA5 /* tests */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		7669C7411957EDF3A87DCD81 /* FlightSimTerrainSystem */ = {
+			isa = PBXGroup;
+			children = (
+				D019AF3A746C4CEC86A4957A /* Sunrise */,
+				5775D4184366DFCA959E7A58 /* src */,
+				BBF76781A7E87333FA200DC1 /* Frameworks */,
+				A6C936B49B3FADE6EA134CF4 /* Products */,
+				9D968EAA920D05DCE0E0A4EA /* Projects */,
+			);
+			name = FlightSimTerrainSystem;
+			sourceTree = "<group>";
+		};
+		8AB42A418E24FC730F91A081 /* scenes */ = {
+			isa = PBXGroup;
+			children = (
+				3F019A2D83503F9FC577786D /* TestScene.cpp */,
+				E4BCBEB7DE7E7B29187D7CF7 /* TestScene.h */,
+				A80D56F5020E6DE7C9556535 /* TestSceneCoordinator.cpp */,
+				627D375F5374A551BF78259F /* TestSceneCoordinator.h */,
+			);
+			name = scenes;
+			sourceTree = "<group>";
+		};
+		9D968EAA920D05DCE0E0A4EA /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				178D07F5DE1AFF674C1D2635 /* Sunrise.xcodeproj */,
+			);
+			name = Projects;
+			sourceTree = "<group>";
+		};
+		A3A4CBC9E7B89CFBDB8A2209 /* graphics */ = {
+			isa = PBXGroup;
+			children = (
+				4E58F43BC2B3392D4096C27B /* shaders */,
+			);
+			name = graphics;
+			sourceTree = "<group>";
+		};
+		A6C936B49B3FADE6EA134CF4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ACB1862A07F2D99CDB4D246A /* FlightSimTerrainSystem */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BBF76781A7E87333FA200DC1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				20EAFC7A52E4472CCCC382BA /* libvulkan.1.dylib */,
+				BCE7FCDC8053BE8EBEF7631C /* libglfw.3.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CEBBE0C9F6F6997BDE922709 /* Sunrise */ = {
+			isa = PBXGroup;
+			children = (
+				FE815FC1307AAA73AA59E601 /* Sunrise */,
+			);
+			name = Sunrise;
+			sourceTree = "<group>";
+		};
+		CF62090B17D2ED3D5C71BF4B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF0FA9256205B2D7B3280F65 /* libSunrise.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D019AF3A746C4CEC86A4957A /* Sunrise */ = {
+			isa = PBXGroup;
+			children = (
+				4313C710E76664C2F99EAD50 /* src */,
+			);
+			name = Sunrise;
+			sourceTree = "<group>";
+		};
+		E493D66588E674179B1EBCA5 /* tests */ = {
+			isa = PBXGroup;
+			children = (
+				B97B8469CBA5611BFF964AA9 /* TestStageSys.cpp */,
+				D4D199F3A2F4EDA52A034033 /* TestStageSys.h */,
+			);
+			name = tests;
+			sourceTree = "<group>";
+		};
+		FE815FC1307AAA73AA59E601 /* Sunrise */ = {
+			isa = PBXGroup;
+			children = (
+				A3A4CBC9E7B89CFBDB8A2209 /* graphics */,
+			);
+			name = Sunrise;
+			sourceTree = "<group>";
+		};
+		FF9341B3A281686531A747F3 /* shaders */ = {
+			isa = PBXGroup;
+			children = (
+				9F11BBF28358C4240745F232 /* greenPipe.frag */,
+				4CBA7EB4310186E6B4EEB4F4 /* greenPipe.vert */,
+				083B22F418204F260493D934 /* greenPipeDeferred.frag */,
+				060596B615EAC2E8025E4CF6 /* greenPipeDeferred.vert */,
+			);
+			name = shaders;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		54EC40D076B7EE02B36D1710 /* FlightSimTerrainSystem */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E98E3EF9401BA96B1894BD39 /* Build configuration list for PBXNativeTarget "FlightSimTerrainSystem" */;
+			buildPhases = (
+				68E04EF52A98E067D1B3AD35 /* Build "GBuffer.frag" */,
+				A2D6D397648F65090BAA31D7 /* Build "GBuffer.vert" */,
+				98624D8127137E73829D9BC1 /* Build "gpuGenCommands.comp" */,
+				2AEE4CDDECA6DE4F93C1AB1D /* Build "terrain.frag" */,
+				64E4D17F269D62F1CDB82FBF /* Build "terrain.vert" */,
+				F1AD579F03D00D91DCD145DF /* Build "triangle.frag" */,
+				EB0F4061FD31F653D6332EA1 /* Build "triangle.vert" */,
+				5C6E74696C53A09B58C72AA9 /* Build "greenPipe.frag" */,
+				457B992B5560C55D41D44F6B /* Build "greenPipe.vert" */,
+				57C1046BB30C549DA13E3AAB /* Build "greenPipeDeferred.frag" */,
+				5831DA2DB37D2A5FA1AF106D /* Build "greenPipeDeferred.vert" */,
+				6B3A773AC1C7E1AC9A40F57A /* Resources */,
+				D4E790912B74FB0303EE0ED1 /* Sources */,
+				FB52F69A51E0610C2A5974DA /* Frameworks */,
+				F1B6558621482478FC5563C6 /* Embed Libraries */,
+				9607AE3710C85E8F00CD1376 /* Postbuild */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD1A4614058B2A464A29FC54 /* PBXTargetDependency */,
+			);
+			name = FlightSimTerrainSystem;
+			productInstallPath = "$(HOME)/bin";
+			productName = FlightSimTerrainSystem;
+			productReference = ACB1862A07F2D99CDB4D246A /* FlightSimTerrainSystem */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "FlightSimTerrainSystem" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 1;
+			mainGroup = 7669C7411957EDF3A87DCD81 /* FlightSimTerrainSystem */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CF62090B17D2ED3D5C71BF4B /* Products */;
+					ProjectRef = 178D07F5DE1AFF674C1D2635 /* Sunrise.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				54EC40D076B7EE02B36D1710 /* FlightSimTerrainSystem */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		AF0FA9256205B2D7B3280F65 /* libSunrise.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSunrise.a;
+			remoteRef = 0D21F52B63AF5F9D3C28736B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6B3A773AC1C7E1AC9A40F57A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2AEE4CDDECA6DE4F93C1AB1D /* Build "terrain.frag" */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"../Sunrise/src/Sunrise/Sunrise/graphics/shaders/terrain.frag",
+				"../Sunrisesrc/Sunrise/graphics/shaders/headers/**.h",
+			);
+			name = "Build \"terrain.frag\"";
+			outputPaths = (
+				"../bin/Debug-macosx-universal/FlightSimTerrainSystem/shaders/terrain.frag.spv",
+				"../bin/Release-macosx-universal/FlightSimTerrainSystem/shaders/terrain.frag.spv",
+				"../bin/Dist-macosx-universal/FlightSimTerrainSystem/shaders/terrain.frag.spv",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nif [ \"${CONFIGURATION}\" = \"Debug\" ]; then\n\techo \"Compiling ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/terrain.frag TO SPIR-V\"\n\t/usr/local/bin/glslangValidator -V ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/terrain.frag -o ../bin/Debug-macosx-universal/FlightSimTerrainSystem/shaders/terrain.frag.spv -g\nfi\nif [ \"${CONFIGURATION}\" = \"Release\" ]; then\n\techo \"Compiling ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/terrain.frag TO SPIR-V\"\n\t/usr/local/bin/glslangValidator -V ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/terrain.frag -o ../bin/Release-macosx-universal/FlightSimTerrainSystem/shaders/terrain.frag.spv -g\nfi\nif [ \"${CONFIGURATION}\" = \"Dist\" ]; then\n\techo \"Compiling ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/terrain.frag TO SPIR-V\"\n\t/usr/local/bin/glslangValidator -V ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/terrain.frag -o ../bin/Dist-macosx-universal/FlightSimTerrainSystem/shaders/terrain.frag.spv -g\nfi";
+		};
+		457B992B5560C55D41D44F6B /* Build "greenPipe.vert" */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"src/shaders/greenPipe.vert",
+				"../Sunrisesrc/Sunrise/graphics/shaders/headers/**.h",
+			);
+			name = "Build \"greenPipe.vert\"";
+			outputPaths = (
+				"../bin/Debug-macosx-universal/FlightSimTerrainSystem/shaders/greenPipe.vert.spv",
+				"../bin/Release-macosx-universal/FlightSimTerrainSystem/shaders/greenPipe.vert.spv",
+				"../bin/Dist-macosx-universal/FlightSimTerrainSystem/shaders/greenPipe.vert.spv",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nif [ \"${CONFIGURATION}\" = \"Debug\" ]; then\n\techo \"Compiling src/shaders/greenPipe.vert TO SPIR-V\"\n\t/usr/local/bin/glslangValidator -V src/shaders/greenPipe.vert -o ../bin/Debug-macosx-universal/FlightSimTerrainSystem/shaders/greenPipe.vert.spv -g\nfi\nif [ \"${CONFIGURATION}\" = \"Release\" ]; then\n\techo \"Compiling src/shaders/greenPipe.vert TO SPIR-V\"\n\t/usr/local/bin/glslangValidator -V src/shaders/greenPipe.vert -o ../bin/Release-macosx-universal/FlightSimTerrainSystem/shaders/greenPipe.vert.spv -g\nfi\nif [ \"${CONFIGURATION}\" = \"Dist\" ]; then\n\techo \"Compiling src/shaders/greenPipe.vert TO SPIR-V\"\n\t/usr/local/bin/glslangValidator -V src/shaders/greenPipe.vert -o ../bin/Dist-macosx-universal/FlightSimTerrainSystem/shaders/greenPipe.vert.spv -g\nfi";
+		};
+		57C1046BB30C549DA13E3AAB /* Build "greenPipeDeferred.frag" */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"src/shaders/greenPipeDeferred.frag",
+				"../Sunrisesrc/Sunrise/graphics/shaders/headers/**.h",
+			);
+			name = "Build \"greenPipeDeferred.frag\"";
+			outputPaths = (
+				"../bin/Debug-macosx-universal/FlightSimTerrainSystem/shaders/greenPipeDeferred.frag.spv",
+				"../bin/Release-macosx-universal/FlightSimTerrainSystem/shaders/greenPipeDeferred.frag.spv",
+				"../bin/Dist-macosx-universal/FlightSimTerrainSystem/shaders/greenPipeDeferred.frag.spv",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nif [ \"${CONFIGURATION}\" = \"Debug\" ]; then\n\techo \"Compiling src/shaders/greenPipeDeferred.frag TO SPIR-V\"\n\t/usr/local/bin/glslangValidator -V src/shaders/greenPipeDeferred.frag -o ../bin/Debug-macosx-universal/FlightSimTerrainSystem/shaders/greenPipeDeferred.frag.spv -g\nfi\nif [ \"${CONFIGURATION}\" = \"Release\" ]; then\n\techo \"Compiling src/shaders/greenPipeDeferred.frag TO SPIR-V\"\n\t/usr/local/bin/glslangValidator -V src/shaders/greenPipeDeferred.frag -o ../bin/Release-macosx-universal/FlightSimTerrainSystem/shaders/greenPipeDeferred.frag.spv -g\nfi\nif [ \"${CONFIGURATION}\" = \"Dist\" ]; then\n\techo \"Compiling src/shaders/greenPipeDeferred.frag TO SPIR-V\"\n\t/usr/local/bin/glslangValidator -V src/shaders/greenPipeDeferred.frag -o ../bin/Dist-macosx-universal/FlightSimTerrainSystem/shaders/greenPipeDeferred.frag.spv -g\nfi";
+		};
+		5831DA2DB37D2A5FA1AF106D /* Build "greenPipeDeferred.vert" */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"src/shaders/greenPipeDeferred.vert",
+				"../Sunrisesrc/Sunrise/graphics/shaders/headers/**.h",
+			);
+			name = "Build \"greenPipeDeferred.vert\"";
+			outputPaths = (
+				"../bin/Debug-macosx-universal/FlightSimTerrainSystem/shaders/greenPipeDeferred.vert.spv",
+				"../bin/Release-macosx-universal/FlightSimTerrainSystem/shaders/greenPipeDeferred.vert.spv",
+				"../bin/Dist-macosx-universal/FlightSimTerrainSystem/shaders/greenPipeDeferred.vert.spv",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nif [ \"${CONFIGURATION}\" = \"Debug\" ]; then\n\techo \"Compiling src/shaders/greenPipeDeferred.vert TO SPIR-V\"\n\t/usr/local/bin/glslangValidator -V src/shaders/greenPipeDeferred.vert -o ../bin/Debug-macosx-universal/FlightSimTerrainSystem/shaders/greenPipeDeferred.vert.spv -g\nfi\nif [ \"${CONFIGURATION}\" = \"Release\" ]; then\n\techo \"Compiling src/shaders/greenPipeDeferred.vert TO SPIR-V\"\n\t/usr/local/bin/glslangValidator -V src/shaders/greenPipeDeferred.vert -o ../bin/Release-macosx-universal/FlightSimTerrainSystem/shaders/greenPipeDeferred.vert.spv -g\nfi\nif [ \"${CONFIGURATION}\" = \"Dist\" ]; then\n\techo \"Compiling src/shaders/greenPipeDeferred.vert TO SPIR-V\"\n\t/usr/local/bin/glslangValidator -V src/shaders/greenPipeDeferred.vert -o ../bin/Dist-macosx-universal/FlightSimTerrainSystem/shaders/greenPipeDeferred.vert.spv -g\nfi";
+		};
+		5C6E74696C53A09B58C72AA9 /* Build "greenPipe.frag" */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"src/shaders/greenPipe.frag",
+				"../Sunrisesrc/Sunrise/graphics/shaders/headers/**.h",
+			);
+			name = "Build \"greenPipe.frag\"";
+			outputPaths = (
+				"../bin/Debug-macosx-universal/FlightSimTerrainSystem/shaders/greenPipe.frag.spv",
+				"../bin/Release-macosx-universal/FlightSimTerrainSystem/shaders/greenPipe.frag.spv",
+				"../bin/Dist-macosx-universal/FlightSimTerrainSystem/shaders/greenPipe.frag.spv",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nif [ \"${CONFIGURATION}\" = \"Debug\" ]; then\n\techo \"Compiling src/shaders/greenPipe.frag TO SPIR-V\"\n\t/usr/local/bin/glslangValidator -V src/shaders/greenPipe.frag -o ../bin/Debug-macosx-universal/FlightSimTerrainSystem/shaders/greenPipe.frag.spv -g\nfi\nif [ \"${CONFIGURATION}\" = \"Release\" ]; then\n\techo \"Compiling src/shaders/greenPipe.frag TO SPIR-V\"\n\t/usr/local/bin/glslangValidator -V src/shaders/greenPipe.frag -o ../bin/Release-macosx-universal/FlightSimTerrainSystem/shaders/greenPipe.frag.spv -g\nfi\nif [ \"${CONFIGURATION}\" = \"Dist\" ]; then\n\techo \"Compiling src/shaders/greenPipe.frag TO SPIR-V\"\n\t/usr/local/bin/glslangValidator -V src/shaders/greenPipe.frag -o ../bin/Dist-macosx-universal/FlightSimTerrainSystem/shaders/greenPipe.frag.spv -g\nfi";
+		};
+		64E4D17F269D62F1CDB82FBF /* Build "terrain.vert" */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"../Sunrise/src/Sunrise/Sunrise/graphics/shaders/terrain.vert",
+				"../Sunrisesrc/Sunrise/graphics/shaders/headers/**.h",
+			);
+			name = "Build \"terrain.vert\"";
+			outputPaths = (
+				"../bin/Debug-macosx-universal/FlightSimTerrainSystem/shaders/terrain.vert.spv",
+				"../bin/Release-macosx-universal/FlightSimTerrainSystem/shaders/terrain.vert.spv",
+				"../bin/Dist-macosx-universal/FlightSimTerrainSystem/shaders/terrain.vert.spv",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nif [ \"${CONFIGURATION}\" = \"Debug\" ]; then\n\techo \"Compiling ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/terrain.vert TO SPIR-V\"\n\t/usr/local/bin/glslangValidator -V ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/terrain.vert -o ../bin/Debug-macosx-universal/FlightSimTerrainSystem/shaders/terrain.vert.spv -g\nfi\nif [ \"${CONFIGURATION}\" = \"Release\" ]; then\n\techo \"Compiling ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/terrain.vert TO SPIR-V\"\n\t/usr/local/bin/glslangValidator -V ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/terrain.vert -o ../bin/Release-macosx-universal/FlightSimTerrainSystem/shaders/terrain.vert.spv -g\nfi\nif [ \"${CONFIGURATION}\" = \"Dist\" ]; then\n\techo \"Compiling ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/terrain.vert TO SPIR-V\"\n\t/usr/local/bin/glslangValidator -V ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/terrain.vert -o ../bin/Dist-macosx-universal/FlightSimTerrainSystem/shaders/terrain.vert.spv -g\nfi";
+		};
+		68E04EF52A98E067D1B3AD35 /* Build "GBuffer.frag" */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"../Sunrise/src/Sunrise/Sunrise/graphics/shaders/GBuffer.frag",
+				"../Sunrisesrc/Sunrise/graphics/shaders/headers/**.h",
+			);
+			name = "Build \"GBuffer.frag\"";
+			outputPaths = (
+				"../bin/Debug-macosx-universal/FlightSimTerrainSystem/shaders/GBuffer.frag.spv",
+				"../bin/Release-macosx-universal/FlightSimTerrainSystem/shaders/GBuffer.frag.spv",
+				"../bin/Dist-macosx-universal/FlightSimTerrainSystem/shaders/GBuffer.frag.spv",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nif [ \"${CONFIGURATION}\" = \"Debug\" ]; then\n\techo \"Compiling ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/GBuffer.frag TO SPIR-V\"\n\t/usr/local/bin/glslangValidator -V ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/GBuffer.frag -o ../bin/Debug-macosx-universal/FlightSimTerrainSystem/shaders/GBuffer.frag.spv -g\nfi\nif [ \"${CONFIGURATION}\" = \"Release\" ]; then\n\techo \"Compiling ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/GBuffer.frag TO SPIR-V\"\n\t/usr/local/bin/glslangValidator -V ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/GBuffer.frag -o ../bin/Release-macosx-universal/FlightSimTerrainSystem/shaders/GBuffer.frag.spv -g\nfi\nif [ \"${CONFIGURATION}\" = \"Dist\" ]; then\n\techo \"Compiling ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/GBuffer.frag TO SPIR-V\"\n\t/usr/local/bin/glslangValidator -V ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/GBuffer.frag -o ../bin/Dist-macosx-universal/FlightSimTerrainSystem/shaders/GBuffer.frag.spv -g\nfi";
+		};
+		98624D8127137E73829D9BC1 /* Build "gpuGenCommands.comp" */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"../Sunrise/src/Sunrise/Sunrise/graphics/shaders/gpuGenCommands.comp",
+				"../Sunrisesrc/Sunrise/graphics/shaders/headers/**.h",
+			);
+			name = "Build \"gpuGenCommands.comp\"";
+			outputPaths = (
+				"../bin/Debug-macosx-universal/FlightSimTerrainSystem/shaders/gpuGenCommands.comp.spv",
+				"../bin/Release-macosx-universal/FlightSimTerrainSystem/shaders/gpuGenCommands.comp.spv",
+				"../bin/Dist-macosx-universal/FlightSimTerrainSystem/shaders/gpuGenCommands.comp.spv",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nif [ \"${CONFIGURATION}\" = \"Debug\" ]; then\n\techo \"Compiling ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/gpuGenCommands.comp TO SPIR-V\"\n\t/usr/local/bin/glslangValidator -V ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/gpuGenCommands.comp -o ../bin/Debug-macosx-universal/FlightSimTerrainSystem/shaders/gpuGenCommands.comp.spv -g\nfi\nif [ \"${CONFIGURATION}\" = \"Release\" ]; then\n\techo \"Compiling ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/gpuGenCommands.comp TO SPIR-V\"\n\t/usr/local/bin/glslangValidator -V ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/gpuGenCommands.comp -o ../bin/Release-macosx-universal/FlightSimTerrainSystem/shaders/gpuGenCommands.comp.spv -g\nfi\nif [ \"${CONFIGURATION}\" = \"Dist\" ]; then\n\techo \"Compiling ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/gpuGenCommands.comp TO SPIR-V\"\n\t/usr/local/bin/glslangValidator -V ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/gpuGenCommands.comp -o ../bin/Dist-macosx-universal/FlightSimTerrainSystem/shaders/gpuGenCommands.comp.spv -g\nfi";
+		};
+		A2D6D397648F65090BAA31D7 /* Build "GBuffer.vert" */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"../Sunrise/src/Sunrise/Sunrise/graphics/shaders/GBuffer.vert",
+				"../Sunrisesrc/Sunrise/graphics/shaders/headers/**.h",
+			);
+			name = "Build \"GBuffer.vert\"";
+			outputPaths = (
+				"../bin/Debug-macosx-universal/FlightSimTerrainSystem/shaders/GBuffer.vert.spv",
+				"../bin/Release-macosx-universal/FlightSimTerrainSystem/shaders/GBuffer.vert.spv",
+				"../bin/Dist-macosx-universal/FlightSimTerrainSystem/shaders/GBuffer.vert.spv",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nif [ \"${CONFIGURATION}\" = \"Debug\" ]; then\n\techo \"Compiling ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/GBuffer.vert TO SPIR-V\"\n\t/usr/local/bin/glslangValidator -V ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/GBuffer.vert -o ../bin/Debug-macosx-universal/FlightSimTerrainSystem/shaders/GBuffer.vert.spv -g\nfi\nif [ \"${CONFIGURATION}\" = \"Release\" ]; then\n\techo \"Compiling ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/GBuffer.vert TO SPIR-V\"\n\t/usr/local/bin/glslangValidator -V ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/GBuffer.vert -o ../bin/Release-macosx-universal/FlightSimTerrainSystem/shaders/GBuffer.vert.spv -g\nfi\nif [ \"${CONFIGURATION}\" = \"Dist\" ]; then\n\techo \"Compiling ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/GBuffer.vert TO SPIR-V\"\n\t/usr/local/bin/glslangValidator -V ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/GBuffer.vert -o ../bin/Dist-macosx-universal/FlightSimTerrainSystem/shaders/GBuffer.vert.spv -g\nfi";
+		};
+		EB0F4061FD31F653D6332EA1 /* Build "triangle.vert" */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"../Sunrise/src/Sunrise/Sunrise/graphics/shaders/triangle.vert",
+				"../Sunrisesrc/Sunrise/graphics/shaders/headers/**.h",
+			);
+			name = "Build \"triangle.vert\"";
+			outputPaths = (
+				"../bin/Debug-macosx-universal/FlightSimTerrainSystem/shaders/triangle.vert.spv",
+				"../bin/Release-macosx-universal/FlightSimTerrainSystem/shaders/triangle.vert.spv",
+				"../bin/Dist-macosx-universal/FlightSimTerrainSystem/shaders/triangle.vert.spv",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nif [ \"${CONFIGURATION}\" = \"Debug\" ]; then\n\techo \"Compiling ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/triangle.vert TO SPIR-V\"\n\t/usr/local/bin/glslangValidator -V ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/triangle.vert -o ../bin/Debug-macosx-universal/FlightSimTerrainSystem/shaders/triangle.vert.spv -g\nfi\nif [ \"${CONFIGURATION}\" = \"Release\" ]; then\n\techo \"Compiling ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/triangle.vert TO SPIR-V\"\n\t/usr/local/bin/glslangValidator -V ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/triangle.vert -o ../bin/Release-macosx-universal/FlightSimTerrainSystem/shaders/triangle.vert.spv -g\nfi\nif [ \"${CONFIGURATION}\" = \"Dist\" ]; then\n\techo \"Compiling ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/triangle.vert TO SPIR-V\"\n\t/usr/local/bin/glslangValidator -V ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/triangle.vert -o ../bin/Dist-macosx-universal/FlightSimTerrainSystem/shaders/triangle.vert.spv -g\nfi";
+		};
+		F1AD579F03D00D91DCD145DF /* Build "triangle.frag" */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"../Sunrise/src/Sunrise/Sunrise/graphics/shaders/triangle.frag",
+				"../Sunrisesrc/Sunrise/graphics/shaders/headers/**.h",
+			);
+			name = "Build \"triangle.frag\"";
+			outputPaths = (
+				"../bin/Debug-macosx-universal/FlightSimTerrainSystem/shaders/triangle.frag.spv",
+				"../bin/Release-macosx-universal/FlightSimTerrainSystem/shaders/triangle.frag.spv",
+				"../bin/Dist-macosx-universal/FlightSimTerrainSystem/shaders/triangle.frag.spv",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nif [ \"${CONFIGURATION}\" = \"Debug\" ]; then\n\techo \"Compiling ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/triangle.frag TO SPIR-V\"\n\t/usr/local/bin/glslangValidator -V ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/triangle.frag -o ../bin/Debug-macosx-universal/FlightSimTerrainSystem/shaders/triangle.frag.spv -g\nfi\nif [ \"${CONFIGURATION}\" = \"Release\" ]; then\n\techo \"Compiling ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/triangle.frag TO SPIR-V\"\n\t/usr/local/bin/glslangValidator -V ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/triangle.frag -o ../bin/Release-macosx-universal/FlightSimTerrainSystem/shaders/triangle.frag.spv -g\nfi\nif [ \"${CONFIGURATION}\" = \"Dist\" ]; then\n\techo \"Compiling ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/triangle.frag TO SPIR-V\"\n\t/usr/local/bin/glslangValidator -V ../Sunrise/src/Sunrise/Sunrise/graphics/shaders/triangle.frag -o ../bin/Dist-macosx-universal/FlightSimTerrainSystem/shaders/triangle.frag.spv -g\nfi";
+		};
+		9607AE3710C85E8F00CD1376 /* Postbuild */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Postbuild;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nif [ \"${CONFIGURATION}\" = \"Debug\" ]; then\ncp -rf ../Sunrise/vendor/bin/glfw/macos/glfw-3.3.6.bin.MACOS/lib-universal/* ../bin/Debug-macosx-universal/FlightSimTerrainSystem\nfi\nif [ \"${CONFIGURATION}\" = \"Release\" ]; then\ncp -rf ../Sunrise/vendor/bin/glfw/macos/glfw-3.3.6.bin.MACOS/lib-universal/* ../bin/Release-macosx-universal/FlightSimTerrainSystem\nfi\nif [ \"${CONFIGURATION}\" = \"Dist\" ]; then\ncp -rf ../Sunrise/vendor/bin/glfw/macos/glfw-3.3.6.bin.MACOS/lib-universal/* ../bin/Dist-macosx-universal/FlightSimTerrainSystem\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D4E790912B74FB0303EE0ED1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98BF041D2EE8160FF04E725D /* FlightSimTerrainSystemApp.cpp in Sources */,
+				83562FE51BA3159749EA1625 /* TestScene.cpp in Sources */,
+				BF67FE2DA4FF055F6844146D /* TestSceneCoordinator.cpp in Sources */,
+				9C9159C110EB9EB38ECF2801 /* TestStageSys.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BD1A4614058B2A464A29FC54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libSunrise.a;
+			targetProxy = 5F5C67C4B5E9D2368E62E604 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2E0F913F725E36B1B4856F7F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = (
+					YES,
+				);
+				CONFIGURATION_BUILD_DIR = "../bin/Debug-macosx-universal/FlightSimTerrainSystem";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = FlightSimTerrainSystem;
+			};
+			name = Debug;
+		};
+		36FBF7F9C989C1EB32626639 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = (
+					YES,
+				);
+				CONFIGURATION_BUILD_DIR = "../bin/Release-macosx-universal/FlightSimTerrainSystem";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = FlightSimTerrainSystem;
+			};
+			name = Release;
+		};
+		462DC6ACDBA485DE4A40DCEC /* Dist */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = (
+					YES,
+				);
+				CONFIGURATION_BUILD_DIR = "../bin/Dist-macosx-universal/FlightSimTerrainSystem";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_DYNAMIC_NO_PIC = NO;
+				INSTALL_PATH = /usr/local/bin;
+				PRODUCT_NAME = FlightSimTerrainSystem;
+			};
+			name = Dist;
+		};
+		86CDC72AE20F1A9CB569656A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = (
+					YES,
+				);
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++1z";
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					SR_PLATFORM_MACOS,
+					SR_RELEASE,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					"../Sunrise/vendor/bin/glfw/macos/glfw-3.3.6.bin.MACOS/lib-universal",
+				);
+				OBJROOT = "../bin-int/Release-macosx-universal/FlightSimTerrainSystem";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-lmarl",
+				);
+				SYMROOT = "../bin/Release-macosx-universal/FlightSimTerrainSystem";
+				USER_HEADER_SEARCH_PATHS = (
+					"C:/VulkanSDK/1.2.154.1/Include",
+					../Sunrise/src,
+					../Sunrise/src/Sunrise,
+					../Sunrise/vendor,
+					../Sunrise/vendor/spdlog/include,
+					"../Sunrise/vendor/glm-master",
+					"../Sunrise/vendor/marl-main/marl-main/include",
+					../Sunrise/vendor/stb,
+					"../Sunrise/vendor/mango-master/mango-master/include",
+					../Sunrise/vendor/libigl/include,
+					../Sunrise/vendor/HTTPRequest/include,
+					../Sunrise/vendor/httplib/include,
+					../Sunrise/vendor/rapidjson/include,
+					../Sunrise/vendor/libguarded/src,
+					../Sunrise/vendor/nlohmann/include,
+					"../Sunrise/vendor/asio-1.18.1/include",
+					"../Sunrise/vendor/bin/glfw/windows/glfw-3.3.2.bin.WIN64/glfw-3.3.2.bin.WIN64/lib-vc2019",
+					../Sunrise/vendor/date/include,
+					../Sunrise/vendor/entt/single_include,
+					../Sunrise/vendor/eigen,
+					/usr/local/include,
+					"../Sunrise/vendor/bin/glfw/macos/glfw-3.3.6.bin.MACOS/include",
+				);
+			};
+			name = Release;
+		};
+		87850A1DAFBFC2CF975B505D /* Dist */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = (
+					YES,
+				);
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++1z";
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					SR_PLATFORM_MACOS,
+					SR_DIST,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					"../Sunrise/vendor/bin/glfw/macos/glfw-3.3.6.bin.MACOS/lib-universal",
+				);
+				OBJROOT = "../bin-int/Dist-macosx-universal/FlightSimTerrainSystem";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-lmarl",
+				);
+				SYMROOT = "../bin/Dist-macosx-universal/FlightSimTerrainSystem";
+				USER_HEADER_SEARCH_PATHS = (
+					"C:/VulkanSDK/1.2.154.1/Include",
+					../Sunrise/src,
+					../Sunrise/src/Sunrise,
+					../Sunrise/vendor,
+					../Sunrise/vendor/spdlog/include,
+					"../Sunrise/vendor/glm-master",
+					"../Sunrise/vendor/marl-main/marl-main/include",
+					../Sunrise/vendor/stb,
+					"../Sunrise/vendor/mango-master/mango-master/include",
+					../Sunrise/vendor/libigl/include,
+					../Sunrise/vendor/HTTPRequest/include,
+					../Sunrise/vendor/httplib/include,
+					../Sunrise/vendor/rapidjson/include,
+					../Sunrise/vendor/libguarded/src,
+					../Sunrise/vendor/nlohmann/include,
+					"../Sunrise/vendor/asio-1.18.1/include",
+					"../Sunrise/vendor/bin/glfw/windows/glfw-3.3.2.bin.WIN64/glfw-3.3.2.bin.WIN64/lib-vc2019",
+					../Sunrise/vendor/date/include,
+					../Sunrise/vendor/entt/single_include,
+					../Sunrise/vendor/eigen,
+					/usr/local/include,
+					"../Sunrise/vendor/bin/glfw/macos/glfw-3.3.6.bin.MACOS/include",
+				);
+			};
+			name = Dist;
+		};
+		B125F0F0E0B7BFE2BBC4FF30 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = (
+					YES,
+				);
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++1z";
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					SR_PLATFORM_MACOS,
+					SR_DEBUG,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib,
+					"../Sunrise/vendor/bin/glfw/macos/glfw-3.3.6.bin.MACOS/lib-universal",
+					"../Sunrise/vendor/marl-main/marl-main/build/Debug",
+				);
+				OBJROOT = "../bin-int/Debug-macosx-universal/FlightSimTerrainSystem";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lmarl",
+				);
+				SYMROOT = "../bin/Debug-macosx-universal/FlightSimTerrainSystem";
+				USER_HEADER_SEARCH_PATHS = (
+					"C:/VulkanSDK/1.2.154.1/Include",
+					../Sunrise/src,
+					../Sunrise/src/Sunrise,
+					../Sunrise/vendor,
+					../Sunrise/vendor/spdlog/include,
+					"../Sunrise/vendor/glm-master",
+					"../Sunrise/vendor/marl-main/marl-main/include",
+					../Sunrise/vendor/stb,
+					"../Sunrise/vendor/mango-master/mango-master/include",
+					../Sunrise/vendor/libigl/include,
+					../Sunrise/vendor/HTTPRequest/include,
+					../Sunrise/vendor/httplib/include,
+					../Sunrise/vendor/rapidjson/include,
+					../Sunrise/vendor/libguarded/src,
+					../Sunrise/vendor/nlohmann/include,
+					"../Sunrise/vendor/asio-1.18.1/include",
+					"../Sunrise/vendor/bin/glfw/windows/glfw-3.3.2.bin.WIN64/glfw-3.3.2.bin.WIN64/lib-vc2019",
+					../Sunrise/vendor/date/include,
+					../Sunrise/vendor/entt/single_include,
+					../Sunrise/vendor/eigen,
+					/usr/local/include,
+					"../Sunrise/vendor/bin/glfw/macos/glfw-3.3.6.bin.MACOS/include",
+				);
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "FlightSimTerrainSystem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B125F0F0E0B7BFE2BBC4FF30 /* Debug */,
+				86CDC72AE20F1A9CB569656A /* Release */,
+				87850A1DAFBFC2CF975B505D /* Dist */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		E98E3EF9401BA96B1894BD39 /* Build configuration list for PBXNativeTarget "FlightSimTerrainSystem" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2E0F913F725E36B1B4856F7F /* Debug */,
+				36FBF7F9C989C1EB32626639 /* Release */,
+				462DC6ACDBA485DE4A40DCEC /* Dist */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+};
+rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

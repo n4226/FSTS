@@ -1,0 +1,458 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3E22EB7A9824026C5F6AF9BA /* SimlinkNetworkManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 99792B02B44599B4B8163142 /* SimlinkNetworkManager.cpp */; };
+		4D4F67920F07F904B622C5D2 /* FlightSimTerrainSystemXplanePlugin.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C618009A7A1419CC5BC656DA /* FlightSimTerrainSystemXplanePlugin.cpp */; };
+		7FD6FADD16000CCFD766691D /* libSunrise.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AF0FA9256205B2D7B3280F65 /* libSunrise.a */; };
+		83792B464A0722B8B8094986 /* DataRefManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 37EE0F0ECD64CE403C01254E /* DataRefManager.cpp */; };
+		B3EBAC12F83A51843A618A52 /* SimlinkApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D28C751AF458224C310D4B5A /* SimlinkApp.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0D21F52B63AF5F9D3C28736B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 178D07F5DE1AFF674C1D2635 /* ../Sunrise/Sunrise.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 95951D7896481A6A0A29EBB8;
+			remoteInfo = libSunrise.a;
+		};
+		5F5C67C4B5E9D2368E62E604 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 178D07F5DE1AFF674C1D2635 /* ../Sunrise/Sunrise.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 3CF3265EDFE14D106F072C9E;
+			remoteInfo = libSunrise.a;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		178D07F5DE1AFF674C1D2635 /* libSunrise.a */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = "Sunrise.xcodeproj"; path = ../Sunrise/Sunrise.xcodeproj; sourceTree = SOURCE_ROOT; };
+		18CD176CB119FD1EDF60FDAC /* SimlinkNetworkManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SimlinkNetworkManager.h; path = src/SimlinkNetworkManager.h; sourceTree = "<group>"; };
+		2AAB75A4731C59D6B7BB2BE4 /* SimlinkApp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SimlinkApp.h; path = src/SimlinkApp.h; sourceTree = "<group>"; };
+		37EE0F0ECD64CE403C01254E /* DataRefManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = DataRefManager.cpp; path = src/DataRefManager.cpp; sourceTree = "<group>"; };
+		53D5827054887F62C86A50B0 /* libwin.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; name = libwin.dylib; path = libwin.dylib; sourceTree = BUILT_PRODUCTS_DIR; };
+		99792B02B44599B4B8163142 /* SimlinkNetworkManager.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = SimlinkNetworkManager.cpp; path = src/SimlinkNetworkManager.cpp; sourceTree = "<group>"; };
+		BDE766980B4A5CCA81695CD8 /* DataRefManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DataRefManager.h; path = src/DataRefManager.h; sourceTree = "<group>"; };
+		C618009A7A1419CC5BC656DA /* FlightSimTerrainSystemXplanePlugin.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = FlightSimTerrainSystemXplanePlugin.cpp; path = src/FlightSimTerrainSystemXplanePlugin.cpp; sourceTree = "<group>"; };
+		D28C751AF458224C310D4B5A /* SimlinkApp.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; name = SimlinkApp.cpp; path = src/SimlinkApp.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		0E47BFE03CEE13D2962F6E20 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FD6FADD16000CCFD766691D /* libSunrise.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		9502884C068DA0BEB58EC68C /* Embed Libraries */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			name = "Embed Libraries";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXGroup section */
+		8BFFBF584F6B810A8E0F2598 /* FlightSimTerrainSystemXplanePlugin */ = {
+			isa = PBXGroup;
+			children = (
+				37EE0F0ECD64CE403C01254E /* DataRefManager.cpp */,
+				BDE766980B4A5CCA81695CD8 /* DataRefManager.h */,
+				C618009A7A1419CC5BC656DA /* FlightSimTerrainSystemXplanePlugin.cpp */,
+				D28C751AF458224C310D4B5A /* SimlinkApp.cpp */,
+				2AAB75A4731C59D6B7BB2BE4 /* SimlinkApp.h */,
+				99792B02B44599B4B8163142 /* SimlinkNetworkManager.cpp */,
+				18CD176CB119FD1EDF60FDAC /* SimlinkNetworkManager.h */,
+				A6C936B49B3FADE6EA134CF4 /* Products */,
+				9D968EAA920D05DCE0E0A4EA /* Projects */,
+			);
+			name = FlightSimTerrainSystemXplanePlugin;
+			sourceTree = "<group>";
+		};
+		9D968EAA920D05DCE0E0A4EA /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				178D07F5DE1AFF674C1D2635 /* Sunrise.xcodeproj */,
+			);
+			name = Projects;
+			sourceTree = "<group>";
+		};
+		A6C936B49B3FADE6EA134CF4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				53D5827054887F62C86A50B0 /* libwin.dylib */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CF62090B17D2ED3D5C71BF4B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AF0FA9256205B2D7B3280F65 /* libSunrise.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		61BECC5604ACF30893D2D296 /* FlightSimTerrainSystemXplanePlugin */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC83083F2B295C31846AB67F /* Build configuration list for PBXNativeTarget "FlightSimTerrainSystemXplanePlugin" */;
+			buildPhases = (
+				7E2F4080ACD594720616EEC0 /* Resources */,
+				E7DC59D71682ADC96FC40817 /* Sources */,
+				0E47BFE03CEE13D2962F6E20 /* Frameworks */,
+				9502884C068DA0BEB58EC68C /* Embed Libraries */,
+				9607AE3710C85E8F00CD1376 /* Postbuild */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD1A4614058B2A464A29FC54 /* PBXTargetDependency */,
+			);
+			name = FlightSimTerrainSystemXplanePlugin;
+			productName = FlightSimTerrainSystemXplanePlugin;
+			productReference = 53D5827054887F62C86A50B0 /* libwin.dylib */;
+			productType = "com.apple.product-type.library.dynamic";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = 1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "FlightSimTerrainSystemXplanePlugin" */;
+			compatibilityVersion = "Xcode 3.2";
+			hasScannedForEncodings = 1;
+			mainGroup = 8BFFBF584F6B810A8E0F2598 /* FlightSimTerrainSystemXplanePlugin */;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = CF62090B17D2ED3D5C71BF4B /* Products */;
+					ProjectRef = 178D07F5DE1AFF674C1D2635 /* Sunrise.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				61BECC5604ACF30893D2D296 /* libwin.dylib */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		AF0FA9256205B2D7B3280F65 /* libSunrise.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSunrise.a;
+			remoteRef = 0D21F52B63AF5F9D3C28736B /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7E2F4080ACD594720616EEC0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9607AE3710C85E8F00CD1376 /* Postbuild */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = Postbuild;
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nif [ \"${CONFIGURATION}\" = \"Debug\" ]; then\ncp -rf ../Sunrise/vendor/bin/NVIDIA_Nsight_Aftermath_SDK_2021.1.0.21090/lib/x64/GFSDK_Aftermath_Lib.x64.dll ../bin/Debug-macosx-universal/FlightSimTerrainSystemXplanePlugin/64\ncp -rf ../bin/Debug-macosx-universal/Sunrise/Sunrise.dLL ../bin/Debug-macosx-universal/FlightSimTerrainSystemXplanePlugin/64\ncp -rf ../bin/Debug-macosx-universal/FlightSimTerrainSystemXplanePlugin E:/dev/devXplaneInstall/X-Plane_11/Resources/plugins/FlightSimTerrainSystemXplanePlugin\nfi\nif [ \"${CONFIGURATION}\" = \"Release\" ]; then\ncp -rf ../Sunrise/vendor/bin/NVIDIA_Nsight_Aftermath_SDK_2021.1.0.21090/lib/x64/GFSDK_Aftermath_Lib.x64.dll ../bin/Release-macosx-universal/FlightSimTerrainSystemXplanePlugin/64\ncp -rf ../bin/Release-macosx-universal/Sunrise/Sunrise.dLL ../bin/Release-macosx-universal/FlightSimTerrainSystemXplanePlugin/64\ncp -rf ../bin/Release-macosx-universal/FlightSimTerrainSystemXplanePlugin E:/dev/devXplaneInstall/X-Plane_11/Resources/plugins/FlightSimTerrainSystemXplanePlugin\nfi\nif [ \"${CONFIGURATION}\" = \"Dist\" ]; then\ncp -rf ../Sunrise/vendor/bin/NVIDIA_Nsight_Aftermath_SDK_2021.1.0.21090/lib/x64/GFSDK_Aftermath_Lib.x64.dll ../bin/Dist-macosx-universal/FlightSimTerrainSystemXplanePlugin/64\ncp -rf ../bin/Dist-macosx-universal/Sunrise/Sunrise.dLL ../bin/Dist-macosx-universal/FlightSimTerrainSystemXplanePlugin/64\ncp -rf ../bin/Dist-macosx-universal/FlightSimTerrainSystemXplanePlugin E:/dev/devXplaneInstall/X-Plane_11/Resources/plugins/FlightSimTerrainSystemXplanePlugin\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E7DC59D71682ADC96FC40817 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83792B464A0722B8B8094986 /* DataRefManager.cpp in Sources */,
+				4D4F67920F07F904B622C5D2 /* FlightSimTerrainSystemXplanePlugin.cpp in Sources */,
+				B3EBAC12F83A51843A618A52 /* SimlinkApp.cpp in Sources */,
+				3E22EB7A9824026C5F6AF9BA /* SimlinkNetworkManager.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BD1A4614058B2A464A29FC54 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = libSunrise.a;
+			targetProxy = 5F5C67C4B5E9D2368E62E604 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1FA483BF7AE5D7314E4021FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = "../bin/Release-macosx-universal/FlightSimTerrainSystemXplanePlugin/64";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EXECUTABLE_PREFIX = lib;
+				GCC_DYNAMIC_NO_PIC = NO;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = win;
+			};
+			name = Release;
+		};
+		66C1293434E47CE6BBF2CF74 /* Dist */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					XPLM200,
+					XPLM210,
+					XPLM300,
+					XPLM301,
+					"_DEBUG\\t\\t\\t",
+					"_WINDOWS\\t\\t",
+					"_USRDLL\\t\\t",
+					SIMDATA_EXPORTS,
+					SR_NO_NETWORKING,
+					SR_DIST,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"C:/dev/x-plane sdk/XPSDK303/SDK/Libraries/Win",
+				);
+				OBJROOT = "../bin-int/Dist-macosx-universal/FlightSimTerrainSystemXplanePlugin";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-lXPLM_64",
+					"-lXPWidgets_64",
+					"-lOpenGL32",
+				);
+				SYMROOT = "../bin/Dist-macosx-universal/FlightSimTerrainSystemXplanePlugin/64";
+				USER_HEADER_SEARCH_PATHS = (
+					"C:/VulkanSDK/1.2.154.1/Include",
+					../Sunrise/src,
+					../Sunrise/vendor,
+					../Sunrise/vendor/spdlog/include,
+					"../Sunrise/vendor/glm-master",
+					"../Sunrise/vendor/marl-main/marl-main/include",
+					../Sunrise/vendor/stb,
+					"../Sunrise/vendor/mango-master/mango-master/include",
+					../Sunrise/vendor/libigl/include,
+					../Sunrise/vendor/HTTPRequest/include,
+					../Sunrise/vendor/httplib/include,
+					../Sunrise/vendor/rapidjson/include,
+					../Sunrise/vendor/libguarded/src,
+					../Sunrise/vendor/nlohmann/include,
+					"../Sunrise/vendor/bin/glfw/windows/glfw-3.3.2.bin.WIN64/glfw-3.3.2.bin.WIN64/lib-vc2019",
+					../Sunrise/vendor/date/include,
+					../Sunrise/vendor/entt/single_include,
+					"../Sunrise/vendor/asio-1.18.1/include",
+					"\"C:/dev/x-plane sdk/XPSDK303/SDK/CHeaders\"",
+				);
+			};
+			name = Dist;
+		};
+		77E5F2E70A73BCD9734C6127 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				COPY_PHASE_STRIP = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					XPLM200,
+					XPLM210,
+					XPLM300,
+					XPLM301,
+					"_DEBUG\\t\\t\\t",
+					"_WINDOWS\\t\\t",
+					"_USRDLL\\t\\t",
+					SIMDATA_EXPORTS,
+					SR_NO_NETWORKING,
+					SR_DEBUG,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"C:/dev/x-plane sdk/XPSDK303/SDK/Libraries/Win",
+				);
+				OBJROOT = "../bin-int/Debug-macosx-universal/FlightSimTerrainSystemXplanePlugin";
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-lXPLM_64",
+					"-lXPWidgets_64",
+					"-lOpenGL32",
+				);
+				SYMROOT = "../bin/Debug-macosx-universal/FlightSimTerrainSystemXplanePlugin/64";
+				USER_HEADER_SEARCH_PATHS = (
+					"C:/VulkanSDK/1.2.154.1/Include",
+					../Sunrise/src,
+					../Sunrise/vendor,
+					../Sunrise/vendor/spdlog/include,
+					"../Sunrise/vendor/glm-master",
+					"../Sunrise/vendor/marl-main/marl-main/include",
+					../Sunrise/vendor/stb,
+					"../Sunrise/vendor/mango-master/mango-master/include",
+					../Sunrise/vendor/libigl/include,
+					../Sunrise/vendor/HTTPRequest/include,
+					../Sunrise/vendor/httplib/include,
+					../Sunrise/vendor/rapidjson/include,
+					../Sunrise/vendor/libguarded/src,
+					../Sunrise/vendor/nlohmann/include,
+					"../Sunrise/vendor/bin/glfw/windows/glfw-3.3.2.bin.WIN64/glfw-3.3.2.bin.WIN64/lib-vc2019",
+					../Sunrise/vendor/date/include,
+					../Sunrise/vendor/entt/single_include,
+					"../Sunrise/vendor/asio-1.18.1/include",
+					"\"C:/dev/x-plane sdk/XPSDK303/SDK/CHeaders\"",
+				);
+			};
+			name = Debug;
+		};
+		8F7E7832B7B930E49F54BE72 /* Dist */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = "../bin/Dist-macosx-universal/FlightSimTerrainSystemXplanePlugin/64";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EXECUTABLE_PREFIX = lib;
+				GCC_DYNAMIC_NO_PIC = NO;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = win;
+			};
+			name = Dist;
+		};
+		A1767385D1084277AC1581C5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CONFIGURATION_BUILD_DIR = "../bin/Debug-macosx-universal/FlightSimTerrainSystemXplanePlugin/64";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				EXECUTABLE_PREFIX = lib;
+				GCC_DYNAMIC_NO_PIC = NO;
+				INSTALL_PATH = /usr/local/lib;
+				PRODUCT_NAME = win;
+			};
+			name = Debug;
+		};
+		FD9622E16ABE31536C512121 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(NATIVE_ARCH_ACTUAL)";
+				CONFIGURATION_BUILD_DIR = "$(SYMROOT)";
+				CONFIGURATION_TEMP_DIR = "$(OBJROOT)";
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					XPLM200,
+					XPLM210,
+					XPLM300,
+					XPLM301,
+					"_DEBUG\\t\\t\\t",
+					"_WINDOWS\\t\\t",
+					"_USRDLL\\t\\t",
+					SIMDATA_EXPORTS,
+					SR_NO_NETWORKING,
+					SR_RELEASE,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				LIBRARY_SEARCH_PATHS = (
+					"C:/dev/x-plane sdk/XPSDK303/SDK/Libraries/Win",
+				);
+				OBJROOT = "../bin-int/Release-macosx-universal/FlightSimTerrainSystemXplanePlugin";
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"-lXPLM_64",
+					"-lXPWidgets_64",
+					"-lOpenGL32",
+				);
+				SYMROOT = "../bin/Release-macosx-universal/FlightSimTerrainSystemXplanePlugin/64";
+				USER_HEADER_SEARCH_PATHS = (
+					"C:/VulkanSDK/1.2.154.1/Include",
+					../Sunrise/src,
+					../Sunrise/vendor,
+					../Sunrise/vendor/spdlog/include,
+					"../Sunrise/vendor/glm-master",
+					"../Sunrise/vendor/marl-main/marl-main/include",
+					../Sunrise/vendor/stb,
+					"../Sunrise/vendor/mango-master/mango-master/include",
+					../Sunrise/vendor/libigl/include,
+					../Sunrise/vendor/HTTPRequest/include,
+					../Sunrise/vendor/httplib/include,
+					../Sunrise/vendor/rapidjson/include,
+					../Sunrise/vendor/libguarded/src,
+					../Sunrise/vendor/nlohmann/include,
+					"../Sunrise/vendor/bin/glfw/windows/glfw-3.3.2.bin.WIN64/glfw-3.3.2.bin.WIN64/lib-vc2019",
+					../Sunrise/vendor/date/include,
+					../Sunrise/vendor/entt/single_include,
+					"../Sunrise/vendor/asio-1.18.1/include",
+					"\"C:/dev/x-plane sdk/XPSDK303/SDK/CHeaders\"",
+				);
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB928908733DD80010E9CD /* Build configuration list for PBXProject "FlightSimTerrainSystemXplanePlugin" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				77E5F2E70A73BCD9734C6127 /* Debug */,
+				FD9622E16ABE31536C512121 /* Release */,
+				66C1293434E47CE6BBF2CF74 /* Dist */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FC83083F2B295C31846AB67F /* Build configuration list for PBXNativeTarget "libwin.dylib" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1767385D1084277AC1581C5 /* Debug */,
+				1FA483BF7AE5D7314E4021FF /* Release */,
+				8F7E7832B7B930E49F54BE72 /* Dist */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+};
+rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}

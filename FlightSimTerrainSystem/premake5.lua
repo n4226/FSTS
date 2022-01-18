@@ -5,13 +5,15 @@ project "FlightSimTerrainSystem"
 	kind "ConsoleApp"
 	language "C++"
 	cppdialect "C++17"
-	staticruntime "on"
+	staticruntime "off"
 
 	targetdir ("%{wks.location}/bin/" .. outputdir .. "/%{prj.name}")
 	objdir ("%{wks.location}/bin-int/" .. outputdir .. "/%{prj.name}")
 
 	-- mainProjDir = "FlightSimTerrainSystem"
 	-- sunriseLocation = "%{wks.location}/Sunrise"
+
+	glslCompilerLoc = "C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe"
 
 	files {
 		"src/**.h",
@@ -50,15 +52,13 @@ project "FlightSimTerrainSystem"
 		
 		"%{wks.location}/Sunrise/vendor/date/include",
 		"%{wks.location}/Sunrise/vendor/entt/single_include",
+		"%{wks.location}/Sunrise/vendor/eigen"
 	}	
 
-	libdirs {
-		"C:/VulkanSDK/1.2.154.1/Lib",
-	}
 
 	links {
 		"Sunrise",
-		"vulkan-1",
+		"marl",
 	}
 
 	postbuildcommands {
@@ -73,12 +73,56 @@ project "FlightSimTerrainSystem"
 			"SR_PLATFORM_WINDOWS"
 		}
 		debugdir ("../bin/" .. outputdir .. "/%{prj.name}/")
+		
+
+		libdirs {
+			"C:/VulkanSDK/1.2.154.1/Lib",
+		}
+		
+		links {
+			"vulkan-1"
+		}
+
+
+	filter "system:macosx"
+
+		defines {
+			"SR_PLATFORM_MACOS"
+		}
+
+		xcodebuildsettings { ["ALWAYS_SEARCH_USER_PATHS"] = "YES" }
+
+		includedirs {
+			"/usr/local/include",
+			"%{wks.location}/Sunrise/vendor/bin/glfw/macos/glfw-3.3.6.bin.MACOS/include",
+		}
+
+		libdirs {
+			"/usr/local/lib",
+			"%{wks.location}/Sunrise/vendor/bin/glfw/macos/glfw-3.3.6.bin.MACOS/lib-universal",
+		}
+
+		links {
+			"libvulkan.1.dylib",
+			"libglfw.3.dylib"
+		}
+
+		--https://vulkan.lunarg.com/doc/view/1.2.148.1/windows/spirv_toolchain.html
+		glslCompilerLoc = "/usr/local/bin/glslangValidator"
+
+		postbuildcommands {
+			("{COPY} %{wks.location}/Sunrise/vendor/bin/glfw/macos/glfw-3.3.6.bin.MACOS/lib-universal/* ../bin/" .. outputdir .. "/%{prj.name}/"),
+		}
 
 
 	filter "configurations:Debug"
 		defines "SR_DEBUG"
 		runtime "Debug"
 		symbols "on"
+
+		libdirs {
+			"%{wks.location}/Sunrise/vendor/marl-main/marl-main/build/Debug",
+		}
 
 	filter "configurations:Release"
 		defines "SR_RELEASE"
@@ -89,7 +133,7 @@ project "FlightSimTerrainSystem"
 		defines "SR_DIST"
 		runtime "Release"
 		optimize "on"
-
+ 
 		
 	-- GLSL Shader Compile Pipeline
 
@@ -101,7 +145,7 @@ project "FlightSimTerrainSystem"
 
 	   -- One or more commands to run (required)
 	   buildcommands {
-		  ("C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V %{file.relpath} -o ../bin/" .. outputdir .. "/%{prj.name}/shaders/%{file.name}.spv -g")
+		  ("" .. glslCompilerLoc .. (" -V %{file.relpath} -o ../bin/" .. outputdir .. "/%{prj.name}/shaders/%{file.name}.spv -g"))
 	   }
 
 	   -- One or more outputs resulting from the build (required)

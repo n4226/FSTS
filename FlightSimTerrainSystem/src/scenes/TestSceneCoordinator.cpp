@@ -85,7 +85,7 @@ public:
 	Mesh* square{};
 	MeshBuffer* meshBuff{};
 
-	virtual void setup() {
+	virtual void setup() override {
 
 		square = new Mesh(MeshPrimatives::square());
 

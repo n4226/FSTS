@@ -1,7 +1,9 @@
 
 workspace "FlightSimTerrainSystem"
 	architecture "x64"
-		
+	
+	filter "system:macosx"
+		architecture "universal"
 
 	configurations {
 		"Debug",
