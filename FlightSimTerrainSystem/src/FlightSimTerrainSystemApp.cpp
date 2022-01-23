@@ -30,10 +30,9 @@ void FlightSimTerrainSystemApp::startup()
 
 void FlightSimTerrainSystemApp::shutdown()
 {
+    SR_TRACE("Shutdown Initiated");
+    
 	Application::shutdown();
-
-	SR_TRACE("Shutdown Initiated");
-	
 }
 
 
