@@ -5,6 +5,8 @@ workspace "FlightSimTerrainSystem"
 	filter "system:macosx"
 		architecture "universal"
 
+	filter {}
+
 	configurations {
 		"Debug",
 		"Release",

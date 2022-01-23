@@ -84,6 +84,7 @@ project "FlightSimTerrainSystem"
 		}
 
 
+
 	filter "system:macosx"
 
 		defines {
@@ -108,7 +109,7 @@ project "FlightSimTerrainSystem"
 		}
 
 		--https://vulkan.lunarg.com/doc/view/1.2.148.1/windows/spirv_toolchain.html
-		glslCompilerLoc = "/usr/local/bin/glslangValidator"
+		
 
 		postbuildcommands {
 			("{COPY} %{wks.location}/Sunrise/vendor/bin/glfw/macos/glfw-3.3.6.bin.MACOS/lib-universal/* ../bin/" .. outputdir .. "/%{prj.name}/"),
@@ -137,15 +138,38 @@ project "FlightSimTerrainSystem"
 		
 	-- GLSL Shader Compile Pipeline
 
-	filter 'files:**.vert or files:**.frag or files:**.comp'
+	filter {'files:**.vert or files:**.frag or files:**.comp', 'system:windows' }
+		glslCompilerLoc = "C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe"
 	   -- A message to display while this build step is running (optional)
-	   buildmessage 'Compiling %{file.relpath} TO SPIR-V'
+	   buildmessage 'Compiling %{file.relpath} TO SPIR-V - windows'
 		
 	   buildinputs {("%{sunriseLocation}src/Sunrise/graphics/shaders/headers/**.h")}
 
 	   -- One or more commands to run (required)
 	   buildcommands {
-		  ("" .. glslCompilerLoc .. (" -V %{file.relpath} -o ../bin/" .. outputdir .. "/%{prj.name}/shaders/%{file.name}.spv -g"))
+		  -- (glslCompilerLoc .. (" -V %{file.relpath} -o %{wks.location}/bin/" .. outputdir .. "/%{prj.name}/shaders/%{file.name}.spv -g"))
+		  ("C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V %{file.relpath} -o %{wks.location}/bin/" .. outputdir .. "/%{prj.name}/shaders/%{file.name}.spv -g")
+	   }
+
+	   -- One or more outputs resulting from the build (required)
+	   buildoutputs {("../bin/" .. outputdir .. "/%{prj.name}/shaders/%{file.name}.spv")}
+
+	   -- One or more additional dependencies for this build command (optional)
+	   --buildinputs { 'path/to/file1.ext', 'path/to/file2.ext' }
+
+
+
+	filter {'files:**.vert or files:**.frag or files:**.comp', 'system:macosx' }
+		glslCompilerLoc = "/usr/local/bin/glslangValidator"
+	   -- A message to display while this build step is running (optional)
+	   buildmessage 'Compiling %{file.relpath} TO SPIR-V - mac'
+		
+	   buildinputs {("%{sunriseLocation}src/Sunrise/graphics/shaders/headers/**.h")}
+
+	   -- One or more commands to run (required)
+	   buildcommands {
+		  -- (glslCompilerLoc .. (" -V %{file.relpath} -o %{wks.location}/bin/" .. outputdir .. "/%{prj.name}/shaders/%{file.name}.spv -g"))
+		  ("%{glslCompilerLoc} -V %{file.relpath} -o %{wks.location}/bin/" .. outputdir .. "/%{prj.name}/shaders/%{file.name}.spv -g")
 	   }
 
 	   -- One or more outputs resulting from the build (required)

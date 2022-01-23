@@ -1,22 +1,22 @@
 ^C:\CODE\VISUAL_STUDIO\FSTS\SUNRISE\SRC\SUNRISE\SUNRISE\GRAPHICS\SHADERS\GBUFFER.FRAG
-C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V ..\Sunrise\src\Sunrise\Sunrise\graphics\shaders\GBuffer.frag -o ../bin/Debug-windows-x86_64/FlightSimTerrainSystem/shaders/GBuffer.frag.spv -g
+C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V ..\Sunrise\src\Sunrise\Sunrise\graphics\shaders\GBuffer.frag -o C:\code\visual_studio\FSTS\/bin/Debug-windows-x86_64/FlightSimTerrainSystem/shaders/GBuffer.frag.spv -g
 ^C:\CODE\VISUAL_STUDIO\FSTS\SUNRISE\SRC\SUNRISE\SUNRISE\GRAPHICS\SHADERS\GBUFFER.VERT
-C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V ..\Sunrise\src\Sunrise\Sunrise\graphics\shaders\GBuffer.vert -o ../bin/Debug-windows-x86_64/FlightSimTerrainSystem/shaders/GBuffer.vert.spv -g
+C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V ..\Sunrise\src\Sunrise\Sunrise\graphics\shaders\GBuffer.vert -o C:\code\visual_studio\FSTS\/bin/Debug-windows-x86_64/FlightSimTerrainSystem/shaders/GBuffer.vert.spv -g
 ^C:\CODE\VISUAL_STUDIO\FSTS\SUNRISE\SRC\SUNRISE\SUNRISE\GRAPHICS\SHADERS\GPUGENCOMMANDS.COMP
-C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V ..\Sunrise\src\Sunrise\Sunrise\graphics\shaders\gpuGenCommands.comp -o ../bin/Debug-windows-x86_64/FlightSimTerrainSystem/shaders/gpuGenCommands.comp.spv -g
+C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V ..\Sunrise\src\Sunrise\Sunrise\graphics\shaders\gpuGenCommands.comp -o C:\code\visual_studio\FSTS\/bin/Debug-windows-x86_64/FlightSimTerrainSystem/shaders/gpuGenCommands.comp.spv -g
 ^C:\CODE\VISUAL_STUDIO\FSTS\SUNRISE\SRC\SUNRISE\SUNRISE\GRAPHICS\SHADERS\TERRAIN.FRAG
-C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V ..\Sunrise\src\Sunrise\Sunrise\graphics\shaders\terrain.frag -o ../bin/Debug-windows-x86_64/FlightSimTerrainSystem/shaders/terrain.frag.spv -g
+C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V ..\Sunrise\src\Sunrise\Sunrise\graphics\shaders\terrain.frag -o C:\code\visual_studio\FSTS\/bin/Debug-windows-x86_64/FlightSimTerrainSystem/shaders/terrain.frag.spv -g
 ^C:\CODE\VISUAL_STUDIO\FSTS\SUNRISE\SRC\SUNRISE\SUNRISE\GRAPHICS\SHADERS\TERRAIN.VERT
-C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V ..\Sunrise\src\Sunrise\Sunrise\graphics\shaders\terrain.vert -o ../bin/Debug-windows-x86_64/FlightSimTerrainSystem/shaders/terrain.vert.spv -g
+C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V ..\Sunrise\src\Sunrise\Sunrise\graphics\shaders\terrain.vert -o C:\code\visual_studio\FSTS\/bin/Debug-windows-x86_64/FlightSimTerrainSystem/shaders/terrain.vert.spv -g
 ^C:\CODE\VISUAL_STUDIO\FSTS\SUNRISE\SRC\SUNRISE\SUNRISE\GRAPHICS\SHADERS\TRIANGLE.FRAG
-C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V ..\Sunrise\src\Sunrise\Sunrise\graphics\shaders\triangle.frag -o ../bin/Debug-windows-x86_64/FlightSimTerrainSystem/shaders/triangle.frag.spv -g
+C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V ..\Sunrise\src\Sunrise\Sunrise\graphics\shaders\triangle.frag -o C:\code\visual_studio\FSTS\/bin/Debug-windows-x86_64/FlightSimTerrainSystem/shaders/triangle.frag.spv -g
 ^C:\CODE\VISUAL_STUDIO\FSTS\SUNRISE\SRC\SUNRISE\SUNRISE\GRAPHICS\SHADERS\TRIANGLE.VERT
-C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V ..\Sunrise\src\Sunrise\Sunrise\graphics\shaders\triangle.vert -o ../bin/Debug-windows-x86_64/FlightSimTerrainSystem/shaders/triangle.vert.spv -g
+C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V ..\Sunrise\src\Sunrise\Sunrise\graphics\shaders\triangle.vert -o C:\code\visual_studio\FSTS\/bin/Debug-windows-x86_64/FlightSimTerrainSystem/shaders/triangle.vert.spv -g
 ^C:\CODE\VISUAL_STUDIO\FSTS\FLIGHTSIMTERRAINSYSTEM\SRC\SHADERS\GREENPIPE.FRAG
-C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V src\shaders\greenPipe.frag -o ../bin/Debug-windows-x86_64/FlightSimTerrainSystem/shaders/greenPipe.frag.spv -g
+C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V src\shaders\greenPipe.frag -o C:\code\visual_studio\FSTS\/bin/Debug-windows-x86_64/FlightSimTerrainSystem/shaders/greenPipe.frag.spv -g
 ^C:\CODE\VISUAL_STUDIO\FSTS\FLIGHTSIMTERRAINSYSTEM\SRC\SHADERS\GREENPIPE.VERT
-C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V src\shaders\greenPipe.vert -o ../bin/Debug-windows-x86_64/FlightSimTerrainSystem/shaders/greenPipe.vert.spv -g
+C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V src\shaders\greenPipe.vert -o C:\code\visual_studio\FSTS\/bin/Debug-windows-x86_64/FlightSimTerrainSystem/shaders/greenPipe.vert.spv -g
 ^C:\CODE\VISUAL_STUDIO\FSTS\FLIGHTSIMTERRAINSYSTEM\SRC\SHADERS\GREENPIPEDEFERRED.FRAG
-C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V src\shaders\greenPipeDeferred.frag -o ../bin/Debug-windows-x86_64/FlightSimTerrainSystem/shaders/greenPipeDeferred.frag.spv -g
+C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V src\shaders\greenPipeDeferred.frag -o C:\code\visual_studio\FSTS\/bin/Debug-windows-x86_64/FlightSimTerrainSystem/shaders/greenPipeDeferred.frag.spv -g
 ^C:\CODE\VISUAL_STUDIO\FSTS\FLIGHTSIMTERRAINSYSTEM\SRC\SHADERS\GREENPIPEDEFERRED.VERT
-C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V src\shaders\greenPipeDeferred.vert -o ../bin/Debug-windows-x86_64/FlightSimTerrainSystem/shaders/greenPipeDeferred.vert.spv -g
+C:/VulkanSDK/1.2.154.1/Bin/glslangValidator.exe -V src\shaders\greenPipeDeferred.vert -o C:\code\visual_studio\FSTS\/bin/Debug-windows-x86_64/FlightSimTerrainSystem/shaders/greenPipeDeferred.vert.spv -g
